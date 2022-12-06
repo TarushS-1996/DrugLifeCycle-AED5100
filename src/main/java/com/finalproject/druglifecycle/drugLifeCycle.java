@@ -259,13 +259,16 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jLabel46 = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
         jTextField15 = new javax.swing.JTextField();
-        jTextField16 = new javax.swing.JTextField();
         jTextField18 = new javax.swing.JTextField();
         jLabel49 = new javax.swing.JLabel();
-        jTextField17 = new javax.swing.JTextField();
         jLabel48 = new javax.swing.JLabel();
         jLabel58 = new javax.swing.JLabel();
         jLabel59 = new javax.swing.JLabel();
+        jLabel76 = new javax.swing.JLabel();
+        jScrollPane25 = new javax.swing.JScrollPane();
+        jTextArea10 = new javax.swing.JTextArea();
+        jScrollPane26 = new javax.swing.JScrollPane();
+        jTextArea11 = new javax.swing.JTextArea();
         jPanel4 = new javax.swing.JPanel();
         jTextField19 = new javax.swing.JTextField();
         jLabel50 = new javax.swing.JLabel();
@@ -1798,17 +1801,11 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jLabel46.setText("GLP Officer");
 
         jLabel47.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        jLabel47.setText("Findings");
+        jLabel47.setText("Side effects");
 
         jTextField15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField15ActionPerformed(evt);
-            }
-        });
-
-        jTextField16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField16ActionPerformed(evt);
             }
         });
 
@@ -1821,18 +1818,22 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jLabel49.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel49.setText("Researcher");
 
-        jTextField17.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField17ActionPerformed(evt);
-            }
-        });
-
         jLabel48.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        jLabel48.setText("Tests Conducted");
+        jLabel48.setText("Reactions");
 
         jLabel58.setText("Total test conducted:");
 
         jLabel59.setText("Success rate:");
+
+        jLabel76.setText("jLabel76");
+
+        jTextArea10.setColumns(20);
+        jTextArea10.setRows(5);
+        jScrollPane25.setViewportView(jTextArea10);
+
+        jTextArea11.setColumns(20);
+        jTextArea11.setRows(5);
+        jScrollPane26.setViewportView(jTextArea11);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -1842,21 +1843,24 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel59)
-                    .addComponent(jLabel58)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel3Layout.createSequentialGroup()
-                            .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(20, 20, 20)
-                            .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(59, 59, 59)
-                            .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(20, 20, 20)
-                            .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField16)
-                        .addComponent(jTextField17)))
-                .addContainerGap(145, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel58)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel76))
+                    .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
+                        .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(59, 59, 59)
+                        .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
+                        .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jScrollPane26, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE)
+                        .addComponent(jScrollPane25, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(jLabel47))
+                .addContainerGap(171, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1869,17 +1873,19 @@ public class drugLifeCycle extends javax.swing.JFrame {
                     .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addComponent(jLabel48)
-                .addGap(12, 12, 12)
-                .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane25, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel47)
-                .addGap(12, 12, 12)
-                .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel58)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel58)
+                    .addComponent(jLabel76))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel59)
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Clinical Testing", jPanel3);
@@ -2208,7 +2214,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jLabel64.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
         jLabel64.setText("Create Trail");
         CreateTrail.add(jLabel64);
-        jLabel64.setBounds(49, 34, 146, 30);
+        jLabel64.setBounds(49, 34, 131, 28);
 
         createTrail1.setText("Save");
         createTrail1.addActionListener(new java.awt.event.ActionListener() {
@@ -2217,7 +2223,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         CreateTrail.add(createTrail1);
-        createTrail1.setBounds(590, 580, 96, 23);
+        createTrail1.setBounds(590, 580, 96, 24);
 
         usernameLabelR1.setText("No of Volunteers:");
         CreateTrail.add(usernameLabelR1);
@@ -2229,7 +2235,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         CreateTrail.add(usernameTextFieldR1);
-        usernameTextFieldR1.setBounds(300, 160, 110, 23);
+        usernameTextFieldR1.setBounds(300, 160, 110, 24);
 
         usernameLabelR2.setForeground(new java.awt.Color(102, 102, 102));
         usernameLabelR2.setText("To be filled by clinical researchers");
@@ -2264,7 +2270,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         CreateTrail.add(usernameTextFieldR5);
-        usernameTextFieldR5.setBounds(300, 110, 110, 23);
+        usernameTextFieldR5.setBounds(300, 110, 110, 24);
 
         usernameLabelR8.setForeground(new java.awt.Color(102, 102, 102));
         usernameLabelR8.setText("To be filled by clinical researchers");
@@ -2278,32 +2284,32 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         jLabel65.setText("Report ID:");
         CreateTrail.add(jLabel65);
-        jLabel65.setBounds(50, 70, 120, 17);
+        jLabel65.setBounds(50, 70, 120, 18);
 
         jLabel66.setText("jLabel66");
         CreateTrail.add(jLabel66);
-        jLabel66.setBounds(300, 70, 140, 17);
+        jLabel66.setBounds(300, 70, 140, 18);
 
         jLabel67.setText("Assign researcher:");
         CreateTrail.add(jLabel67);
         jLabel67.setBounds(450, 110, 130, 20);
 
         CreateTrail.add(jComboBox5);
-        jComboBox5.setBounds(590, 110, 210, 23);
+        jComboBox5.setBounds(590, 110, 210, 24);
 
         jTextArea6.setColumns(20);
         jTextArea6.setRows(5);
         jScrollPane18.setViewportView(jTextArea6);
 
         CreateTrail.add(jScrollPane18);
-        jScrollPane18.setBounds(300, 340, 390, 91);
+        jScrollPane18.setBounds(300, 340, 390, 96);
 
         jTextArea7.setColumns(20);
         jTextArea7.setRows(5);
         jScrollPane19.setViewportView(jTextArea7);
 
         CreateTrail.add(jScrollPane19);
-        jScrollPane19.setBounds(300, 460, 390, 91);
+        jScrollPane19.setBounds(300, 460, 390, 96);
 
         leftComponent.add(CreateTrail, "card8");
 
@@ -2818,10 +2824,22 @@ public class drugLifeCycle extends javax.swing.JFrame {
         }
     }
     
+    public void addToClinicalTesting(ResearchReport RR, DevelopmentReport DR, ClinicalResearcherReport crr){
+        addToDisAndDev(RR);
+        addToDistAndDos(RR, DR);
+        jTextField15.setText(crr.getAssignedGLPOfficer());
+        jTextField18.setText(crr.getAssignedClinicalResearcher());
+        jTextArea10.setText(crr.getDrugReaction());
+        jTextArea11.setText(crr.getSideEffects());
+    }
+        
+    
     public void viewReportAll(String reportNumber){
         SplitPanelPain(ResearchScientistViewReport);
         ResearchReport RR = new ResearchReport();
         DevelopmentReport devR = new DevelopmentReport();
+        MedicalReport medR = new MedicalReport();
+        ClinicalResearcherReport crRepo = new ClinicalResearcherReport();
         //listOfComposition.removeAllElements();
         for (ResearchReport rr : repDir.getResearchReportdsDir()){
             if (rr.getReportID().equals(reportNumber)){
@@ -2832,9 +2850,21 @@ public class drugLifeCycle extends javax.swing.JFrame {
             if (deRE.getReportID().equals(reportNumber)){
                 devR = deRE;            
             }
-        }        
+        }
         
-        if (devR != null){
+        for (MedicalReport med: mediRepp.getMediRep()){
+            if (med.getReportID().equals(reportNumber)){
+                medR = med;            
+            }
+        }
+        for (ClinicalResearcherReport crrep: clinicalresearchdir.getClinicalReportDir()){
+            if (crrep.getReportID().equals(reportNumber)){
+                crRepo = crrep;       
+            }
+        }
+        if(crRepo != null){
+            addToClinicalTesting(RR, devR, crRepo);
+        }else if (devR != null){
             addToDistAndDos(RR, devR);
         }
         else if (RR != null){
@@ -3194,17 +3224,9 @@ public class drugLifeCycle extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField15ActionPerformed
 
-    private void jTextField16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField16ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField16ActionPerformed
-
     private void jTextField18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField18ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField18ActionPerformed
-
-    private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField17ActionPerformed
 
     private void jTextField19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField19ActionPerformed
         // TODO add your handling code here:
@@ -3632,6 +3654,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList1;
@@ -3663,6 +3686,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane22;
     private javax.swing.JScrollPane jScrollPane23;
     private javax.swing.JScrollPane jScrollPane24;
+    private javax.swing.JScrollPane jScrollPane25;
+    private javax.swing.JScrollPane jScrollPane26;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
@@ -3681,6 +3706,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JTable jTable6;
     private javax.swing.JTable jTable7;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea10;
+    private javax.swing.JTextArea jTextArea11;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
@@ -3693,8 +3720,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField2;
