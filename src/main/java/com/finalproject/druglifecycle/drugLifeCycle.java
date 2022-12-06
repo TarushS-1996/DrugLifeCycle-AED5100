@@ -214,6 +214,67 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jLabel40 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
+        ResearchScientistViewReport = new javax.swing.JPanel();
+        viewReportBackButton = new javax.swing.JButton();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        DiscoveryDevelopment = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel33 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        jLabel37 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jList3 = new javax.swing.JList<>();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel43 = new javax.swing.JLabel();
+        jTextField12 = new javax.swing.JTextField();
+        jTextField13 = new javax.swing.JTextField();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jScrollPane13 = new javax.swing.JScrollPane();
+        jList5 = new javax.swing.JList<>();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jTextField15 = new javax.swing.JTextField();
+        jTextField16 = new javax.swing.JTextField();
+        jTextField18 = new javax.swing.JTextField();
+        jLabel49 = new javax.swing.JLabel();
+        jTextField17 = new javax.swing.JTextField();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jTextField19 = new javax.swing.JTextField();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jTextField20 = new javax.swing.JTextField();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jScrollPane14 = new javax.swing.JScrollPane();
+        jTextArea5 = new javax.swing.JTextArea();
+        jComboBox4 = new javax.swing.JComboBox<>();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel54 = new javax.swing.JLabel();
+        jTextField23 = new javax.swing.JTextField();
+        jTextField24 = new javax.swing.JTextField();
+        jLabel55 = new javax.swing.JLabel();
+        jTextField25 = new javax.swing.JTextField();
+        jLabel56 = new javax.swing.JLabel();
+        jTextField26 = new javax.swing.JTextField();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -1442,6 +1503,505 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         leftComponent.add(AddManufacturingDetails, "card10");
 
+        ResearchScientistViewReport.setBackground(new java.awt.Color(255, 255, 255));
+
+        viewReportBackButton.setText("Back");
+        viewReportBackButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewReportBackButtonActionPerformed(evt);
+            }
+        });
+
+        jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
+
+        DiscoveryDevelopment.setBackground(new java.awt.Color(255, 255, 255));
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
+        jLabel31.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel31.setText("Composition");
+
+        jLabel32.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel32.setText("Notes:");
+
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
+
+        jLabel33.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel33.setText("Disease Target:");
+
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField6ActionPerformed(evt);
+            }
+        });
+
+        jLabel34.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel34.setText("Name:");
+
+        jLabel35.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel35.setText("Stage:");
+
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField7ActionPerformed(evt);
+            }
+        });
+
+        jLabel37.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel37.setText("Research Lead:");
+
+        jLabel27.setFont(new java.awt.Font("Helvetica Neue", 0, 12)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel27.setText("Other Details");
+
+        jLabel36.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel36.setText("Research By:");
+
+        jTextArea3.setColumns(20);
+        jTextArea3.setRows(5);
+        jScrollPane8.setViewportView(jTextArea3);
+
+        jScrollPane9.setViewportView(jList3);
+
+        javax.swing.GroupLayout DiscoveryDevelopmentLayout = new javax.swing.GroupLayout(DiscoveryDevelopment);
+        DiscoveryDevelopment.setLayout(DiscoveryDevelopmentLayout);
+        DiscoveryDevelopmentLayout.setHorizontalGroup(
+            DiscoveryDevelopmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DiscoveryDevelopmentLayout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addGroup(DiscoveryDevelopmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel36)
+                    .addComponent(jLabel37)
+                    .addComponent(jLabel32))
+                .addGap(23, 23, 23)
+                .addGroup(DiscoveryDevelopmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(93, 93, 93)
+                .addComponent(jLabel31)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(168, Short.MAX_VALUE))
+            .addGroup(DiscoveryDevelopmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(DiscoveryDevelopmentLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(DiscoveryDevelopmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(DiscoveryDevelopmentLayout.createSequentialGroup()
+                            .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, 0)
+                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(40, 40, 40)
+                            .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, 0)
+                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(40, 40, 40)
+                            .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(10, 10, 10)
+                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 829, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel27))
+                    .addGap(0, 125, Short.MAX_VALUE)))
+        );
+        DiscoveryDevelopmentLayout.setVerticalGroup(
+            DiscoveryDevelopmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DiscoveryDevelopmentLayout.createSequentialGroup()
+                .addGap(105, 105, 105)
+                .addGroup(DiscoveryDevelopmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DiscoveryDevelopmentLayout.createSequentialGroup()
+                        .addGroup(DiscoveryDevelopmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel36))
+                        .addGap(18, 18, 18)
+                        .addGroup(DiscoveryDevelopmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel37))
+                        .addGap(28, 28, 28)
+                        .addGroup(DiscoveryDevelopmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel32)))
+                    .addComponent(jLabel31)
+                    .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 239, Short.MAX_VALUE))
+            .addGroup(DiscoveryDevelopmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(DiscoveryDevelopmentLayout.createSequentialGroup()
+                    .addGap(0, 1, Short.MAX_VALUE)
+                    .addGroup(DiscoveryDevelopmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(17, 17, 17)
+                    .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(10, 10, 10)
+                    .addComponent(jLabel27)
+                    .addGap(0, 447, Short.MAX_VALUE)))
+        );
+
+        jTabbedPane1.addTab("Discovery and Development", DiscoveryDevelopment);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel43.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel43.setText("Distribution");
+
+        jTextField12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField12ActionPerformed(evt);
+            }
+        });
+
+        jTextField13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField13ActionPerformed(evt);
+            }
+        });
+
+        jLabel44.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel44.setText("Manufactoring Analyst:");
+
+        jLabel45.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel45.setText("Dosage");
+
+        jScrollPane13.setViewportView(jList5);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(29, 29, 29)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField13)
+                            .addComponent(jTextField12)
+                            .addComponent(jScrollPane13))))
+                .addContainerGap(498, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel44)
+                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel43)
+                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel45)
+                    .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(292, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Distribution and Dosage", jPanel2);
+
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel46.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel46.setText("GLP Officer");
+
+        jLabel47.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel47.setText("Findings");
+
+        jTextField15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField15ActionPerformed(evt);
+            }
+        });
+
+        jTextField16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField16ActionPerformed(evt);
+            }
+        });
+
+        jTextField18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField18ActionPerformed(evt);
+            }
+        });
+
+        jLabel49.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel49.setText("Researcher");
+
+        jTextField17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField17ActionPerformed(evt);
+            }
+        });
+
+        jLabel48.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel48.setText("Tests Conducted");
+
+        jLabel58.setText("Total test conducted:");
+
+        jLabel59.setText("Success rate:");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel59)
+                    .addComponent(jLabel58)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                            .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(20, 20, 20)
+                            .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(59, 59, 59)
+                            .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(20, 20, 20)
+                            .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField16)
+                        .addComponent(jTextField17)))
+                .addContainerGap(173, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel46)
+                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel49)
+                    .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addComponent(jLabel48)
+                .addGap(12, 12, 12)
+                .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel47)
+                .addGap(12, 12, 12)
+                .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel58)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel59)
+                .addContainerGap(114, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Clinical Testing", jPanel3);
+
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+
+        jTextField19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField19ActionPerformed(evt);
+            }
+        });
+
+        jLabel50.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel50.setText("Toxicology Specialist");
+
+        jLabel51.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel51.setText("FDA Project Manager");
+
+        jTextField20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField20ActionPerformed(evt);
+            }
+        });
+
+        jLabel52.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel52.setText("Toxicology Remarks");
+
+        jLabel53.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel53.setText("FDA Approval Status");
+
+        jTextArea5.setColumns(20);
+        jTextArea5.setRows(5);
+        jScrollPane14.setViewportView(jTextArea5);
+
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Not selected", "Approved", "Denied", "Revaluation" }));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel52, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(59, 59, 59)
+                        .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
+                        .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(172, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel50)
+                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel51)
+                    .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(53, 53, 53)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel52)
+                    .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel53)
+                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(234, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("FDA Approval", jPanel4);
+
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel54.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel54.setText("FDA Regulator");
+
+        jTextField23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField23ActionPerformed(evt);
+            }
+        });
+
+        jTextField24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField24ActionPerformed(evt);
+            }
+        });
+
+        jLabel55.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel55.setText("FDA Official");
+
+        jTextField25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField25ActionPerformed(evt);
+            }
+        });
+
+        jLabel56.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel56.setText("Distrubution Regulations");
+
+        jTextField26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField26ActionPerformed(evt);
+            }
+        });
+
+        jLabel57.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel57.setText("Monitoring Methods");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, 609, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
+                        .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(59, 59, 59)
+                        .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
+                        .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(55, 55, 55)
+                        .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, 609, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(73, 73, 73))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel55)
+                    .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel54)
+                    .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(52, 52, 52)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel56)
+                    .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel57)
+                    .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(191, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Saftey Monitoring", jPanel5);
+
+        jLabel24.setFont(new java.awt.Font("Liberation Sans", 1, 14)); // NOI18N
+        jLabel24.setText("Report ID:");
+
+        javax.swing.GroupLayout ResearchScientistViewReportLayout = new javax.swing.GroupLayout(ResearchScientistViewReport);
+        ResearchScientistViewReport.setLayout(ResearchScientistViewReportLayout);
+        ResearchScientistViewReportLayout.setHorizontalGroup(
+            ResearchScientistViewReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ResearchScientistViewReportLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ResearchScientistViewReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTabbedPane1)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ResearchScientistViewReportLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(viewReportBackButton))
+                    .addGroup(ResearchScientistViewReportLayout.createSequentialGroup()
+                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        ResearchScientistViewReportLayout.setVerticalGroup(
+            ResearchScientistViewReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ResearchScientistViewReportLayout.createSequentialGroup()
+                .addContainerGap(28, Short.MAX_VALUE)
+                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 565, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(viewReportBackButton)
+                .addContainerGap())
+        );
+
+        leftComponent.add(ResearchScientistViewReport, "card6");
+
         jSplitPane1.setRightComponent(leftComponent);
 
         javax.swing.GroupLayout WorkspaceLayout = new javax.swing.GroupLayout(Workspace);
@@ -1588,6 +2148,56 @@ public class drugLifeCycle extends javax.swing.JFrame {
         }
     }
     
+        public void addToDistAndDos(ResearchReport RR, DevelopmentReport DR){
+        addToDisAndDev(RR);
+        DefaultListModel mod = new DefaultListModel();
+        jTextField13.setText(DR.getDevAssigned());
+        jTextField12.setText(DR.getDistribution());
+        ArrayList<String> dosageList = DR.getDosage();
+        for(int i = 0; i<dosageList.size(); i++){
+            mod.addElement(i);
+            jList5.setModel(mod);
+        }
+    }
+        
+    public void addToDisAndDev(ResearchReport RR){
+        jLabel24.setText("Report ID: "+RR.getReportID());
+        jTextField6.setText(RR.getDrugName());
+        jTextField5.setText(RR.getDiseaseTarget());
+        jTextField1.setText(RR.getResearchBy());
+        jTextArea3.setText(RR.getDrugNotes());
+        ArrayList<String> compList = RR.getComposition(); 
+        for (int i = 0; i<compList.size(); i++){
+            listOfComposition.addElement(i);
+            jList3.setModel(listOfComposition);
+        }
+    }
+        
+    
+    public void viewReportAll(String reportNumber){
+        SplitPanelPain(ResearchScientistViewReport);
+        ResearchReport RR = new ResearchReport();
+        DevelopmentReport devR = new DevelopmentReport();
+        //listOfComposition.removeAllElements();
+        for (ResearchReport rr : repDir.getResearchReportdsDir()){
+            if (rr.getReportID().equals(reportNumber)){
+                RR = rr;                      
+            }
+        }
+        for(DevelopmentReport deRE: devRepDir.getDevRepDir()){
+            if (deRE.getReportID().equals(reportNumber)){
+                devR = deRE;            
+            }
+        }        
+        
+        if (devR != null){
+            addToDistAndDos(RR, devR);
+        }
+        else if (RR != null){
+            addToDisAndDev(RR);
+        }
+        
+    }
     
     private void submitButtonRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonRActionPerformed
         Employee emp = empDir.addEmployee();
@@ -1664,7 +2274,25 @@ public class drugLifeCycle extends javax.swing.JFrame {
     }//GEN-LAST:event_registerButtonActionPerformed
 
     private void ViewReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewReportActionPerformed
-
+        if(jTable1.getSelectedRow() != -1){
+            cardPrevious = ResearchScientistHome;
+            String ID = jTable1.getValueAt(0, 0).toString();
+            viewReportAll(ID);
+            ResearchReport rr = new ResearchReport();
+            for (ResearchReport rr1: repDir.getResearchReportdsDir()){
+                if (rr1.getReportID().equals(ID)){
+                    rr = rr1;                    
+                }
+            }
+            IDleadAssign.setText(rr.getReportID());
+            NameleadAssign.setText(rr.getDrugName());
+            targetleadAssign.setText(rr.getDiseaseTarget());
+            dateleadAssign.setText(rr.getDate().toString());
+            jTextArea4.setText(rr.getDrugNotes());
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "Please select a report to view.");
+        }
     }//GEN-LAST:event_ViewReportActionPerformed
 
     private void AddReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddReportActionPerformed
@@ -1672,7 +2300,14 @@ public class drugLifeCycle extends javax.swing.JFrame {
     }//GEN-LAST:event_AddReportActionPerformed
 
     private void viewReportResearchLeadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewReportResearchLeadActionPerformed
-
+        if (jTable2.getSelectedRow() != -1){
+            String ID = jTable2.getValueAt(jTable2.getSelectedRow(), 0).toString();
+            viewReportAll(ID);
+            cardPrevious = ResearchLeadHome;
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "Please select a report to view.");
+        }
     }//GEN-LAST:event_viewReportResearchLeadActionPerformed
 
     private void researchLeadApprovalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_researchLeadApprovalActionPerformed
@@ -1790,7 +2425,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         if (jTable3.getSelectedRow() != -1){
             String ID = jTable3.getValueAt(jTable3.getSelectedRow(), 0).toString();
-            //some view report method.
+            viewReportAll(ID);
             cardPrevious = ManufacturingAnalystHome;
         }
         else{
@@ -1828,6 +2463,74 @@ public class drugLifeCycle extends javax.swing.JFrame {
         SplitPanelPain(ManufacturingAnalystHome);
 
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void viewReportBackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewReportBackButtonActionPerformed
+        SplitPanelPain(cardPrevious);
+    }//GEN-LAST:event_viewReportBackButtonActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7ActionPerformed
+
+    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField12ActionPerformed
+
+    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField13ActionPerformed
+
+    private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField15ActionPerformed
+
+    private void jTextField16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField16ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField16ActionPerformed
+
+    private void jTextField18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField18ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField18ActionPerformed
+
+    private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField17ActionPerformed
+
+    private void jTextField19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField19ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField19ActionPerformed
+
+    private void jTextField20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField20ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField20ActionPerformed
+
+    private void jTextField23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField23ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField23ActionPerformed
+
+    private void jTextField24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField24ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField24ActionPerformed
+
+    private void jTextField25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField25ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField25ActionPerformed
+
+    private void jTextField26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField26ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField26ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1870,6 +2573,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JButton AssignToDevDecsion;
     private javax.swing.JButton CancelAssigning;
     private com.toedter.calendar.JDateChooser DateofBirthChooser1;
+    private javax.swing.JPanel DiscoveryDevelopment;
     private javax.swing.JLabel IDleadAssign;
     private javax.swing.JPanel Login;
     private javax.swing.JPanel ManufacturingAnalystHome;
@@ -1893,6 +2597,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JTabbedPane ResearchScientistReport;
     private javax.swing.JTextField ResearchScientistReportPage2ChemicalTextField;
     private javax.swing.JTextField ResearchScientistReportPage2Quantity;
+    private javax.swing.JPanel ResearchScientistViewReport;
     private javax.swing.JButton TabbedPaneNext1;
     private javax.swing.JButton TabbedPaneNext2;
     private javax.swing.JLabel Title;
@@ -1937,7 +2642,9 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox4;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1955,47 +2662,103 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList1;
     private javax.swing.JList<String> jList2;
+    private javax.swing.JList<String> jList3;
     private javax.swing.JList<String> jList4;
+    private javax.swing.JList<String> jList5;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
+    private javax.swing.JScrollPane jScrollPane13;
+    private javax.swing.JScrollPane jScrollPane14;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSplitPane jSplitPane1;
+    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
+    private javax.swing.JTextArea jTextArea5;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField15;
+    private javax.swing.JTextField jTextField16;
+    private javax.swing.JTextField jTextField17;
+    private javax.swing.JTextField jTextField18;
+    private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField20;
+    private javax.swing.JTextField jTextField23;
+    private javax.swing.JTextField jTextField24;
+    private javax.swing.JTextField jTextField25;
+    private javax.swing.JTextField jTextField26;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField lastnameTextField1;
     private javax.swing.JPanel leftComponent;
     private javax.swing.JButton loginButton;
@@ -2026,6 +2789,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JLabel usernameLabelR;
     private javax.swing.JTextField usernameTextField1;
     private javax.swing.JTextField usernameTextFieldR;
+    private javax.swing.JButton viewReportBackButton;
     private javax.swing.JButton viewReportResearchLead;
     private javax.swing.JLabel zipCodeLabelR;
     private javax.swing.JTextField zipcodeTextField1;
