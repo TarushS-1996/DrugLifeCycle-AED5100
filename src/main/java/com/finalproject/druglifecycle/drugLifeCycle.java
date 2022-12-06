@@ -4,6 +4,8 @@
  */
 package com.finalproject.druglifecycle;
 
+import com.finalproject.backend.DevelopmentReport;
+import com.finalproject.backend.DevelopmentReportDir;
 import com.finalproject.backend.Employee;
 import com.finalproject.backend.EmployeeDirectory;
 import com.finalproject.backend.ResearchReport;
@@ -29,7 +31,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     public static String gender;
     EmployeeDirectory empDir = new EmployeeDirectory();
     ResearchReportDirectory repDir = new ResearchReportDirectory();
-
+    DevelopmentReportDir devRepDir = new DevelopmentReportDir();
     
     public static DefaultListModel listOfComposition = new DefaultListModel();
     public static DefaultListModel listOfDosage = new DefaultListModel();
@@ -187,6 +189,31 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jLabel22 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
         jList2 = new javax.swing.JList<>();
+        ManufacturingAnalystHome = new javax.swing.JPanel();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        AddManufacturingDetails = new javax.swing.JPanel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        jList4 = new javax.swing.JList<>();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel38 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel39 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -1233,6 +1260,188 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         leftComponent.add(ResearchScientistReport, "card7");
 
+        ManufacturingAnalystHome.setBackground(new java.awt.Color(255, 255, 255));
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Report ID", "Drug name", "Date", "Disease target", "Report to"
+            }
+        ));
+        jScrollPane11.setViewportView(jTable3);
+
+        jButton1.setText("Add manufacturing details");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("View report");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout ManufacturingAnalystHomeLayout = new javax.swing.GroupLayout(ManufacturingAnalystHome);
+        ManufacturingAnalystHome.setLayout(ManufacturingAnalystHomeLayout);
+        ManufacturingAnalystHomeLayout.setHorizontalGroup(
+            ManufacturingAnalystHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ManufacturingAnalystHomeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ManufacturingAnalystHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 944, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ManufacturingAnalystHomeLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1)))
+                .addContainerGap())
+        );
+        ManufacturingAnalystHomeLayout.setVerticalGroup(
+            ManufacturingAnalystHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ManufacturingAnalystHomeLayout.createSequentialGroup()
+                .addGap(96, 96, 96)
+                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53)
+                .addGroup(ManufacturingAnalystHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addContainerGap(64, Short.MAX_VALUE))
+        );
+
+        leftComponent.add(ManufacturingAnalystHome, "card8");
+
+        AddManufacturingDetails.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel25.setText("Report ID:");
+
+        jLabel26.setText("Research by:");
+
+        jLabel28.setText("Report lead:");
+
+        jLabel29.setText("Distribution:");
+
+        jLabel30.setText("Dosage:");
+
+        jScrollPane12.setViewportView(jList4);
+
+        jLabel38.setText("Age");
+
+        jLabel39.setText("Quantity");
+
+        jButton3.setText("Add");
+        jButton3.setToolTipText("");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("Delete");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        jButton5.setText("Add details");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        jButton6.setText("Cancel");
+
+        jLabel40.setText("jLabel40");
+
+        jLabel41.setText("jLabel41");
+
+        jLabel42.setText("jLabel42");
+
+        javax.swing.GroupLayout AddManufacturingDetailsLayout = new javax.swing.GroupLayout(AddManufacturingDetails);
+        AddManufacturingDetails.setLayout(AddManufacturingDetailsLayout);
+        AddManufacturingDetailsLayout.setHorizontalGroup(
+            AddManufacturingDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AddManufacturingDetailsLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addGroup(AddManufacturingDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel25)
+                    .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(AddManufacturingDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(AddManufacturingDetailsLayout.createSequentialGroup()
+                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel38)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel39)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton4))
+                    .addGroup(AddManufacturingDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jLabel42, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel41, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel40, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane12, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)))
+                .addContainerGap(411, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddManufacturingDetailsLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton6)
+                .addGap(18, 18, 18)
+                .addComponent(jButton5)
+                .addContainerGap())
+        );
+        AddManufacturingDetailsLayout.setVerticalGroup(
+            AddManufacturingDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AddManufacturingDetailsLayout.createSequentialGroup()
+                .addGap(89, 89, 89)
+                .addGroup(AddManufacturingDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel25)
+                    .addComponent(jLabel40))
+                .addGap(18, 18, 18)
+                .addGroup(AddManufacturingDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(jLabel41))
+                .addGap(18, 18, 18)
+                .addGroup(AddManufacturingDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel28)
+                    .addComponent(jLabel42))
+                .addGap(18, 18, 18)
+                .addGroup(AddManufacturingDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel29)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(AddManufacturingDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel30)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel38)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel39)
+                    .addComponent(jButton3)
+                    .addComponent(jButton4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 217, Short.MAX_VALUE)
+                .addGroup(AddManufacturingDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton5)
+                    .addComponent(jButton6))
+                .addGap(23, 23, 23))
+        );
+
+        leftComponent.add(AddManufacturingDetails, "card10");
+
         jSplitPane1.setRightComponent(leftComponent);
 
         javax.swing.GroupLayout WorkspaceLayout = new javax.swing.GroupLayout(Workspace);
@@ -1561,6 +1770,65 @@ public class drugLifeCycle extends javax.swing.JFrame {
         summaryResearchReport();
     }//GEN-LAST:event_ResearchScientistReportMouseClicked
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        SplitPanelPain(AddManufacturingDetails);
+        if(jTable3.getSelectedRow() != -1){
+            DevelopmentReport Devrep = new DevelopmentReport();
+            String ID =  jTable3.getValueAt(jTable3.getSelectedRow(), 0).toString();
+            for (DevelopmentReport devRep: devRepDir.getDevRepDir()){
+                if (devRep.getReportID().equals(ID)){
+                    Devrep = devRep;
+                }
+            }
+            jLabel40.setText(Devrep.getReportID());
+            jLabel41.setText(Devrep.getResearchBy());
+            jLabel42.setText(Devrep.getReportTo());
+
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        if (jTable3.getSelectedRow() != -1){
+            String ID = jTable3.getValueAt(jTable3.getSelectedRow(), 0).toString();
+            //some view report method.
+            cardPrevious = ManufacturingAnalystHome;
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "Please select a report to view.");
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        listOfDosage.addElement("For age: "+jTextField3.getText() + ", Quantity: "+jTextField4.getText() + " ml/gm");
+        jList4.setModel(listOfDosage);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        int row = jList4.getSelectedIndex();
+        if (row != -1){
+            listOfDosage.removeElementAt(row);
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        DevelopmentReport devrep = new DevelopmentReport();
+        String ID = jLabel40.getText();
+        for(DevelopmentReport dr: devRepDir.getDevRepDir()){
+            if (dr.getReportID().equals(ID)){
+                devrep = dr;
+            }
+        }
+        devrep.setDistribution(jTextField2.getText());
+        ArrayList<String> temp = new ArrayList<>();
+        for (int i = 0; i<jList4.getModel().getSize(); i++){
+            temp.add(jList4.getModel().getElementAt(i));
+        }
+        devrep.setDosage(temp);
+        devrep.setStatus("Approved for clinical");
+        SplitPanelPain(ManufacturingAnalystHome);
+
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1597,12 +1865,14 @@ public class drugLifeCycle extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel AddManufacturingDetails;
     private javax.swing.JButton AddReport;
     private javax.swing.JButton AssignToDevDecsion;
     private javax.swing.JButton CancelAssigning;
     private com.toedter.calendar.JDateChooser DateofBirthChooser1;
     private javax.swing.JLabel IDleadAssign;
     private javax.swing.JPanel Login;
+    private javax.swing.JPanel ManufacturingAnalystHome;
     private javax.swing.JLabel NameleadAssign;
     private javax.swing.JPanel Parent;
     private javax.swing.JPanel Registration;
@@ -1660,6 +1930,12 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JLabel firstLoginOrganizationTitleLabel;
     private javax.swing.JTextField firstnameTextField1;
     private javax.swing.JLabel genderLabelR;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox3;
     private com.toedter.calendar.JDateChooser jDateChooser1;
@@ -1679,8 +1955,18 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1688,9 +1974,12 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList1;
     private javax.swing.JList<String> jList2;
+    private javax.swing.JList<String> jList4;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
+    private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -1700,9 +1989,13 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea4;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField lastnameTextField1;
     private javax.swing.JPanel leftComponent;
     private javax.swing.JButton loginButton;
