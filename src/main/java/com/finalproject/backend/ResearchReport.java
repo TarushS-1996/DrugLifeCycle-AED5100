@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  *
- * @author tarush
+ * @author ramit
  */
 public class ResearchReport extends Employee{
     private String reportID;
