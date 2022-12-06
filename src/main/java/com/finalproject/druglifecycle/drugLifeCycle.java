@@ -318,6 +318,28 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jTextArea6 = new javax.swing.JTextArea();
         jScrollPane19 = new javax.swing.JScrollPane();
         jTextArea7 = new javax.swing.JTextArea();
+        RegulatoryHealthManager = new javax.swing.JPanel();
+        jLabel68 = new javax.swing.JLabel();
+        jScrollPane20 = new javax.swing.JScrollPane();
+        jTable6 = new javax.swing.JTable();
+        ViewReport3 = new javax.swing.JButton();
+        AddReport1 = new javax.swing.JButton();
+        MedicalOfficerHome = new javax.swing.JPanel();
+        jLabel69 = new javax.swing.JLabel();
+        jScrollPane21 = new javax.swing.JScrollPane();
+        jTable7 = new javax.swing.JTable();
+        ViewReport4 = new javax.swing.JButton();
+        AddReport2 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        AddToxicologyReport = new javax.swing.JPanel();
+        RepNotes1 = new javax.swing.JLabel();
+        RepPushToDev1 = new javax.swing.JLabel();
+        jScrollPane22 = new javax.swing.JScrollPane();
+        jTextArea8 = new javax.swing.JTextArea();
+        jComboBox6 = new javax.swing.JComboBox<>();
+        AssignToDevDecsion1 = new javax.swing.JButton();
+        CancelAssigning1 = new javax.swing.JButton();
+        jLabel70 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -2272,6 +2294,220 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         leftComponent.add(CreateTrail, "card8");
 
+        RegulatoryHealthManager.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel68.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel68.setText("Welcome  Regulatory Health Manager");
+
+        jTable6.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Report ID", "Drug name", "Date", "Disease target", "Report to"
+            }
+        ));
+        jScrollPane20.setViewportView(jTable6);
+
+        ViewReport3.setText("View Report");
+        ViewReport3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ViewReport3ActionPerformed(evt);
+            }
+        });
+
+        AddReport1.setText("Add Toxicology Report");
+        AddReport1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddReport1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout RegulatoryHealthManagerLayout = new javax.swing.GroupLayout(RegulatoryHealthManager);
+        RegulatoryHealthManager.setLayout(RegulatoryHealthManagerLayout);
+        RegulatoryHealthManagerLayout.setHorizontalGroup(
+            RegulatoryHealthManagerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RegulatoryHealthManagerLayout.createSequentialGroup()
+                .addGap(322, 322, 322)
+                .addComponent(jLabel68)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RegulatoryHealthManagerLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(RegulatoryHealthManagerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 839, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(RegulatoryHealthManagerLayout.createSequentialGroup()
+                        .addComponent(ViewReport3)
+                        .addGap(18, 18, 18)
+                        .addComponent(AddReport1)))
+                .addGap(29, 29, 29))
+        );
+        RegulatoryHealthManagerLayout.setVerticalGroup(
+            RegulatoryHealthManagerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RegulatoryHealthManagerLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel68)
+                .addGap(44, 44, 44)
+                .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addGroup(RegulatoryHealthManagerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ViewReport3)
+                    .addComponent(AddReport1))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        leftComponent.add(RegulatoryHealthManager, "card4");
+
+        MedicalOfficerHome.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel69.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel69.setText("Welcome Medical Officer");
+
+        jTable7.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Report ID", "Drug name", "Date", "Disease target", "Report to", "Final Status"
+            }
+        ));
+        jScrollPane21.setViewportView(jTable7);
+
+        ViewReport4.setText("View Report");
+        ViewReport4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ViewReport4ActionPerformed(evt);
+            }
+        });
+
+        AddReport2.setText("Approve");
+        AddReport2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddReport2ActionPerformed(evt);
+            }
+        });
+
+        jButton7.setText("Reject");
+
+        javax.swing.GroupLayout MedicalOfficerHomeLayout = new javax.swing.GroupLayout(MedicalOfficerHome);
+        MedicalOfficerHome.setLayout(MedicalOfficerHomeLayout);
+        MedicalOfficerHomeLayout.setHorizontalGroup(
+            MedicalOfficerHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MedicalOfficerHomeLayout.createSequentialGroup()
+                .addContainerGap(646, Short.MAX_VALUE)
+                .addComponent(ViewReport4)
+                .addGap(33, 33, 33)
+                .addComponent(AddReport2)
+                .addGap(18, 18, 18)
+                .addComponent(jButton7)
+                .addGap(33, 33, 33))
+            .addGroup(MedicalOfficerHomeLayout.createSequentialGroup()
+                .addGroup(MedicalOfficerHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MedicalOfficerHomeLayout.createSequentialGroup()
+                        .addGap(322, 322, 322)
+                        .addComponent(jLabel69))
+                    .addGroup(MedicalOfficerHomeLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane21, javax.swing.GroupLayout.PREFERRED_SIZE, 839, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        MedicalOfficerHomeLayout.setVerticalGroup(
+            MedicalOfficerHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MedicalOfficerHomeLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel69)
+                .addGap(40, 40, 40)
+                .addComponent(jScrollPane21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
+                .addGroup(MedicalOfficerHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ViewReport4)
+                    .addComponent(AddReport2)
+                    .addComponent(jButton7))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        leftComponent.add(MedicalOfficerHome, "card4");
+
+        AddToxicologyReport.setBackground(new java.awt.Color(255, 255, 255));
+
+        RepNotes1.setFont(new java.awt.Font("Liberation Sans", 0, 14)); // NOI18N
+        RepNotes1.setText("Toxins found:");
+
+        RepPushToDev1.setFont(new java.awt.Font("Liberation Sans", 0, 14)); // NOI18N
+        RepPushToDev1.setText("Assign to Medical Officer:");
+
+        jTextArea8.setColumns(20);
+        jTextArea8.setRows(5);
+        jScrollPane22.setViewportView(jTextArea8);
+
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "None" }));
+        jComboBox6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox6ActionPerformed(evt);
+            }
+        });
+
+        AssignToDevDecsion1.setText("Submit");
+        AssignToDevDecsion1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AssignToDevDecsion1ActionPerformed(evt);
+            }
+        });
+
+        CancelAssigning1.setText("Cancel");
+        CancelAssigning1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CancelAssigning1ActionPerformed(evt);
+            }
+        });
+
+        jLabel70.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel70.setText("Add Toxicology Report");
+
+        javax.swing.GroupLayout AddToxicologyReportLayout = new javax.swing.GroupLayout(AddToxicologyReport);
+        AddToxicologyReport.setLayout(AddToxicologyReportLayout);
+        AddToxicologyReportLayout.setHorizontalGroup(
+            AddToxicologyReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AddToxicologyReportLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(AddToxicologyReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel70)
+                    .addGroup(AddToxicologyReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(AddToxicologyReportLayout.createSequentialGroup()
+                            .addComponent(CancelAssigning1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(AssignToDevDecsion1))
+                        .addGroup(AddToxicologyReportLayout.createSequentialGroup()
+                            .addGroup(AddToxicologyReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(RepNotes1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(RepPushToDev1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(AddToxicologyReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jScrollPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 741, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        AddToxicologyReportLayout.setVerticalGroup(
+            AddToxicologyReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AddToxicologyReportLayout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(jLabel70)
+                .addGap(31, 31, 31)
+                .addGroup(AddToxicologyReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(RepNotes1)
+                    .addComponent(jScrollPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 306, Short.MAX_VALUE)
+                .addGroup(AddToxicologyReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(RepPushToDev1)
+                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(59, 59, 59)
+                .addGroup(AddToxicologyReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AssignToDevDecsion1)
+                    .addComponent(CancelAssigning1))
+                .addGap(27, 27, 27))
+        );
+
+        leftComponent.add(AddToxicologyReport, "card9");
+
         jSplitPane1.setRightComponent(leftComponent);
 
         javax.swing.GroupLayout WorkspaceLayout = new javax.swing.GroupLayout(Workspace);
@@ -2956,6 +3192,70 @@ public class drugLifeCycle extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_usernameTextFieldR5ActionPerformed
 
+    private void ViewReport3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewReport3ActionPerformed
+        if(jTable1.getSelectedRow() != -1){
+            cardPrevious = RegulatoryHealthManager;
+            String ID = jTable1.getValueAt(0, 0).toString();
+            viewReportAll(ID);
+            ResearchReport rr = new ResearchReport();
+            for (ResearchReport rr1: repDir.getResearchReportdsDir()){
+                if (rr1.getReportID().equals(ID)){
+                    rr = rr1;
+                }
+            }
+            IDleadAssign.setText(rr.getReportID());
+            NameleadAssign.setText(rr.getDrugName());
+            targetleadAssign.setText(rr.getDiseaseTarget());
+            dateleadAssign.setText(rr.getDate().toString());
+            jTextArea4.setText(rr.getDrugNotes());
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "Please select a report to view.");
+        }
+    }//GEN-LAST:event_ViewReport3ActionPerformed
+
+    private void AddReport1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddReport1ActionPerformed
+        SplitPanelPainReports(ResearchScientistReport);
+    }//GEN-LAST:event_AddReport1ActionPerformed
+
+    private void ViewReport4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewReport4ActionPerformed
+        if(jTable1.getSelectedRow() != -1){
+            cardPrevious = RegulatoryHealthManager;
+            String ID = jTable1.getValueAt(0, 0).toString();
+            viewReportAll(ID);
+            ResearchReport rr = new ResearchReport();
+            for (ResearchReport rr1: repDir.getResearchReportdsDir()){
+                if (rr1.getReportID().equals(ID)){
+                    rr = rr1;
+                }
+            }
+            IDleadAssign.setText(rr.getReportID());
+            NameleadAssign.setText(rr.getDrugName());
+            targetleadAssign.setText(rr.getDiseaseTarget());
+            dateleadAssign.setText(rr.getDate().toString());
+            jTextArea4.setText(rr.getDrugNotes());
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "Please select a report to view.");
+        }
+    }//GEN-LAST:event_ViewReport4ActionPerformed
+
+    private void AddReport2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddReport2ActionPerformed
+        SplitPanelPainReports(ResearchScientistReport);
+    }//GEN-LAST:event_AddReport2ActionPerformed
+
+    private void jComboBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox6ActionPerformed
+
+    private void AssignToDevDecsion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignToDevDecsion1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AssignToDevDecsion1ActionPerformed
+
+    private void CancelAssigning1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelAssigning1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CancelAssigning1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2994,8 +3294,13 @@ public class drugLifeCycle extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AddManufacturingDetails;
     private javax.swing.JButton AddReport;
+    private javax.swing.JButton AddReport1;
+    private javax.swing.JButton AddReport2;
+    private javax.swing.JPanel AddToxicologyReport;
     private javax.swing.JButton AssignToDevDecsion;
+    private javax.swing.JButton AssignToDevDecsion1;
     private javax.swing.JButton CancelAssigning;
+    private javax.swing.JButton CancelAssigning1;
     private javax.swing.JPanel ClinicalResearchers;
     private javax.swing.JPanel CreateTrail;
     private com.toedter.calendar.JDateChooser DateofBirthChooser1;
@@ -3004,14 +3309,18 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JLabel IDleadAssign;
     private javax.swing.JPanel Login;
     private javax.swing.JPanel ManufacturingAnalystHome;
+    private javax.swing.JPanel MedicalOfficerHome;
     private javax.swing.JLabel NameleadAssign;
     private javax.swing.JPanel Parent;
     private javax.swing.JPanel Registration;
+    private javax.swing.JPanel RegulatoryHealthManager;
     private javax.swing.JLabel RepBy;
     private javax.swing.JLabel RepID;
     private javax.swing.JLabel RepName;
     private javax.swing.JLabel RepNotes;
+    private javax.swing.JLabel RepNotes1;
     private javax.swing.JLabel RepPushToDev;
+    private javax.swing.JLabel RepPushToDev1;
     private javax.swing.JLabel RepTarget;
     private javax.swing.JPanel ResearchLeadApproval;
     private javax.swing.JPanel ResearchLeadHome;
@@ -3031,6 +3340,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JButton ViewReport;
     private javax.swing.JButton ViewReport1;
     private javax.swing.JButton ViewReport2;
+    private javax.swing.JButton ViewReport3;
+    private javax.swing.JButton ViewReport4;
     private javax.swing.JPanel Workspace;
     private javax.swing.JButton addChemicalComposition;
     private javax.swing.JButton addEnterpriseButton;
@@ -3072,11 +3383,13 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
+    private javax.swing.JComboBox<String> jComboBox6;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -3142,7 +3455,10 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList1;
@@ -3168,6 +3484,9 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane18;
     private javax.swing.JScrollPane jScrollPane19;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane20;
+    private javax.swing.JScrollPane jScrollPane21;
+    private javax.swing.JScrollPane jScrollPane22;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
@@ -3183,6 +3502,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable4;
     private javax.swing.JTable jTable5;
+    private javax.swing.JTable jTable6;
+    private javax.swing.JTable jTable7;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
@@ -3190,6 +3511,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea5;
     private javax.swing.JTextArea jTextArea6;
     private javax.swing.JTextArea jTextArea7;
+    private javax.swing.JTextArea jTextArea8;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;

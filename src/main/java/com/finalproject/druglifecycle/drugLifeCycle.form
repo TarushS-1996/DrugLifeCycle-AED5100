@@ -3467,6 +3467,364 @@
                         </Container>
                       </SubComponents>
                     </Container>
+                    <Container class="javax.swing.JPanel" name="RegulatoryHealthManager">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                          <CardConstraints cardName="card4"/>
+                        </Constraint>
+                      </Constraints>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="322" max="-2" attributes="0"/>
+                                  <Component id="jLabel68" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="jScrollPane20" alignment="1" min="-2" pref="839" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="ViewReport3" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="AddReport1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="jLabel68" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane20" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="ViewReport3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="AddReport1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JLabel" name="jLabel68">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Liberation Sans" size="18" style="1"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" value="Welcome  Regulatory Health Manager"/>
+                          </Properties>
+                        </Component>
+                        <Container class="javax.swing.JScrollPane" name="jScrollPane20">
+                          <AuxValues>
+                            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                          </AuxValues>
+
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                          <SubComponents>
+                            <Component class="javax.swing.JTable" name="jTable6">
+                              <Properties>
+                                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                                  <Table columnCount="5" rowCount="0">
+                                    <Column editable="true" title="Report ID" type="java.lang.Object"/>
+                                    <Column editable="true" title="Drug name" type="java.lang.Object"/>
+                                    <Column editable="true" title="Date" type="java.lang.Object"/>
+                                    <Column editable="true" title="Disease target" type="java.lang.Object"/>
+                                    <Column editable="true" title="Report to" type="java.lang.Object"/>
+                                  </Table>
+                                </Property>
+                                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                          </SubComponents>
+                        </Container>
+                        <Component class="javax.swing.JButton" name="ViewReport3">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="View Report"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ViewReport3ActionPerformed"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="AddReport1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Add Toxicology Report"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AddReport1ActionPerformed"/>
+                          </Events>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                    <Container class="javax.swing.JPanel" name="MedicalOfficerHome">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                          <CardConstraints cardName="card4"/>
+                        </Constraint>
+                      </Constraints>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace pref="646" max="32767" attributes="0"/>
+                                  <Component id="ViewReport4" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                  <Component id="AddReport2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jButton7" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="322" max="-2" attributes="0"/>
+                                          <Component id="jLabel69" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jScrollPane21" min="-2" pref="839" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="jLabel69" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane21" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="ViewReport4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="AddReport2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButton7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JLabel" name="jLabel69">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Liberation Sans" size="18" style="1"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" value="Welcome Medical Officer"/>
+                          </Properties>
+                        </Component>
+                        <Container class="javax.swing.JScrollPane" name="jScrollPane21">
+                          <AuxValues>
+                            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                          </AuxValues>
+
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                          <SubComponents>
+                            <Component class="javax.swing.JTable" name="jTable7">
+                              <Properties>
+                                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                                  <Table columnCount="6" rowCount="0">
+                                    <Column editable="true" title="Report ID" type="java.lang.Object"/>
+                                    <Column editable="true" title="Drug name" type="java.lang.Object"/>
+                                    <Column editable="true" title="Date" type="java.lang.Object"/>
+                                    <Column editable="true" title="Disease target" type="java.lang.Object"/>
+                                    <Column editable="true" title="Report to" type="java.lang.Object"/>
+                                    <Column editable="true" title="Final Status" type="java.lang.Object"/>
+                                  </Table>
+                                </Property>
+                                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                          </SubComponents>
+                        </Container>
+                        <Component class="javax.swing.JButton" name="ViewReport4">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="View Report"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ViewReport4ActionPerformed"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="AddReport2">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Approve"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AddReport2ActionPerformed"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="jButton7">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Reject"/>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                    <Container class="javax.swing.JPanel" name="AddToxicologyReport">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                          <CardConstraints cardName="card9"/>
+                        </Constraint>
+                      </Constraints>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel70" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="CancelAssigning1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="AssignToDevDecsion1" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                  <Component id="RepNotes1" alignment="1" max="32767" attributes="0"/>
+                                                  <Component id="RepPushToDev1" alignment="1" max="32767" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jComboBox6" alignment="0" min="-2" pref="234" max="-2" attributes="0"/>
+                                                  <Component id="jScrollPane22" alignment="0" min="-2" pref="741" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                                  <Component id="jLabel70" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="RepNotes1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane22" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace pref="306" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="RepPushToDev1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBox6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="AssignToDevDecsion1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="CancelAssigning1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JLabel" name="RepNotes1">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Liberation Sans" size="14" style="0"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" value="Toxins found:"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="RepPushToDev1">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Liberation Sans" size="14" style="0"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" value="Assign to Medical Officer:"/>
+                          </Properties>
+                        </Component>
+                        <Container class="javax.swing.JScrollPane" name="jScrollPane22">
+                          <AuxValues>
+                            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                          </AuxValues>
+
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                          <SubComponents>
+                            <Component class="javax.swing.JTextArea" name="jTextArea8">
+                              <Properties>
+                                <Property name="columns" type="int" value="20"/>
+                                <Property name="rows" type="int" value="5"/>
+                              </Properties>
+                            </Component>
+                          </SubComponents>
+                        </Container>
+                        <Component class="javax.swing.JComboBox" name="jComboBox6">
+                          <Properties>
+                            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                              <StringArray count="1">
+                                <StringItem index="0" value="None"/>
+                              </StringArray>
+                            </Property>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox6ActionPerformed"/>
+                          </Events>
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                          </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="AssignToDevDecsion1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Submit"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AssignToDevDecsion1ActionPerformed"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="CancelAssigning1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Cancel"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CancelAssigning1ActionPerformed"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel70">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Liberation Sans" size="18" style="1"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" value="Add Toxicology Report"/>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
                   </SubComponents>
                 </Container>
               </SubComponents>
