@@ -236,7 +236,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(loginButton))
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(437, Short.MAX_VALUE))
+                .addContainerGap(451, Short.MAX_VALUE))
         );
         LoginLayout.setVerticalGroup(
             LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -377,7 +377,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RegistrationLayout.createSequentialGroup()
                         .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(numberLabelR, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                            .addComponent(numberLabelR, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
                             .addComponent(addressLabelR, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(zipCodeLabelR, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -598,7 +598,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                             .addComponent(firstLoginEnterpriseTypeComboBox, 0, 200, Short.MAX_VALUE)
                             .addComponent(firstLoginEnterpriseMyRoleTextField)
                             .addComponent(firstLoginEnterpriseMyOrganizationTextField))))
-                .addContainerGap(382, Short.MAX_VALUE))
+                .addContainerGap(396, Short.MAX_VALUE))
         );
         firstLoginEnterpriseLayout.setVerticalGroup(
             firstLoginEnterpriseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -663,7 +663,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                             .addComponent(firstLoginOrganizationAddButton)
                             .addComponent(firstLoginOrganizationNameTextField)
                             .addComponent(firstLoginOrganizationRoleTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE))))
-                .addContainerGap(388, Short.MAX_VALUE))
+                .addContainerGap(402, Short.MAX_VALUE))
         );
         firstLoginOrganizationLayout.setVerticalGroup(
             firstLoginOrganizationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -685,8 +685,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
         );
 
         leftComponent.add(firstLoginOrganization, "card3");
-
-        jSplitPane1.setRightComponent(leftComponent);
 
         ResearchScientistHome.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -749,6 +747,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 .addContainerGap(94, Short.MAX_VALUE))
         );
 
+        leftComponent.add(ResearchScientistHome, "card4");
+
         ResearchLeadHome.setBackground(new java.awt.Color(255, 255, 255));
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
@@ -800,6 +800,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
                     .addComponent(researchLeadApproval))
                 .addContainerGap(59, Short.MAX_VALUE))
         );
+
+        leftComponent.add(ResearchLeadHome, "card5");
 
         ResearchLeadApproval.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -916,6 +918,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
                     .addComponent(CancelAssigning))
                 .addGap(27, 27, 27))
         );
+
+        leftComponent.add(ResearchLeadApproval, "card6");
 
         ResearchScientistReport.setBackground(new java.awt.Color(255, 255, 255));
         ResearchScientistReport.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1227,55 +1231,19 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         ResearchScientistReport.addTab("Summary", page3);
 
+        leftComponent.add(ResearchScientistReport, "card7");
+
+        jSplitPane1.setRightComponent(leftComponent);
+
         javax.swing.GroupLayout WorkspaceLayout = new javax.swing.GroupLayout(Workspace);
         Workspace.setLayout(WorkspaceLayout);
         WorkspaceLayout.setHorizontalGroup(
             WorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSplitPane1)
-            .addGroup(WorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(WorkspaceLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(ResearchScientistHome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(WorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(WorkspaceLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(ResearchLeadHome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(WorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(WorkspaceLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(ResearchLeadApproval, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(WorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(WorkspaceLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(ResearchScientistReport, javax.swing.GroupLayout.PREFERRED_SIZE, 956, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         WorkspaceLayout.setVerticalGroup(
             WorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSplitPane1)
-            .addGroup(WorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(WorkspaceLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(ResearchScientistHome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(WorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(WorkspaceLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(ResearchLeadHome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(WorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(WorkspaceLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(ResearchLeadApproval, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(WorkspaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(WorkspaceLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(ResearchScientistReport, javax.swing.GroupLayout.PREFERRED_SIZE, 663, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         Parent.add(Workspace, "card4");
