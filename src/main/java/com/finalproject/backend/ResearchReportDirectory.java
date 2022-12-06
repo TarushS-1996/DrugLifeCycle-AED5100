@@ -9,7 +9,7 @@ import com.finalproject.backend.Employee;
 
 /**
  *
- * @author tarush
+ * @author ramit
  */
 public class ResearchReportDirectory {
     private ArrayList<ResearchReport> researchReportdsDir = new ArrayList<>();
