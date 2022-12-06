@@ -79,7 +79,7 @@
                           </Group>
                           <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="451" max="32767" attributes="0"/>
+                      <EmptySpace pref="513" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -103,7 +103,7 @@
                           <Component id="loginButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="registerButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="362" max="32767" attributes="0"/>
+                      <EmptySpace pref="444" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -299,7 +299,7 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="passwordLabelR" alignment="0" pref="35" max="32767" attributes="0"/>
+                          <Component id="passwordLabelR" alignment="0" pref="210" max="32767" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                               <Component id="usernameLabelR" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="usernameTextFieldR" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -641,9 +641,9 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="608" max="32767" attributes="0"/>
+                              <EmptySpace pref="679" max="32767" attributes="0"/>
                               <Component id="logoutButton1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -717,7 +717,7 @@
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="394" max="32767" attributes="0"/>
+                                  <EmptySpace pref="479" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -748,7 +748,7 @@
                                   </Group>
                                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                   <Component id="addEnterpriseButton" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="389" max="32767" attributes="0"/>
+                                  <EmptySpace pref="511" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -856,7 +856,7 @@
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="400" max="32767" attributes="0"/>
+                                  <EmptySpace pref="469" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -879,7 +879,7 @@
                                       <Component id="firstLoginOrganizationRoleTextField1" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="firstLoginOrganizationAddButton" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="505" max="32767" attributes="0"/>
+                                  <EmptySpace pref="627" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -936,7 +936,7 @@
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="86" max="32767" attributes="0"/>
+                                  <EmptySpace pref="171" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Component id="jScrollPane2" alignment="1" min="-2" pref="839" max="-2" attributes="0"/>
                                       <Group type="102" alignment="1" attributes="0">
@@ -961,7 +961,7 @@
                                       <Component id="ViewReport" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="AddReport" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="82" max="32767" attributes="0"/>
+                                  <EmptySpace pref="207" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1034,7 +1034,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace pref="35" max="32767" attributes="0"/>
+                                  <EmptySpace pref="120" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Component id="jScrollPane6" alignment="1" min="-2" pref="889" max="-2" attributes="0"/>
                                       <Group type="102" alignment="1" attributes="0">
@@ -1057,7 +1057,7 @@
                                       <Component id="viewReportResearchLead" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="researchLeadApproval" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="47" max="32767" attributes="0"/>
+                                  <EmptySpace pref="172" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1140,7 +1140,7 @@
                                       <Component id="jScrollPane10" alignment="0" max="32767" attributes="0"/>
                                       <Component id="jComboBox3" alignment="0" max="32767" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="548" max="32767" attributes="0"/>
+                                  <EmptySpace pref="607" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace max="32767" attributes="0"/>
@@ -1184,7 +1184,7 @@
                                       <Component id="RepPushToDev" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jComboBox3" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="227" max="32767" attributes="0"/>
+                                  <EmptySpace pref="350" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="AssignToDevDecsion" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="CancelAssigning" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1373,7 +1373,7 @@
                                           <Component id="ResearchReportPage1ResearchBy" alignment="0" max="32767" attributes="0"/>
                                           <Component id="jDateChooser1" alignment="0" max="32767" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="499" max="32767" attributes="0"/>
+                                      <EmptySpace pref="584" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1410,7 +1410,7 @@
                                           <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="179" max="32767" attributes="0"/>
+                                      <EmptySpace pref="300" max="32767" attributes="0"/>
                                       <Component id="TabbedPaneNext1" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                                   </Group>
@@ -1533,7 +1533,7 @@
                                               <Component id="deleteChemicalComposition" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace pref="234" max="32767" attributes="0"/>
+                                      <EmptySpace pref="310" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1551,7 +1551,7 @@
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="jScrollPane7" min="-2" pref="165" max="-2" attributes="0"/>
-                                      <EmptySpace pref="265" max="32767" attributes="0"/>
+                                      <EmptySpace pref="389" max="32767" attributes="0"/>
                                       <Component id="TabbedPaneNext2" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                                   </Group>
@@ -1642,7 +1642,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="0" pref="780" max="32767" attributes="0"/>
+                                              <EmptySpace min="0" pref="857" max="32767" attributes="0"/>
                                               <Component id="ResearchReportCancelReport" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="ResearchReportSubmitReport" min="-2" max="-2" attributes="0"/>
@@ -1732,7 +1732,7 @@
                                           <Component id="jLabel22" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="jScrollPane5" alignment="0" min="-2" pref="165" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="105" max="32767" attributes="0"/>
+                                      <EmptySpace pref="220" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="ResearchReportSubmitReport" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="ResearchReportCancelReport" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1875,7 +1875,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jScrollPane11" alignment="0" pref="942" max="32767" attributes="0"/>
+                                      <Component id="jScrollPane11" alignment="0" pref="1027" max="32767" attributes="0"/>
                                       <Group type="102" alignment="1" attributes="0">
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                           <Component id="jButton2" min="-2" max="-2" attributes="0"/>
@@ -1897,7 +1897,7 @@
                                       <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="52" max="32767" attributes="0"/>
+                                  <EmptySpace pref="177" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1993,7 +1993,7 @@
                                           <Component id="jTextField2" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="409" max="32767" attributes="0"/>
+                                  <EmptySpace pref="477" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace max="32767" attributes="0"/>
@@ -2039,7 +2039,7 @@
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jScrollPane12" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="205" max="32767" attributes="0"/>
+                                  <EmptySpace pref="325" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jButton5" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jButton6" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2192,10 +2192,10 @@
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace pref="61" max="32767" attributes="0"/>
                                   <Component id="jLabel24" min="-2" pref="27" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jTabbedPane1" min="-2" pref="565" max="-2" attributes="0"/>
+                                  <Component id="jTabbedPane1" min="-2" pref="635" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="viewReportBackButton" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -2255,7 +2255,7 @@
                                           <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="jScrollPane9" min="-2" pref="184" max="-2" attributes="0"/>
-                                          <EmptySpace pref="154" max="32767" attributes="0"/>
+                                          <EmptySpace pref="225" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
@@ -2277,7 +2277,7 @@
                                                   <Component id="jSeparator2" alignment="0" min="-2" pref="829" max="-2" attributes="0"/>
                                                   <Component id="jLabel27" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
-                                              <EmptySpace min="0" pref="112" max="32767" attributes="0"/>
+                                              <EmptySpace min="0" pref="196" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -2306,11 +2306,11 @@
                                               <Component id="jLabel31" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="jScrollPane9" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="0" pref="239" max="32767" attributes="0"/>
+                                          <EmptySpace min="0" pref="309" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="0" pref="1" max="32767" attributes="0"/>
+                                              <EmptySpace min="0" pref="37" max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="jLabel34" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
                                                   <Component id="jTextField6" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -2323,7 +2323,7 @@
                                               <Component id="jSeparator2" min="-2" pref="20" max="-2" attributes="0"/>
                                               <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                                               <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="0" pref="447" max="32767" attributes="0"/>
+                                              <EmptySpace min="0" pref="481" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -2499,7 +2499,7 @@
                                                   </Group>
                                               </Group>
                                           </Group>
-                                          <EmptySpace pref="470" max="32767" attributes="0"/>
+                                          <EmptySpace pref="555" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -2521,7 +2521,7 @@
                                               <Component id="jLabel45" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="jScrollPane13" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="292" max="32767" attributes="0"/>
+                                          <EmptySpace pref="362" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -2615,7 +2615,7 @@
                                                   <Component id="jTextField15" min="-2" pref="190" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                                                   <Component id="jLabel49" min="-2" pref="150" max="-2" attributes="0"/>
-                                                  <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="jTextField18" min="-2" pref="190" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
@@ -2624,19 +2624,21 @@
                                               </Group>
                                               <Component id="jLabel47" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="171" max="32767" attributes="0"/>
+                                          <EmptySpace pref="244" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jLabel46" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="jTextField15" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel49" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextField18" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                                  <Component id="jLabel49" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jTextField18" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
                                           <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                                           <Component id="jLabel48" min="-2" max="-2" attributes="0"/>
@@ -2653,7 +2655,7 @@
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="jLabel59" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace pref="96" max="32767" attributes="0"/>
+                                          <EmptySpace pref="170" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -2786,7 +2788,7 @@
                                               <Component id="jScrollPane14" alignment="0" min="-2" pref="494" max="-2" attributes="0"/>
                                               <Component id="jComboBox4" alignment="0" min="-2" pref="215" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="144" max="32767" attributes="0"/>
+                                          <EmptySpace pref="229" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -2810,7 +2812,7 @@
                                               <Component id="jLabel53" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="jComboBox4" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="234" max="32767" attributes="0"/>
+                                          <EmptySpace pref="304" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -2955,7 +2957,7 @@
                                               <Component id="jLabel57" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="jTextField26" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="191" max="32767" attributes="0"/>
+                                          <EmptySpace pref="261" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -3052,7 +3054,7 @@
                                           <Component id="jScrollPane15" alignment="1" min="-2" pref="858" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="47" max="32767" attributes="0"/>
+                                  <EmptySpace pref="132" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -3067,7 +3069,7 @@
                                   <Component id="jScrollPane15" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                   <Component id="ViewReport2" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="59" max="32767" attributes="0"/>
+                                  <EmptySpace pref="187" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -3153,7 +3155,7 @@
                                           <Component id="jScrollPane16" alignment="0" min="-2" pref="839" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="66" max="32767" attributes="0"/>
+                                  <EmptySpace pref="151" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -3171,7 +3173,7 @@
                                       <Component id="ViewReport1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="createTrail" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="57" max="32767" attributes="0"/>
+                                  <EmptySpace pref="185" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -3248,8 +3250,139 @@
                         </Constraint>
                       </Constraints>
 
-                      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
-                        <Property name="useNullLayout" type="boolean" value="true"/>
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="49" pref="49" max="-2" attributes="0"/>
+                                          <Component id="jLabel64" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
+                                          <Component id="jLabel65" min="-2" pref="120" max="-2" attributes="0"/>
+                                          <EmptySpace min="130" pref="130" max="-2" attributes="0"/>
+                                          <Component id="jLabel66" min="-2" pref="140" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="usernameLabelR7" min="-2" pref="240" max="-2" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace min="80" pref="80" max="-2" attributes="0"/>
+                                                  <Component id="usernameLabelR6" min="-2" pref="50" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                          <Component id="usernameTextFieldR5" min="-2" pref="110" max="-2" attributes="0"/>
+                                          <EmptySpace min="40" pref="40" max="-2" attributes="0"/>
+                                          <Component id="jLabel67" min="-2" pref="130" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jComboBox5" min="-2" pref="190" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
+                                          <Component id="usernameLabelR1" min="-2" pref="240" max="-2" attributes="0"/>
+                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                          <Component id="usernameTextFieldR1" min="-2" pref="110" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
+                                          <Component id="usernameLabelR5" min="-2" pref="240" max="-2" attributes="0"/>
+                                          <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                                          <Component id="jScrollPane17" min="-2" pref="390" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="usernameLabelR8" min="-2" pref="240" max="-2" attributes="0"/>
+                                              <Component id="usernameLabelR3" min="-2" pref="240" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                          <Component id="jScrollPane18" min="-2" pref="390" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="usernameLabelR4" min="-2" pref="240" max="-2" attributes="0"/>
+                                              <Component id="usernameLabelR2" min="-2" pref="240" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                          <Component id="jScrollPane19" min="-2" pref="390" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="251" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="createTrail1" min="-2" pref="96" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="34" pref="34" max="-2" attributes="0"/>
+                                  <Component id="jLabel64" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel65" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel66" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="usernameLabelR7" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="usernameLabelR6" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="usernameTextFieldR5" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel67" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                                          <Component id="jComboBox5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="usernameLabelR1" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="usernameTextFieldR1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="usernameLabelR5" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
+                                          <Component id="jScrollPane17" min="-2" pref="100" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                                          <Component id="usernameLabelR8" min="-2" pref="30" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="usernameLabelR3" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                          <Component id="jScrollPane18" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="14" pref="14" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="usernameLabelR4" min="-2" pref="30" max="-2" attributes="0"/>
+                                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                                          <Component id="usernameLabelR2" min="-2" pref="30" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                          <Component id="jScrollPane19" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace pref="181" max="32767" attributes="0"/>
+                                  <Component id="createTrail1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
                       </Layout>
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="jLabel64">
@@ -3259,11 +3392,6 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Create Trail"/>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="49" y="34" width="-1" height="-1"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="javax.swing.JButton" name="createTrail1">
                           <Properties>
@@ -3272,31 +3400,16 @@
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="createTrail1ActionPerformed"/>
                           </Events>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="590" y="580" width="96" height="-1"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="javax.swing.JLabel" name="usernameLabelR1">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="No of Volunteers:"/>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="50" y="160" width="240" height="30"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="javax.swing.JTextField" name="usernameTextFieldR1">
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="usernameTextFieldR1ActionPerformed"/>
                           </Events>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="300" y="160" width="110" height="-1"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="javax.swing.JLabel" name="usernameLabelR2">
                           <Properties>
@@ -3305,31 +3418,16 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="To be filled by clinical researchers"/>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="50" y="480" width="240" height="30"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="javax.swing.JLabel" name="usernameLabelR3">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Drug Reactions"/>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="50" y="330" width="240" height="30"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="javax.swing.JLabel" name="usernameLabelR4">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Side Effects"/>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="50" y="450" width="240" height="30"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="javax.swing.JLabel" name="usernameLabelR5">
                           <Properties>
@@ -3338,11 +3436,6 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Dosage directions"/>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="50" y="210" width="240" height="30"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="javax.swing.JLabel" name="usernameLabelR6">
                           <Properties>
@@ -3351,31 +3444,16 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Prefilled"/>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="130" y="110" width="50" height="30"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="javax.swing.JLabel" name="usernameLabelR7">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Drug Name"/>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="50" y="110" width="240" height="30"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="javax.swing.JTextField" name="usernameTextFieldR5">
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="usernameTextFieldR5ActionPerformed"/>
                           </Events>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="300" y="110" width="110" height="-1"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="javax.swing.JLabel" name="usernameLabelR8">
                           <Properties>
@@ -3384,21 +3462,11 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="To be filled by clinical researchers"/>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="50" y="350" width="240" height="30"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Container class="javax.swing.JScrollPane" name="jScrollPane17">
                           <AuxValues>
                             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                           </AuxValues>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="294" y="212" width="390" height="100"/>
-                            </Constraint>
-                          </Constraints>
 
                           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                           <SubComponents>
@@ -3418,56 +3486,21 @@
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Report ID:"/>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="50" y="70" width="120" height="-1"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel66">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="jLabel66"/>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="300" y="70" width="140" height="-1"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel67">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Assign researcher:"/>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="450" y="110" width="130" height="20"/>
-                            </Constraint>
-                          </Constraints>
-                        </Component>
-                        <Component class="javax.swing.JComboBox" name="jComboBox5">
-                          <Properties>
-                            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="0"/>
-                            </Property>
-                          </Properties>
-                          <AuxValues>
-                            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                          </AuxValues>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="590" y="110" width="210" height="-1"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Container class="javax.swing.JScrollPane" name="jScrollPane18">
                           <AuxValues>
                             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                           </AuxValues>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="300" y="340" width="390" height="-1"/>
-                            </Constraint>
-                          </Constraints>
 
                           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                           <SubComponents>
@@ -3483,11 +3516,6 @@
                           <AuxValues>
                             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                           </AuxValues>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="300" y="460" width="390" height="-1"/>
-                            </Constraint>
-                          </Constraints>
 
                           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                           <SubComponents>
@@ -3499,6 +3527,21 @@
                             </Component>
                           </SubComponents>
                         </Container>
+                        <Component class="javax.swing.JComboBox" name="jComboBox5">
+                          <Properties>
+                            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                              <StringArray count="4">
+                                <StringItem index="0" value="Item 1"/>
+                                <StringItem index="1" value="Item 2"/>
+                                <StringItem index="2" value="Item 3"/>
+                                <StringItem index="3" value="Item 4"/>
+                              </StringArray>
+                            </Property>
+                          </Properties>
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                          </AuxValues>
+                        </Component>
                       </SubComponents>
                     </Container>
                     <Container class="javax.swing.JPanel" name="RegulatoryHealthManager">
@@ -3622,7 +3665,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="322" max="-2" attributes="0"/>
                                   <Component id="jLabel69" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="402" max="32767" attributes="0"/>
+                                  <EmptySpace pref="499" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace max="32767" attributes="0"/>
@@ -3656,7 +3699,7 @@
                                       <Component id="AddReport2" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jButton7" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="37" max="32767" attributes="0"/>
+                                  <EmptySpace pref="207" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -3824,7 +3867,7 @@
                                       <Component id="RepPushToDev1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jComboBox6" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="73" max="32767" attributes="0"/>
+                                  <EmptySpace pref="255" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="AssignToDevDecsion1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="CancelAssigning1" alignment="3" min="-2" max="-2" attributes="0"/>
