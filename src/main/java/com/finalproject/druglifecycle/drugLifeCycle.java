@@ -4,6 +4,8 @@
  */
 package com.finalproject.druglifecycle;
 
+import com.finalproject.backend.ClinicalResearcherReport;
+import com.finalproject.backend.ClinicalResearcherReportDirectory;
 import com.finalproject.backend.DevelopmentReport;
 import com.finalproject.backend.DevelopmentReportDir;
 import com.finalproject.backend.Employee;
@@ -32,12 +34,17 @@ public class drugLifeCycle extends javax.swing.JFrame {
     EmployeeDirectory empDir = new EmployeeDirectory();
     ResearchReportDirectory repDir = new ResearchReportDirectory();
     DevelopmentReportDir devRepDir = new DevelopmentReportDir();
-    
+    ClinicalResearcherReportDirectory clinicalresearchdir = new ClinicalResearcherReportDirectory();
     public static DefaultListModel listOfComposition = new DefaultListModel();
     public static DefaultListModel listOfDosage = new DefaultListModel();
     public static JPanel cardPrevious = null;
     public drugLifeCycle() {
         initComponents();
+        organizationComboBoxR.setEnabled(false);
+        roleComboBoxR.setEnabled(false);
+        jTextArea2.setEnabled(false);
+        ResearchReportPage1ResearchBy.setEnabled(false);
+        usernameTextFieldR5.setEnabled(false);
     }
 
     
@@ -275,6 +282,42 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jTextField26 = new javax.swing.JTextField();
         jLabel57 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
+        ClinicalResearchers = new javax.swing.JPanel();
+        jScrollPane15 = new javax.swing.JScrollPane();
+        jTable4 = new javax.swing.JTable();
+        jLabel60 = new javax.swing.JLabel();
+        ViewReport2 = new javax.swing.JButton();
+        jLabel61 = new javax.swing.JLabel();
+        GLPOfficersHome = new javax.swing.JPanel();
+        jScrollPane16 = new javax.swing.JScrollPane();
+        jTable5 = new javax.swing.JTable();
+        jLabel62 = new javax.swing.JLabel();
+        ViewReport1 = new javax.swing.JButton();
+        jLabel63 = new javax.swing.JLabel();
+        createTrail = new javax.swing.JButton();
+        CreateTrail = new javax.swing.JPanel();
+        jLabel64 = new javax.swing.JLabel();
+        createTrail1 = new javax.swing.JButton();
+        usernameLabelR1 = new javax.swing.JLabel();
+        usernameTextFieldR1 = new javax.swing.JTextField();
+        usernameLabelR2 = new javax.swing.JLabel();
+        usernameLabelR3 = new javax.swing.JLabel();
+        usernameLabelR4 = new javax.swing.JLabel();
+        usernameLabelR5 = new javax.swing.JLabel();
+        usernameLabelR6 = new javax.swing.JLabel();
+        usernameLabelR7 = new javax.swing.JLabel();
+        usernameTextFieldR5 = new javax.swing.JTextField();
+        usernameLabelR8 = new javax.swing.JLabel();
+        jScrollPane17 = new javax.swing.JScrollPane();
+        jList6 = new javax.swing.JList<>();
+        jLabel65 = new javax.swing.JLabel();
+        jLabel66 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
+        jComboBox5 = new javax.swing.JComboBox<>();
+        jScrollPane18 = new javax.swing.JScrollPane();
+        jTextArea6 = new javax.swing.JTextArea();
+        jScrollPane19 = new javax.swing.JScrollPane();
+        jTextArea7 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -412,7 +455,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         organizationLabelR.setText("Organization:");
 
-        organizationComboBoxR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New organization" }));
+        organizationComboBoxR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New organization", "Research", "Development", "GLP Regulators", "Clinical Researcher", "Review", "Approval", "Manufacturer inspections", "Drug advertising" }));
         organizationComboBoxR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 organizationComboBoxRActionPerformed(evt);
@@ -427,7 +470,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         passwordLabelR.setText("Password:");
 
-        roleComboBoxR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New role" }));
+        roleComboBoxR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New role", "Research Scientist", "Research lead", "CTEP medical officer", "Manufacturing Analyst", "GLP Officer", "Clinical researcher" }));
 
         cancelButtonR.setText("Cancel");
         cancelButtonR.addActionListener(new java.awt.event.ActionListener() {
@@ -445,7 +488,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         enterpriseLabelR.setText("Enterprise:");
 
-        enterpriseComboBoxR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New enterprise" }));
+        enterpriseComboBoxR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New enterprise", "Medical institute" }));
         enterpriseComboBoxR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 enterpriseComboBoxRActionPerformed(evt);
@@ -1070,7 +1113,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                     .addComponent(jComboBox1, 0, 291, Short.MAX_VALUE)
                     .addComponent(ResearchReportPage1ResearchBy)
                     .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(501, Short.MAX_VALUE))
+                .addContainerGap(510, Short.MAX_VALUE))
         );
         page1Layout.setVerticalGroup(
             page1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1241,7 +1284,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(page3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(page3Layout.createSequentialGroup()
-                        .addGap(0, 782, Short.MAX_VALUE)
+                        .addGap(0, 783, Short.MAX_VALUE)
                         .addComponent(ResearchReportCancelReport)
                         .addGap(18, 18, 18)
                         .addComponent(ResearchReportSubmitReport))
@@ -2002,6 +2045,233 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         leftComponent.add(ResearchScientistViewReport, "card6");
 
+        ClinicalResearchers.setBackground(new java.awt.Color(255, 255, 255));
+
+        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Report ID", "Drug name", "Date", "Disease target", "Report to"
+            }
+        ));
+        jScrollPane15.setViewportView(jTable4);
+
+        jLabel60.setFont(new java.awt.Font("Liberation Sans", 0, 12)); // NOI18N
+        jLabel60.setText("All Trails");
+
+        ViewReport2.setText("View Trail");
+        ViewReport2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ViewReport2ActionPerformed(evt);
+            }
+        });
+
+        jLabel61.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
+        jLabel61.setText("Welcome Clinical Researcher");
+
+        javax.swing.GroupLayout ClinicalResearchersLayout = new javax.swing.GroupLayout(ClinicalResearchers);
+        ClinicalResearchers.setLayout(ClinicalResearchersLayout);
+        ClinicalResearchersLayout.setHorizontalGroup(
+            ClinicalResearchersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ClinicalResearchersLayout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addGroup(ClinicalResearchersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel61)
+                    .addComponent(jLabel60)
+                    .addGroup(ClinicalResearchersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(ViewReport2)
+                        .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, 858, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(75, Short.MAX_VALUE))
+        );
+        ClinicalResearchersLayout.setVerticalGroup(
+            ClinicalResearchersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ClinicalResearchersLayout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel61)
+                .addGap(31, 31, 31)
+                .addComponent(jLabel60)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(ViewReport2)
+                .addContainerGap(81, Short.MAX_VALUE))
+        );
+
+        leftComponent.add(ClinicalResearchers, "card8");
+
+        GLPOfficersHome.setBackground(new java.awt.Color(255, 255, 255));
+
+        jTable5.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Report ID", "Drug name", "Date", "Disease target", "Report to"
+            }
+        ));
+        jScrollPane16.setViewportView(jTable5);
+
+        jLabel62.setFont(new java.awt.Font("Liberation Sans", 0, 12)); // NOI18N
+        jLabel62.setText("All Research Rreports");
+
+        ViewReport1.setText("View Report");
+        ViewReport1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ViewReport1ActionPerformed(evt);
+            }
+        });
+
+        jLabel63.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
+        jLabel63.setText("Create Trail");
+
+        createTrail.setText("Create Trail");
+        createTrail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createTrailActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout GLPOfficersHomeLayout = new javax.swing.GroupLayout(GLPOfficersHome);
+        GLPOfficersHome.setLayout(GLPOfficersHomeLayout);
+        GLPOfficersHomeLayout.setHorizontalGroup(
+            GLPOfficersHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GLPOfficersHomeLayout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addGroup(GLPOfficersHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(GLPOfficersHomeLayout.createSequentialGroup()
+                        .addComponent(ViewReport1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(createTrail))
+                    .addGroup(GLPOfficersHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel63)
+                        .addComponent(jLabel62)
+                        .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 839, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(94, Short.MAX_VALUE))
+        );
+        GLPOfficersHomeLayout.setVerticalGroup(
+            GLPOfficersHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GLPOfficersHomeLayout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel63)
+                .addGap(31, 31, 31)
+                .addComponent(jLabel62)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addGroup(GLPOfficersHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ViewReport1)
+                    .addComponent(createTrail))
+                .addContainerGap(79, Short.MAX_VALUE))
+        );
+
+        leftComponent.add(GLPOfficersHome, "card8");
+
+        CreateTrail.setBackground(new java.awt.Color(255, 255, 255));
+        CreateTrail.setLayout(null);
+
+        jLabel64.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
+        jLabel64.setText("Create Trail");
+        CreateTrail.add(jLabel64);
+        jLabel64.setBounds(49, 34, 146, 30);
+
+        createTrail1.setText("Save");
+        createTrail1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createTrail1ActionPerformed(evt);
+            }
+        });
+        CreateTrail.add(createTrail1);
+        createTrail1.setBounds(590, 580, 96, 23);
+
+        usernameLabelR1.setText("No of Volunteers:");
+        CreateTrail.add(usernameLabelR1);
+        usernameLabelR1.setBounds(50, 160, 240, 30);
+
+        usernameTextFieldR1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usernameTextFieldR1ActionPerformed(evt);
+            }
+        });
+        CreateTrail.add(usernameTextFieldR1);
+        usernameTextFieldR1.setBounds(300, 160, 110, 23);
+
+        usernameLabelR2.setForeground(new java.awt.Color(102, 102, 102));
+        usernameLabelR2.setText("To be filled by clinical researchers");
+        CreateTrail.add(usernameLabelR2);
+        usernameLabelR2.setBounds(50, 480, 240, 30);
+
+        usernameLabelR3.setText("Drug Reactions");
+        CreateTrail.add(usernameLabelR3);
+        usernameLabelR3.setBounds(50, 330, 240, 30);
+
+        usernameLabelR4.setText("Side Effects");
+        CreateTrail.add(usernameLabelR4);
+        usernameLabelR4.setBounds(50, 450, 240, 30);
+
+        usernameLabelR5.setFont(new java.awt.Font("Helvetica Neue", 0, 12)); // NOI18N
+        usernameLabelR5.setText("Dosage directions");
+        CreateTrail.add(usernameLabelR5);
+        usernameLabelR5.setBounds(50, 210, 240, 30);
+
+        usernameLabelR6.setForeground(new java.awt.Color(102, 102, 102));
+        usernameLabelR6.setText("Prefilled");
+        CreateTrail.add(usernameLabelR6);
+        usernameLabelR6.setBounds(130, 110, 50, 30);
+
+        usernameLabelR7.setText("Drug Name");
+        CreateTrail.add(usernameLabelR7);
+        usernameLabelR7.setBounds(50, 110, 240, 30);
+
+        usernameTextFieldR5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usernameTextFieldR5ActionPerformed(evt);
+            }
+        });
+        CreateTrail.add(usernameTextFieldR5);
+        usernameTextFieldR5.setBounds(300, 110, 110, 23);
+
+        usernameLabelR8.setForeground(new java.awt.Color(102, 102, 102));
+        usernameLabelR8.setText("To be filled by clinical researchers");
+        CreateTrail.add(usernameLabelR8);
+        usernameLabelR8.setBounds(50, 350, 240, 30);
+
+        jScrollPane17.setViewportView(jList6);
+
+        CreateTrail.add(jScrollPane17);
+        jScrollPane17.setBounds(294, 212, 390, 100);
+
+        jLabel65.setText("Report ID:");
+        CreateTrail.add(jLabel65);
+        jLabel65.setBounds(50, 70, 120, 17);
+
+        jLabel66.setText("jLabel66");
+        CreateTrail.add(jLabel66);
+        jLabel66.setBounds(300, 70, 140, 17);
+
+        jLabel67.setText("Assign researcher:");
+        CreateTrail.add(jLabel67);
+        jLabel67.setBounds(450, 110, 130, 20);
+
+        CreateTrail.add(jComboBox5);
+        jComboBox5.setBounds(590, 110, 210, 23);
+
+        jTextArea6.setColumns(20);
+        jTextArea6.setRows(5);
+        jScrollPane18.setViewportView(jTextArea6);
+
+        CreateTrail.add(jScrollPane18);
+        jScrollPane18.setBounds(300, 340, 390, 91);
+
+        jTextArea7.setColumns(20);
+        jTextArea7.setRows(5);
+        jScrollPane19.setViewportView(jTextArea7);
+
+        CreateTrail.add(jScrollPane19);
+        jScrollPane19.setBounds(300, 460, 390, 91);
+
+        leftComponent.add(CreateTrail, "card8");
+
         jSplitPane1.setRightComponent(leftComponent);
 
         javax.swing.GroupLayout WorkspaceLayout = new javax.swing.GroupLayout(Workspace);
@@ -2099,6 +2369,51 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         }
     }
+    
+        public void populateTableManufacturingAnalyst(Employee emp){
+        DefaultTableModel model = (DefaultTableModel) jTable3.getModel();
+        model.setRowCount(0);
+        for (DevelopmentReport devRep : devRepDir.getDevRepDir()){
+            if(devRep.getDevAssigned().equals(emp.getName())){
+                
+                String[] addToTable = {devRep.getReportID(), devRep.getDrugName(), devRep.getDate().toString(), devRep.getDiseaseTarget(), devRep.getReportTo()};
+                model.addRow(addToTable);
+            }
+        }                
+    }
+        
+    public void populateTableGTPOfficer(Employee emp){
+        DefaultTableModel model = (DefaultTableModel) jTable5.getModel();
+        model.setRowCount(0);
+        //edit this to have if condition that helps populate data that is assigned to this specific enterprise. There is a variable that needs to be assigned when manufacturing analyst adds the manufacturign details.
+        for(DevelopmentReport devRep: devRepDir.getDevRepDir()){
+            
+            String[] addToTable = {devRep.getReportID(), devRep.getDrugName(), devRep.getDate().toString(), devRep.getDiseaseTarget(), devRep.getReportTo()};
+            model.addRow(addToTable);
+        }
+    }
+    
+    public void populateTableClinicalResearcher(Employee emp){
+        DefaultTableModel model = (DefaultTableModel) jTable4.getModel();
+        model.setRowCount(0);
+        for (ClinicalResearcherReport crR : clinicalresearchdir.getClinicalReportDir()){
+            if (crR.getAssignedClinicalResearcher().equals(emp.getName())){
+                String[] addToTable = {crR.getReportID(), crR.getDrugName(), crR.getDate().toString(), crR.getDiseaseTarget(), crR.getAssignedGLPOfficer()};
+                model.addRow(addToTable);                            
+            }
+        }
+    }
+    
+    public void addClinicalResearchers(Employee emp){
+        jComboBox5.removeAllItems();
+        jComboBox5.addItem("None");
+        for (Employee em: empDir.getEmpDir()){
+            if (em.getEnterpriseName().equals(emp.getEnterpriseName()) && em.getOrganizationName().equals("Clinical Researcher") && em.getRole().equals("Clinical researcher")){
+                jComboBox5.addItem(em.getName());
+            }
+        }
+    }
+    
     
     private void maleRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maleRadioButton1ActionPerformed
         gender = "Male";
@@ -2268,6 +2583,31 @@ public class drugLifeCycle extends javax.swing.JFrame {
         
     }//GEN-LAST:event_loginButtonActionPerformed
 
+        if (empWorkSpace.getRole().equals("Manufacturing Analyst")){
+            PanelPaint(Workspace);
+            SplitPanelPain(ManufacturingAnalystHome);
+            populateTableManufacturingAnalyst(empWorkSpace);
+        }if(empWorkSpace.getRole().equals("GLP Officer")){
+            PanelPaint(Workspace);
+            SplitPanelPain(GLPOfficersHome);
+            populateTableGTPOfficer(empWorkSpace);
+            addClinicalResearchers(empWorkSpace);
+            jTextArea6.setEnabled(false);
+            jTextArea7.setEnabled(false);
+            usernameTextFieldR5.setEnabled(true);
+            usernameTextFieldR1.setEnabled(true);
+            jComboBox5.setEnabled(true);
+        }if(empWorkSpace.getRole().equals("Clinical researcher")){
+            PanelPaint(Workspace);
+            SplitPanelPain(ClinicalResearchers);
+            populateTableClinicalResearcher(empWorkSpace);
+            jTextArea6.setEnabled(true);
+            jTextArea7.setEnabled(true);
+            usernameTextFieldR5.setEnabled(false);
+            usernameTextFieldR1.setEnabled(false);
+            jComboBox5.setEnabled(false);
+            jComboBox5.setSelectedItem(empWorkSpace.getName());
+        }
     }
     private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
         PanelPaint(Registration);
@@ -2532,6 +2872,90 @@ public class drugLifeCycle extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField26ActionPerformed
 
+    private void ViewReport2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewReport2ActionPerformed
+        int row = jTable4.getSelectedRow();
+        if(row != -1){
+            SplitPanelPain(CreateTrail);
+        }
+    }//GEN-LAST:event_ViewReport2ActionPerformed
+
+    private void ViewReport1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewReport1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ViewReport1ActionPerformed
+
+    private void createTrailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createTrailActionPerformed
+        int row = jTable5.getSelectedRow();
+        cardPrevious = GLPOfficersHome;
+        if(row != -1){
+            String ID = jTable5.getValueAt(row, 0).toString();
+            SplitPanelPain(CreateTrail);
+            DevelopmentReport devrep = new DevelopmentReport();
+            for(DevelopmentReport devRe:devRepDir.getDevRepDir()){
+                if (devRe.getReportID().equals(ID)){
+                    devrep = devRe;
+                }
+            }createTrailData(devrep);
+        }
+    }//GEN-LAST:event_createTrailActionPerformed
+
+    public void createTrailData(DevelopmentReport dr){
+        Employee loggedINEmployee = empDir.sendParticularUser(usernameTextField1.getText(), String.valueOf(passwordField1.getPassword()));
+        ClinicalResearcherReport crr = clinicalresearchdir.addTrails();
+        crr.setDrugName(dr.getDrugName());
+        crr.setComposition(dr.getComposition());
+        crr.setDate(dr.getDate());
+        crr.setDiseaseTarget(dr.getDiseaseTarget());
+        crr.setReportID(dr.getReportID());
+        crr.setResearchBy(dr.getResearchBy());
+        crr.setReportTo(dr.getReportTo());
+        crr.setEnterpriseName(dr.getEnterpriseName());
+        crr.setReportID(dr.getReportID());
+        crr.setDosage(dr.getDosage());
+        crr.setDistribution(dr.getDistribution());
+        crr.setDevAssigned(dr.getDevAssigned());
+        crr.setAssignedGLPOfficer(loggedINEmployee.getName());
+        usernameTextFieldR5.setText(crr.getDrugName());
+        jLabel66.setText(crr.getReportID());
+        DefaultListModel dosage = new DefaultListModel();
+        ArrayList<String> dos = crr.getDosage();
+        dosage.removeAllElements();
+        for (int i = 0; i<crr.getDosage().size(); i++){
+            dosage.addElement(dos.get(i));
+        }
+        jList6.setModel(dosage);
+    }
+    
+    private void createTrail1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createTrail1ActionPerformed
+        ClinicalResearcherReport cr = new ClinicalResearcherReport();
+        for (ClinicalResearcherReport c: clinicalresearchdir.getClinicalReportDir()){
+            if (c.getReportID().equals(jLabel66.getText())){
+                cr = c;
+            }
+        }
+        cr.setNumberOfVolunteers(Integer.valueOf(usernameTextFieldR1.getText()));
+        cr.setAssignedClinicalResearcher(jComboBox5.getSelectedItem().toString());
+        if (jTextArea6.getText().length() != 0){
+            cr.setDrugReaction(jTextArea6.getText());
+        }else{
+            cr.setDrugReaction("Not provided.");
+        }
+        if (jTextArea7.getText().length() != 0){
+            cr.setSideEffects(jTextArea7.getText());
+        }
+        else{
+            cr.setSideEffects("Not provided.");
+        }
+        SplitPanelPain(cardPrevious);
+    }//GEN-LAST:event_createTrail1ActionPerformed
+
+    private void usernameTextFieldR1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameTextFieldR1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usernameTextFieldR1ActionPerformed
+
+    private void usernameTextFieldR5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameTextFieldR5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usernameTextFieldR5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2572,8 +2996,11 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JButton AddReport;
     private javax.swing.JButton AssignToDevDecsion;
     private javax.swing.JButton CancelAssigning;
+    private javax.swing.JPanel ClinicalResearchers;
+    private javax.swing.JPanel CreateTrail;
     private com.toedter.calendar.JDateChooser DateofBirthChooser1;
     private javax.swing.JPanel DiscoveryDevelopment;
+    private javax.swing.JPanel GLPOfficersHome;
     private javax.swing.JLabel IDleadAssign;
     private javax.swing.JPanel Login;
     private javax.swing.JPanel ManufacturingAnalystHome;
@@ -2602,6 +3029,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JButton TabbedPaneNext2;
     private javax.swing.JLabel Title;
     private javax.swing.JButton ViewReport;
+    private javax.swing.JButton ViewReport1;
+    private javax.swing.JButton ViewReport2;
     private javax.swing.JPanel Workspace;
     private javax.swing.JButton addChemicalComposition;
     private javax.swing.JButton addEnterpriseButton;
@@ -2610,6 +3039,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JLabel ageLabelR;
     private javax.swing.JTextField ageTextField;
     private javax.swing.JButton cancelButtonR;
+    private javax.swing.JButton createTrail;
+    private javax.swing.JButton createTrail1;
     private javax.swing.JLabel dateleadAssign;
     private javax.swing.JButton deleteChemicalComposition;
     private javax.swing.JLabel dobLabelR;
@@ -2645,6 +3076,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
+    private javax.swing.JComboBox<String> jComboBox5;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -2702,6 +3134,14 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -2710,6 +3150,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JList<String> jList3;
     private javax.swing.JList<String> jList4;
     private javax.swing.JList<String> jList5;
+    private javax.swing.JList<String> jList6;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -2721,6 +3162,11 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane13;
     private javax.swing.JScrollPane jScrollPane14;
+    private javax.swing.JScrollPane jScrollPane15;
+    private javax.swing.JScrollPane jScrollPane16;
+    private javax.swing.JScrollPane jScrollPane17;
+    private javax.swing.JScrollPane jScrollPane18;
+    private javax.swing.JScrollPane jScrollPane19;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -2735,11 +3181,15 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
+    private javax.swing.JTable jTable4;
+    private javax.swing.JTable jTable5;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
     private javax.swing.JTextArea jTextArea5;
+    private javax.swing.JTextArea jTextArea6;
+    private javax.swing.JTextArea jTextArea7;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
@@ -2787,8 +3237,18 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JLabel targetleadAssign;
     private javax.swing.JLabel usernameLabel;
     private javax.swing.JLabel usernameLabelR;
+    private javax.swing.JLabel usernameLabelR1;
+    private javax.swing.JLabel usernameLabelR2;
+    private javax.swing.JLabel usernameLabelR3;
+    private javax.swing.JLabel usernameLabelR4;
+    private javax.swing.JLabel usernameLabelR5;
+    private javax.swing.JLabel usernameLabelR6;
+    private javax.swing.JLabel usernameLabelR7;
+    private javax.swing.JLabel usernameLabelR8;
     private javax.swing.JTextField usernameTextField1;
     private javax.swing.JTextField usernameTextFieldR;
+    private javax.swing.JTextField usernameTextFieldR1;
+    private javax.swing.JTextField usernameTextFieldR5;
     private javax.swing.JButton viewReportBackButton;
     private javax.swing.JButton viewReportResearchLead;
     private javax.swing.JLabel zipCodeLabelR;
