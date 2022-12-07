@@ -70,6 +70,9 @@ public class drugLifeCycle extends javax.swing.JFrame {
         passwordField1 = new javax.swing.JPasswordField();
         loginButton = new javax.swing.JButton();
         registerButton = new javax.swing.JButton();
+        jLabel87 = new javax.swing.JLabel();
+        jLabel92 = new javax.swing.JLabel();
+        jLabel93 = new javax.swing.JLabel();
         Registration = new javax.swing.JPanel();
         Title = new javax.swing.JLabel();
         nameLabelR = new javax.swing.JLabel();
@@ -105,6 +108,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         submitButtonR = new javax.swing.JButton();
         enterpriseLabelR = new javax.swing.JLabel();
         enterpriseComboBoxR = new javax.swing.JComboBox<>();
+        jSeparator4 = new javax.swing.JSeparator();
         Workspace = new javax.swing.JPanel();
         jSplitPane1 = new javax.swing.JSplitPane();
         rightComponent = new javax.swing.JPanel();
@@ -374,104 +378,132 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jScrollPane27 = new javax.swing.JScrollPane();
         jTextArea12 = new javax.swing.JTextArea();
         jSeparator1 = new javax.swing.JSeparator();
+        SafetyInspectorOfficer = new javax.swing.JPanel();
+        AssignToDevDecsion5 = new javax.swing.JButton();
+        jLabel81 = new javax.swing.JLabel();
+        jScrollPane34 = new javax.swing.JScrollPane();
+        jTable9 = new javax.swing.JTable();
+        ViewReport7 = new javax.swing.JButton();
+        ViewReport8 = new javax.swing.JButton();
+        InspectionVisit = new javax.swing.JPanel();
+        AssignToDevDecsion4 = new javax.swing.JButton();
+        CancelAssigning4 = new javax.swing.JButton();
+        jLabel84 = new javax.swing.JLabel();
+        jLabel82 = new javax.swing.JLabel();
+        jLabel85 = new javax.swing.JLabel();
+        jScrollPane28 = new javax.swing.JScrollPane();
+        jTextArea13 = new javax.swing.JTextArea();
+        jSeparator3 = new javax.swing.JSeparator();
+        jLabel88 = new javax.swing.JLabel();
+        jLabel89 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jLabel90 = new javax.swing.JLabel();
+        jTextField8 = new javax.swing.JTextField();
+        jLabel91 = new javax.swing.JLabel();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        jRadioButton5 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Parent.setLayout(new java.awt.CardLayout());
 
         Login.setBackground(new java.awt.Color(255, 255, 255));
+        Login.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Drug Track Application");
+        jLabel1.setText("Regenero Drugdisk");
+        Login.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 80, 390, 60));
 
-        usernameLabel.setText("Username:");
+        usernameLabel.setText("Username");
+        Login.add(usernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 220, -1, -1));
 
-        passwordLabel.setText("Password:");
+        passwordLabel.setText("Password");
+        Login.add(passwordLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 290, -1, -1));
+        Login.add(usernameTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 240, 220, 30));
+        Login.add(passwordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 310, 220, 30));
 
+        loginButton.setBackground(new java.awt.Color(0, 102, 204));
+        loginButton.setForeground(new java.awt.Color(255, 255, 255));
         loginButton.setText("Login");
         loginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginButtonActionPerformed(evt);
             }
         });
+        Login.add(loginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 360, 220, 40));
 
-        registerButton.setText("Register");
+        registerButton.setText("Configure Users");
         registerButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 registerButtonActionPerformed(evt);
             }
         });
+        Login.add(registerButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 580, 130, 30));
 
-        javax.swing.GroupLayout LoginLayout = new javax.swing.GroupLayout(Login);
-        Login.setLayout(LoginLayout);
-        LoginLayout.setHorizontalGroup(
-            LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LoginLayout.createSequentialGroup()
-                .addGap(351, 351, 351)
-                .addGroup(LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(LoginLayout.createSequentialGroup()
-                        .addGroup(LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(passwordLabel)
-                            .addComponent(usernameLabel))
-                        .addGap(33, 33, 33)
-                        .addGroup(LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(usernameTextField1)
-                            .addComponent(passwordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(LoginLayout.createSequentialGroup()
-                        .addComponent(registerButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(loginButton))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(513, Short.MAX_VALUE))
-        );
-        LoginLayout.setVerticalGroup(
-            LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LoginLayout.createSequentialGroup()
-                .addGap(133, 133, 133)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(usernameLabel)
-                    .addComponent(usernameTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(passwordLabel)
-                    .addComponent(passwordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(58, 58, 58)
-                .addGroup(LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(loginButton)
-                    .addComponent(registerButton))
-                .addContainerGap(444, Short.MAX_VALUE))
-        );
+        jLabel87.setIcon(new javax.swing.ImageIcon("/Users/kalzayy/Desktop/Loginwallpaper.png")); // NOI18N
+        jLabel87.setText("jLabel87");
+        Login.add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 770));
+
+        jLabel92.setFont(new java.awt.Font("Helvetica Neue", 0, 12)); // NOI18N
+        jLabel92.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel92.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel92.setText("Admin Settings");
+        Login.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 550, 170, 30));
+
+        jLabel93.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel93.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel93.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel93.setText("Drug Track Application");
+        Login.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 140, 390, 30));
 
         Parent.add(Login, "card2");
 
         Registration.setBackground(new java.awt.Color(255, 255, 255));
+        Registration.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Title.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         Title.setText("Registration");
+        Registration.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, -1, -1));
 
         nameLabelR.setText("Name:");
+        Registration.add(nameLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 83, -1));
 
         ageLabelR.setText("Age:");
+        Registration.add(ageLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, 83, 20));
 
         genderLabelR.setText("Gender:");
+        Registration.add(genderLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 94, -1));
 
         dobLabelR.setText("Date of birth:");
+        Registration.add(dobLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, -1, 24));
 
         numberLabelR.setText("Contact No.:");
+        Registration.add(numberLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, -1, 24));
 
         mailIDLabelR.setText("Email ID:");
+        Registration.add(mailIDLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 250, 83, 30));
 
         addressLabelR.setText("Address:");
+        Registration.add(addressLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 73, -1));
 
         zipCodeLabelR.setText("Zip Code:");
+        Registration.add(zipCodeLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 370, 73, 24));
 
+        firstnameTextField1.setForeground(new java.awt.Color(153, 153, 153));
         firstnameTextField1.setText("First name");
+        Registration.add(firstnameTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, 115, -1));
 
+        middlenameTextField1.setForeground(new java.awt.Color(153, 153, 153));
         middlenameTextField1.setText("Middle name");
+        Registration.add(middlenameTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 120, 120, -1));
 
+        lastnameTextField1.setForeground(new java.awt.Color(153, 153, 153));
         lastnameTextField1.setText("Last name");
+        Registration.add(lastnameTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 120, 126, -1));
+        Registration.add(ageTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 170, 50, -1));
+        Registration.add(DateofBirthChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, 110, -1));
 
         maleRadioButton1.setText("Male");
         maleRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -479,6 +511,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 maleRadioButton1ActionPerformed(evt);
             }
         });
+        Registration.add(maleRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, -1, -1));
 
         femaleRadioButton1.setText("Female");
         femaleRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -486,6 +519,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 femaleRadioButton1ActionPerformed(evt);
             }
         });
+        Registration.add(femaleRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, -1, -1));
 
         othersRadioButton1.setText("Others");
         othersRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -493,6 +527,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 othersRadioButton1ActionPerformed(evt);
             }
         });
+        Registration.add(othersRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 210, -1, -1));
 
         numberTextField1.setText("1234567890");
         numberTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -500,16 +535,20 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 numberTextField1ActionPerformed(evt);
             }
         });
+        Registration.add(numberTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, 220, -1));
 
         emailIDTextField1.setText("abc@gmail.com");
+        Registration.add(emailIDTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 250, 170, -1));
 
         addressTextArea1.setColumns(20);
         addressTextArea1.setRows(5);
         jScrollPane1.setViewportView(addressTextArea1);
 
-        zipcodeTextField1.setText("00000");
+        Registration.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 300, 490, 50));
+        Registration.add(zipcodeTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 370, 90, -1));
 
         organizationLabelR.setText("Organization:");
+        Registration.add(organizationLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 560, 80, 24));
 
         organizationComboBoxR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New organization", "Research", "Development", "GLP Regulators", "Clinical Researcher", "Review", "Approval", "Manufacturer inspections", "Drug advertising" }));
         organizationComboBoxR.addActionListener(new java.awt.event.ActionListener() {
@@ -517,21 +556,26 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 organizationComboBoxRActionPerformed(evt);
             }
         });
+        Registration.add(organizationComboBoxR, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 560, 210, -1));
 
         roleLabelR.setText("Role:");
+        Registration.add(roleLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 610, 94, 20));
 
         usernameLabelR.setText("Username:");
-
-        usernameTextFieldR.setText("Username");
+        Registration.add(usernameLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 510, 83, -1));
+        Registration.add(usernameTextFieldR, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 510, 160, -1));
 
         passwordLabelR.setText("Password:");
+        Registration.add(passwordLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 510, 130, 20));
+        Registration.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 510, 220, -1));
 
-        roleComboBoxR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New role", "Research Scientist", "Research lead", "CTEP medical officer", "Manufacturing Analyst", "GLP Officer", "Clinical researcher", "Medical Officer", "Toxicology Specialist", "Advertising Specialist" }));
+        roleComboBoxR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New role", "Research Scientist", "Research lead", "CTEP medical officer", "Manufacturing Analyst", "GLP Officer", "Clinical researcher", "Medical Officer", "Toxicology Specialist", "Advertising Specialist", "Safety Inspector Officer" }));
         roleComboBoxR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 roleComboBoxRActionPerformed(evt);
             }
         });
+        Registration.add(roleComboBoxR, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 610, 150, -1));
 
         cancelButtonR.setText("Cancel");
         cancelButtonR.addActionListener(new java.awt.event.ActionListener() {
@@ -539,15 +583,20 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 cancelButtonRActionPerformed(evt);
             }
         });
+        Registration.add(cancelButtonR, new org.netbeans.lib.awtextra.AbsoluteConstraints(612, 673, 90, 30));
 
-        submitButtonR.setText("Submit");
+        submitButtonR.setBackground(new java.awt.Color(51, 102, 255));
+        submitButtonR.setForeground(new java.awt.Color(255, 255, 255));
+        submitButtonR.setText("Create User");
         submitButtonR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 submitButtonRActionPerformed(evt);
             }
         });
+        Registration.add(submitButtonR, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 673, 120, 30));
 
         enterpriseLabelR.setText("Enterprise:");
+        Registration.add(enterpriseLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 560, 100, -1));
 
         enterpriseComboBoxR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New enterprise", "Medical institute" }));
         enterpriseComboBoxR.addActionListener(new java.awt.event.ActionListener() {
@@ -555,156 +604,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 enterpriseComboBoxRActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout RegistrationLayout = new javax.swing.GroupLayout(Registration);
-        Registration.setLayout(RegistrationLayout);
-        RegistrationLayout.setHorizontalGroup(
-            RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(RegistrationLayout.createSequentialGroup()
-                .addGap(450, 450, 450)
-                .addComponent(Title)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(RegistrationLayout.createSequentialGroup()
-                .addGap(263, 263, 263)
-                .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RegistrationLayout.createSequentialGroup()
-                        .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(numberLabelR, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(addressLabelR, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(zipCodeLabelR, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(zipcodeTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(RegistrationLayout.createSequentialGroup()
-                                .addComponent(numberTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(mailIDLabelR, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(emailIDTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(271, 271, 271))
-                    .addGroup(RegistrationLayout.createSequentialGroup()
-                        .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(RegistrationLayout.createSequentialGroup()
-                                .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(usernameLabelR, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
-                                        .addComponent(ageLabelR, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(nameLabelR, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addComponent(genderLabelR, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(RegistrationLayout.createSequentialGroup()
-                                        .addComponent(maleRadioButton1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(femaleRadioButton1)
-                                        .addGap(9, 9, 9)
-                                        .addComponent(othersRadioButton1))
-                                    .addGroup(RegistrationLayout.createSequentialGroup()
-                                        .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(usernameTextFieldR, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(RegistrationLayout.createSequentialGroup()
-                                                .addComponent(ageTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(dobLabelR)))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(RegistrationLayout.createSequentialGroup()
-                                                .addComponent(passwordLabelR)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(DateofBirthChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                    .addGroup(RegistrationLayout.createSequentialGroup()
-                                        .addComponent(firstnameTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(middlenameTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(lastnameTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, RegistrationLayout.createSequentialGroup()
-                                    .addComponent(enterpriseLabelR, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(enterpriseComboBoxR, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGroup(RegistrationLayout.createSequentialGroup()
-                                    .addComponent(roleLabelR, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(roleComboBoxR, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGroup(RegistrationLayout.createSequentialGroup()
-                                    .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(organizationLabelR, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(cancelButtonR))
-                                    .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(RegistrationLayout.createSequentialGroup()
-                                            .addGap(2, 2, 2)
-                                            .addComponent(submitButtonR))
-                                        .addGroup(RegistrationLayout.createSequentialGroup()
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(organizationComboBoxR, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
-        RegistrationLayout.setVerticalGroup(
-            RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(RegistrationLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Title)
-                .addGap(18, 18, 18)
-                .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nameLabelR)
-                    .addComponent(firstnameTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(middlenameTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lastnameTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(ageLabelR)
-                        .addComponent(ageTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(dobLabelR, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(DateofBirthChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(passwordLabelR, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
-                    .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(usernameLabelR)
-                        .addComponent(usernameTextFieldR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(genderLabelR)
-                    .addComponent(maleRadioButton1)
-                    .addComponent(femaleRadioButton1)
-                    .addComponent(othersRadioButton1))
-                .addGap(18, 18, 18)
-                .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(numberLabelR, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mailIDLabelR)
-                    .addComponent(numberTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(emailIDTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(addressLabelR)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(zipcodeTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(zipCodeLabelR, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(enterpriseLabelR)
-                    .addComponent(enterpriseComboBoxR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(organizationLabelR, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(organizationComboBoxR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(roleLabelR)
-                    .addComponent(roleComboBoxR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47)
-                .addGroup(RegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cancelButtonR)
-                    .addComponent(submitButtonR))
-                .addContainerGap())
-        );
+        Registration.add(enterpriseComboBoxR, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 560, 150, -1));
+        Registration.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 460, 580, -1));
 
         Parent.add(Registration, "card3");
 
@@ -1203,7 +1104,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 .addGroup(page1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 300, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 307, Short.MAX_VALUE)
                 .addComponent(TabbedPaneNext1)
                 .addGap(21, 21, 21))
         );
@@ -1269,7 +1170,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                         .addComponent(addChemicalComposition)
                         .addGap(18, 18, 18)
                         .addComponent(deleteChemicalComposition)))
-                .addContainerGap(310, Short.MAX_VALUE))
+                .addContainerGap(331, Short.MAX_VALUE))
         );
         page2Layout.setVerticalGroup(
             page2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1345,7 +1246,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(page3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(page3Layout.createSequentialGroup()
-                        .addGap(0, 857, Short.MAX_VALUE)
+                        .addGap(0, 877, Short.MAX_VALUE)
                         .addComponent(ResearchReportCancelReport)
                         .addGap(18, 18, 18)
                         .addComponent(ResearchReportSubmitReport))
@@ -1414,7 +1315,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 .addGroup(page3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel22)
                     .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 220, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 233, Short.MAX_VALUE)
                 .addGroup(page3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ResearchReportSubmitReport)
                     .addComponent(ResearchReportCancelReport))
@@ -2766,6 +2667,119 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         leftComponent.add(AddAdvertising, "card9");
 
+        SafetyInspectorOfficer.setBackground(new java.awt.Color(255, 255, 255));
+        SafetyInspectorOfficer.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        AssignToDevDecsion5.setText("Add Inspection Visit");
+        AssignToDevDecsion5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AssignToDevDecsion5ActionPerformed(evt);
+            }
+        });
+        SafetyInspectorOfficer.add(AssignToDevDecsion5, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 540, -1, -1));
+
+        jLabel81.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel81.setText("Welcome Safety Inspector Officer");
+        SafetyInspectorOfficer.add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 35, 370, -1));
+
+        jTable9.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Report ID", "Drug name", "Date", "Disease target", "Report to"
+            }
+        ));
+        jScrollPane34.setViewportView(jTable9);
+
+        SafetyInspectorOfficer.add(jScrollPane34, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 83, 922, 402));
+
+        ViewReport7.setText("View Report");
+        SafetyInspectorOfficer.add(ViewReport7, new org.netbeans.lib.awtextra.AbsoluteConstraints(439, 300, -1, -1));
+
+        ViewReport8.setText("View Report");
+        SafetyInspectorOfficer.add(ViewReport8, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 540, -1, -1));
+
+        leftComponent.add(SafetyInspectorOfficer, "card9");
+
+        InspectionVisit.setBackground(new java.awt.Color(255, 255, 255));
+        InspectionVisit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        AssignToDevDecsion4.setText("Add");
+        AssignToDevDecsion4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AssignToDevDecsion4ActionPerformed(evt);
+            }
+        });
+        InspectionVisit.add(AssignToDevDecsion4, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 540, 100, -1));
+
+        CancelAssigning4.setText("Cancel");
+        CancelAssigning4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CancelAssigning4ActionPerformed(evt);
+            }
+        });
+        InspectionVisit.add(CancelAssigning4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 540, -1, -1));
+
+        jLabel84.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
+        jLabel84.setText("Add Inspection Visit");
+        InspectionVisit.add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 270, -1));
+
+        jLabel82.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel82.setText("FDA officials conduct routine inspections of drug manufacturing facilities across the United States, and abroad if approved products are");
+        InspectionVisit.add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 910, -1));
+
+        jLabel85.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel85.setText("manufactured overseas. Manufacturers may be informed of inspections in advance, or the inspections may be unannounced.");
+        InspectionVisit.add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 910, -1));
+
+        jTextArea13.setColumns(20);
+        jTextArea13.setRows(5);
+        jScrollPane28.setViewportView(jTextArea13);
+
+        InspectionVisit.add(jScrollPane28, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 710, 90));
+        InspectionVisit.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 880, 20));
+
+        jLabel88.setText("Remarks:");
+        InspectionVisit.add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 160, -1));
+
+        jLabel89.setText("Inspection Type:");
+        InspectionVisit.add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 160, 20));
+
+        jRadioButton1.setText("Pass");
+        InspectionVisit.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, 60, -1));
+
+        jRadioButton3.setText("Fail");
+        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton3ActionPerformed(evt);
+            }
+        });
+        InspectionVisit.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 380, 60, -1));
+
+        jLabel90.setText("Inspection Result:");
+        InspectionVisit.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 160, 20));
+
+        jTextField8.setForeground(new java.awt.Color(102, 102, 102));
+        jTextField8.setText("Select Date");
+        InspectionVisit.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, 200, -1));
+
+        jLabel91.setText("Inspection Date:");
+        InspectionVisit.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 160, 20));
+
+        jRadioButton4.setText("Routine");
+        InspectionVisit.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 90, -1));
+
+        jRadioButton5.setText("Due to problem");
+        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton5ActionPerformed(evt);
+            }
+        });
+        InspectionVisit.add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 120, -1));
+
+        leftComponent.add(InspectionVisit, "card9");
+
         jSplitPane1.setRightComponent(leftComponent);
 
         javax.swing.GroupLayout WorkspaceLayout = new javax.swing.GroupLayout(Workspace);
@@ -3188,8 +3202,11 @@ public class drugLifeCycle extends javax.swing.JFrame {
             SplitPanelPain(AdvertisingSpecialist); 
         }
         
-        
-        
+        //Safety Inspector added here
+        if (empWorkSpace.getRole().equals("Safety Inspector")){
+            PanelPaint(Workspace);
+            SplitPanelPain(SafetyInspectorOfficer); 
+        }
         
     }
     private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
@@ -3676,6 +3693,26 @@ public class drugLifeCycle extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_roleComboBoxRActionPerformed
 
+    private void AssignToDevDecsion5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignToDevDecsion5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AssignToDevDecsion5ActionPerformed
+
+    private void AssignToDevDecsion4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignToDevDecsion4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AssignToDevDecsion4ActionPerformed
+
+    private void CancelAssigning4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelAssigning4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CancelAssigning4ActionPerformed
+
+    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton3ActionPerformed
+
+    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -3724,15 +3761,19 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JButton AssignToDevDecsion1;
     private javax.swing.JButton AssignToDevDecsion2;
     private javax.swing.JButton AssignToDevDecsion3;
+    private javax.swing.JButton AssignToDevDecsion4;
+    private javax.swing.JButton AssignToDevDecsion5;
     private javax.swing.JButton CancelAssigning;
     private javax.swing.JButton CancelAssigning1;
     private javax.swing.JButton CancelAssigning3;
+    private javax.swing.JButton CancelAssigning4;
     private javax.swing.JPanel ClinicalResearchers;
     private javax.swing.JPanel CreateTrail;
     private com.toedter.calendar.JDateChooser DateofBirthChooser1;
     private javax.swing.JPanel DiscoveryDevelopment;
     private javax.swing.JPanel GLPOfficersHome;
     private javax.swing.JLabel IDleadAssign;
+    private javax.swing.JPanel InspectionVisit;
     private javax.swing.JPanel Login;
     private javax.swing.JPanel ManufacturingAnalystHome;
     private javax.swing.JPanel MedicalOfficerHome;
@@ -3760,6 +3801,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JTextField ResearchScientistReportPage2ChemicalTextField;
     private javax.swing.JTextField ResearchScientistReportPage2Quantity;
     private javax.swing.JPanel ResearchScientistViewReport;
+    private javax.swing.JPanel SafetyInspectorOfficer;
     private javax.swing.JButton TabbedPaneNext1;
     private javax.swing.JButton TabbedPaneNext2;
     private javax.swing.JLabel Title;
@@ -3770,6 +3812,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JButton ViewReport4;
     private javax.swing.JButton ViewReport5;
     private javax.swing.JButton ViewReport6;
+    private javax.swing.JButton ViewReport7;
+    private javax.swing.JButton ViewReport8;
     private javax.swing.JPanel Workspace;
     private javax.swing.JButton addChemicalComposition;
     private javax.swing.JButton addEnterpriseButton;
@@ -3898,9 +3942,20 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel80;
+    private javax.swing.JLabel jLabel81;
+    private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel83;
+    private javax.swing.JLabel jLabel84;
+    private javax.swing.JLabel jLabel85;
     private javax.swing.JLabel jLabel86;
+    private javax.swing.JLabel jLabel87;
+    private javax.swing.JLabel jLabel88;
+    private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel90;
+    private javax.swing.JLabel jLabel91;
+    private javax.swing.JLabel jLabel92;
+    private javax.swing.JLabel jLabel93;
     private javax.swing.JList<String> jList1;
     private javax.swing.JList<String> jList2;
     private javax.swing.JList<String> jList3;
@@ -3913,6 +3968,10 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
@@ -3933,8 +3992,10 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane25;
     private javax.swing.JScrollPane jScrollPane26;
     private javax.swing.JScrollPane jScrollPane27;
+    private javax.swing.JScrollPane jScrollPane28;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane33;
+    private javax.swing.JScrollPane jScrollPane34;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
@@ -3943,6 +4004,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
@@ -3952,10 +4015,12 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JTable jTable5;
     private javax.swing.JTable jTable6;
     private javax.swing.JTable jTable7;
+    private javax.swing.JTable jTable9;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea10;
     private javax.swing.JTextArea jTextArea11;
     private javax.swing.JTextArea jTextArea12;
+    private javax.swing.JTextArea jTextArea13;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
@@ -3981,6 +4046,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField lastnameTextField1;
     private javax.swing.JPanel leftComponent;
     private javax.swing.JButton loginButton;
