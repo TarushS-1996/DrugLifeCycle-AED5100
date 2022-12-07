@@ -2912,7 +2912,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         }
     }
     
-    //Advertising Details
+    //Advertising Detail
     
     public void populateAddSpecialistTable(Employee emp){
         DefaultTableModel model = (DefaultTableModel) AddSpecialistTable.getModel();
