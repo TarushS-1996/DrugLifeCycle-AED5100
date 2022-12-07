@@ -356,6 +356,24 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jTextArea9 = new javax.swing.JTextArea();
         jLabel74 = new javax.swing.JLabel();
         jLabel75 = new javax.swing.JLabel();
+        AdvertisingSpecialist = new javax.swing.JPanel();
+        AssignToDevDecsion2 = new javax.swing.JButton();
+        jLabel80 = new javax.swing.JLabel();
+        jScrollPane33 = new javax.swing.JScrollPane();
+        AddSpecialistTable = new javax.swing.JTable();
+        ViewReport5 = new javax.swing.JButton();
+        ViewReport6 = new javax.swing.JButton();
+        AddAdvertising = new javax.swing.JPanel();
+        AssignToDevDecsion3 = new javax.swing.JButton();
+        CancelAssigning3 = new javax.swing.JButton();
+        jLabel83 = new javax.swing.JLabel();
+        jLabel86 = new javax.swing.JLabel();
+        jLabel77 = new javax.swing.JLabel();
+        jLabel78 = new javax.swing.JLabel();
+        jLabel79 = new javax.swing.JLabel();
+        jScrollPane27 = new javax.swing.JScrollPane();
+        jTextArea12 = new javax.swing.JTextArea();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -508,7 +526,12 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         passwordLabelR.setText("Password:");
 
-        roleComboBoxR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New role", "Research Scientist", "Research lead", "CTEP medical officer", "Manufacturing Analyst", "GLP Officer", "Clinical researcher", "Medical Officer", "Toxicology Specialist" }));
+        roleComboBoxR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New role", "Research Scientist", "Research lead", "CTEP medical officer", "Manufacturing Analyst", "GLP Officer", "Clinical researcher", "Medical Officer", "Toxicology Specialist", "Advertising Specialist" }));
+        roleComboBoxR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                roleComboBoxRActionPerformed(evt);
+            }
+        });
 
         cancelButtonR.setText("Cancel");
         cancelButtonR.addActionListener(new java.awt.event.ActionListener() {
@@ -2652,6 +2675,97 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         leftComponent.add(AddToxicologyReport, "card9");
 
+        AdvertisingSpecialist.setBackground(new java.awt.Color(255, 255, 255));
+        AdvertisingSpecialist.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        AssignToDevDecsion2.setText("Add Advertising Info");
+        AssignToDevDecsion2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AssignToDevDecsion2ActionPerformed(evt);
+            }
+        });
+        AdvertisingSpecialist.add(AssignToDevDecsion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 540, -1, -1));
+
+        jLabel80.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel80.setText("Welcome Advertising Specialist");
+        AdvertisingSpecialist.add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 35, -1, -1));
+
+        AddSpecialistTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Report ID", "Drug name", "Date", "Disease target", "Report to"
+            }
+        ));
+        jScrollPane33.setViewportView(AddSpecialistTable);
+
+        AdvertisingSpecialist.add(jScrollPane33, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 83, 922, 402));
+
+        ViewReport5.setText("View Report");
+        AdvertisingSpecialist.add(ViewReport5, new org.netbeans.lib.awtextra.AbsoluteConstraints(439, 300, -1, -1));
+
+        ViewReport6.setText("View Report");
+        AdvertisingSpecialist.add(ViewReport6, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 540, -1, -1));
+
+        leftComponent.add(AdvertisingSpecialist, "card9");
+
+        AddAdvertising.setBackground(new java.awt.Color(255, 255, 255));
+        AddAdvertising.setLayout(null);
+
+        AssignToDevDecsion3.setText("Add");
+        AssignToDevDecsion3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AssignToDevDecsion3ActionPerformed(evt);
+            }
+        });
+        AddAdvertising.add(AssignToDevDecsion3);
+        AssignToDevDecsion3.setBounds(812, 420, 100, 23);
+
+        CancelAssigning3.setText("Cancel");
+        CancelAssigning3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CancelAssigning3ActionPerformed(evt);
+            }
+        });
+        AddAdvertising.add(CancelAssigning3);
+        CancelAssigning3.setBounds(730, 420, 72, 23);
+
+        jLabel83.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
+        jLabel83.setText("Add Advertising Info");
+        AddAdvertising.add(jLabel83);
+        jLabel83.setBounds(30, 40, 270, 30);
+
+        jLabel86.setText("Product Claim Information:");
+        AddAdvertising.add(jLabel86);
+        jLabel86.setBounds(30, 210, 160, 17);
+
+        jLabel77.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel77.setText("found in medical journals, newspapers, and magazines, and on the Internet, television, or radio.");
+        AddAdvertising.add(jLabel77);
+        jLabel77.setBounds(30, 120, 910, 18);
+
+        jLabel78.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel78.setText("All advertisements, such as product claims or reminder ads, cannot be false or misleading. They must contain truthful information about a ");
+        AddAdvertising.add(jLabel78);
+        jLabel78.setBounds(30, 80, 910, 18);
+
+        jLabel79.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel79.setText("They must contain truthful information about a drug’s effectiveness, side effects, and prescribing information. These advertisements can be ");
+        AddAdvertising.add(jLabel79);
+        jLabel79.setBounds(30, 100, 910, 18);
+
+        jTextArea12.setColumns(20);
+        jTextArea12.setRows(5);
+        jScrollPane27.setViewportView(jTextArea12);
+
+        AddAdvertising.add(jScrollPane27);
+        jScrollPane27.setBounds(200, 210, 710, 180);
+        AddAdvertising.add(jSeparator1);
+        jSeparator1.setBounds(30, 170, 880, 20);
+
+        leftComponent.add(AddAdvertising, "card9");
+
         jSplitPane1.setRightComponent(leftComponent);
 
         javax.swing.GroupLayout WorkspaceLayout = new javax.swing.GroupLayout(Workspace);
@@ -2783,6 +2897,28 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         }
     }
+    
+    //Advertising Details
+    
+    public void populateAddSpecialistTable(Employee emp){
+        DefaultTableModel model = (DefaultTableModel) AddSpecialistTable.getModel();
+        model.setRowCount(0);
+        for (ClinicalResearcherReport crR : clinicalresearchdir.getClinicalReportDir()){
+            if (crR.getAssignedClinicalResearcher().equals(emp.getName())){
+                String[] addToTable = {crR.getReportID(), crR.getDrugName(), crR.getDate().toString(), crR.getDiseaseTarget(), crR.getAssignedGLPOfficer()};
+                model.addRow(addToTable);                            
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     public void addClinicalResearchers(Employee emp){
         jComboBox5.removeAllItems();
@@ -3044,6 +3180,17 @@ public class drugLifeCycle extends javax.swing.JFrame {
             SplitPanelPain(MedicalOfficerHome);
             
         }
+        
+        //AdvertisingSpecialist added here
+        
+        if (empWorkSpace.getRole().equals("Advertising Specialist")){
+            PanelPaint(Workspace);
+            SplitPanelPain(AdvertisingSpecialist); 
+        }
+        
+        
+        
+        
     }
     private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
         PanelPaint(Registration);
@@ -3512,6 +3659,23 @@ public class drugLifeCycle extends javax.swing.JFrame {
         
     }//GEN-LAST:event_AddReport2MouseClicked
 
+    private void AssignToDevDecsion3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignToDevDecsion3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AssignToDevDecsion3ActionPerformed
+
+    private void CancelAssigning3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelAssigning3ActionPerformed
+    
+        SplitPanelPain(AdvertisingSpecialist );
+    }//GEN-LAST:event_CancelAssigning3ActionPerformed
+
+    private void AssignToDevDecsion2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignToDevDecsion2ActionPerformed
+       SplitPanelPain(AddAdvertising);
+    }//GEN-LAST:event_AssignToDevDecsion2ActionPerformed
+
+    private void roleComboBoxRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roleComboBoxRActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_roleComboBoxRActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -3548,15 +3712,21 @@ public class drugLifeCycle extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel AddAdvertising;
     private javax.swing.JPanel AddManufacturingDetails;
     private javax.swing.JButton AddReport;
     private javax.swing.JButton AddReport1;
     private javax.swing.JButton AddReport2;
+    private javax.swing.JTable AddSpecialistTable;
     private javax.swing.JPanel AddToxicologyReport;
+    private javax.swing.JPanel AdvertisingSpecialist;
     private javax.swing.JButton AssignToDevDecsion;
     private javax.swing.JButton AssignToDevDecsion1;
+    private javax.swing.JButton AssignToDevDecsion2;
+    private javax.swing.JButton AssignToDevDecsion3;
     private javax.swing.JButton CancelAssigning;
     private javax.swing.JButton CancelAssigning1;
+    private javax.swing.JButton CancelAssigning3;
     private javax.swing.JPanel ClinicalResearchers;
     private javax.swing.JPanel CreateTrail;
     private com.toedter.calendar.JDateChooser DateofBirthChooser1;
@@ -3598,6 +3768,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JButton ViewReport2;
     private javax.swing.JButton ViewReport3;
     private javax.swing.JButton ViewReport4;
+    private javax.swing.JButton ViewReport5;
+    private javax.swing.JButton ViewReport6;
     private javax.swing.JPanel Workspace;
     private javax.swing.JButton addChemicalComposition;
     private javax.swing.JButton addEnterpriseButton;
@@ -3721,7 +3893,13 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel75;
     private javax.swing.JLabel jLabel76;
+    private javax.swing.JLabel jLabel77;
+    private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel80;
+    private javax.swing.JLabel jLabel83;
+    private javax.swing.JLabel jLabel86;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList1;
     private javax.swing.JList<String> jList2;
@@ -3754,13 +3932,16 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane24;
     private javax.swing.JScrollPane jScrollPane25;
     private javax.swing.JScrollPane jScrollPane26;
+    private javax.swing.JScrollPane jScrollPane27;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane33;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
@@ -3774,6 +3955,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea10;
     private javax.swing.JTextArea jTextArea11;
+    private javax.swing.JTextArea jTextArea12;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
