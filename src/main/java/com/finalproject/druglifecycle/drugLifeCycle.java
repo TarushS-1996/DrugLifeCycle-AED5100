@@ -2919,6 +2919,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         }
     }
     
+
     public void populatweTableMedicalOfficerHome(Employee emp){
         DefaultTableModel model = (DefaultTableModel) jTable7.getModel();
         model.setRowCount(0);
@@ -2930,7 +2931,10 @@ public class drugLifeCycle extends javax.swing.JFrame {
         }
     }
     
-    //Advertising Details
+
+
+    //Advertising Detail
+
     
     public void populateAddSpecialistTable(Employee emp){
         DefaultTableModel model = (DefaultTableModel) AddSpecialistTable.getModel();
