@@ -61,6 +61,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        inspectionType = new javax.swing.ButtonGroup();
+        inspectionResult = new javax.swing.ButtonGroup();
         Parent = new javax.swing.JPanel();
         Login = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -399,10 +401,10 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
         jLabel90 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
         jLabel91 = new javax.swing.JLabel();
         jRadioButton4 = new javax.swing.JRadioButton();
         jRadioButton5 = new javax.swing.JRadioButton();
+        jDateChooser2 = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -568,7 +570,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         Registration.add(passwordLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 510, 130, 20));
         Registration.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 510, 220, -1));
 
-        roleComboBoxR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New role", "Research Scientist", "Research lead", "CTEP medical officer", "Manufacturing Analyst", "GLP Officer", "Clinical researcher", "Medical Officer", "Toxicology Specialist", "Advertising Specialist", "Safety Inspector Officer" }));
+        roleComboBoxR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New role", "Research Scientist", "Research lead", "CTEP medical officer", "Manufacturing Analyst", "GLP Officer", "Clinical researcher", "Medical Officer", "Toxicology Specialist", "Advertising Specialist", "Safety Inspector" }));
         roleComboBoxR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 roleComboBoxRActionPerformed(evt);
@@ -2750,9 +2752,11 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jLabel89.setText("Inspection Type:");
         InspectionVisit.add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 160, 20));
 
+        inspectionResult.add(jRadioButton1);
         jRadioButton1.setText("Pass");
         InspectionVisit.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, 60, -1));
 
+        inspectionResult.add(jRadioButton3);
         jRadioButton3.setText("Fail");
         jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2764,16 +2768,14 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jLabel90.setText("Inspection Result:");
         InspectionVisit.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 160, 20));
 
-        jTextField8.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField8.setText("Select Date");
-        InspectionVisit.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, 200, -1));
-
         jLabel91.setText("Inspection Date:");
         InspectionVisit.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 160, 20));
 
+        inspectionType.add(jRadioButton4);
         jRadioButton4.setText("Routine");
         InspectionVisit.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 90, -1));
 
+        inspectionType.add(jRadioButton5);
         jRadioButton5.setText("Due to problem");
         jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2781,6 +2783,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         InspectionVisit.add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 120, -1));
+        InspectionVisit.add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, 190, -1));
 
         leftComponent.add(InspectionVisit, "card9");
 
@@ -3023,6 +3026,15 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jList5.setModel(mod);
     }
         
+    public void populateSafetyInspectorHome(Employee emp){
+        DefaultTableModel model = (DefaultTableModel) jTable9.getModel();
+        model.setRowCount(0);
+        for(MedicalReport me:mediRepp.getMediRep()){
+            String[] addToTable = {me.getReportID(), me.getDrugName(), me.getDate().toString(), me.getDiseaseTarget(), me.getToxicologySpecialist()};
+            model.addRow(addToTable);
+        }
+    }
+        
     public void addToDisAndDev(ResearchReport RR){
         jLabel24.setText("Report ID: "+RR.getReportID());
         jTextField6.setText(RR.getDrugName());
@@ -3208,6 +3220,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         if (empWorkSpace.getRole().equals("Advertising Specialist")){
             PanelPaint(Workspace);
             SplitPanelPain(AdvertisingSpecialist); 
+            populateSafetyInspectorHome(empWorkSpace);
         }
         
         //Safety Inspector added here
@@ -3710,15 +3723,18 @@ public class drugLifeCycle extends javax.swing.JFrame {
     }//GEN-LAST:event_roleComboBoxRActionPerformed
 
     private void AssignToDevDecsion5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignToDevDecsion5ActionPerformed
-        // TODO add your handling code here:
+        int row = jTable9.getSelectedRow();
+        if(row != -1){
+            SplitPanelPain(InspectionVisit);
+        }
     }//GEN-LAST:event_AssignToDevDecsion5ActionPerformed
 
     private void AssignToDevDecsion4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignToDevDecsion4ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_AssignToDevDecsion4ActionPerformed
 
     private void CancelAssigning4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelAssigning4ActionPerformed
-        // TODO add your handling code here:
+        SplitPanelPain(InspectionVisit);
     }//GEN-LAST:event_CancelAssigning4ActionPerformed
 
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
@@ -3881,6 +3897,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JLabel firstLoginOrganizationTitleLabel;
     private javax.swing.JTextField firstnameTextField1;
     private javax.swing.JLabel genderLabelR;
+    private javax.swing.ButtonGroup inspectionResult;
+    private javax.swing.ButtonGroup inspectionType;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -3895,6 +3913,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JComboBox<String> jComboBox6;
     private com.toedter.calendar.JDateChooser jDateChooser1;
+    private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -4078,7 +4097,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField lastnameTextField1;
     private javax.swing.JPanel leftComponent;
     private javax.swing.JButton loginButton;
