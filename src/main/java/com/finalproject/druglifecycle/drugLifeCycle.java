@@ -442,7 +442,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
         });
         Login.add(registerButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 580, 130, 30));
 
-        jLabel87.setIcon(new javax.swing.ImageIcon("/Users/kalzayy/Desktop/Loginwallpaper.png")); // NOI18N
         jLabel87.setText("jLabel87");
         Login.add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 770));
 
@@ -2401,6 +2400,11 @@ public class drugLifeCycle extends javax.swing.JFrame {
         });
 
         jButton7.setText("Reject");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout MedicalOfficerHomeLayout = new javax.swing.GroupLayout(MedicalOfficerHome);
         MedicalOfficerHome.setLayout(MedicalOfficerHomeLayout);
@@ -2912,6 +2916,17 @@ public class drugLifeCycle extends javax.swing.JFrame {
         }
     }
     
+    public void populatweTableMedicalOfficerHome(Employee emp){
+        DefaultTableModel model = (DefaultTableModel) jTable7.getModel();
+        model.setRowCount(0);
+        for(MedicalReport med : mediRepp.getMediRep()){
+            if (med.getMedicalOfficer().equals(emp.getName())){
+                String[] addToTable = {med.getReportID(), med.getDrugName(), med.getDate().toString(), med.getDiseaseTarget(), med.getToxicologySpecialist(), med.getFinalApproval()};
+                model.addRow(addToTable);
+            }
+        }
+    }
+    
     //Advertising Details
     
     public void populateAddSpecialistTable(Employee emp){
@@ -2924,14 +2939,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     public void addClinicalResearchers(Employee emp){
@@ -3192,6 +3199,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         if (empWorkSpace.getRole().equals("Toxicology Specialist")){
             PanelPaint(Workspace);
             SplitPanelPain(MedicalOfficerHome);
+            populatweTableMedicalOfficerHome(empWorkSpace);
             
         }
         
@@ -3635,9 +3643,17 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
     private void AddReport2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddReport2ActionPerformed
         int row = jTable7.getSelectedRow();
-        cardPrevious = RegulatoryHealthManager;
+        Employee loggedINEmployee = empDir.sendParticularUser(usernameTextField1.getText(), String.valueOf(passwordField1.getPassword()));
+        //cardPrevious = RegulatoryHealthManager;
         if (row != -1){
-            //SplitPanelPain();
+            String ID = jTable7.getValueAt(row, 0).toString();
+            MedicalReport med = new MedicalReport();
+            for(MedicalReport me:mediRepp.getMediRep()){
+                if(me.getReportID().equals(ID)){
+                    med = me;
+                }
+            }med.setFinalApproval("Approve");
+            populatweTableMedicalOfficerHome(loggedINEmployee);
         }
     }//GEN-LAST:event_AddReport2ActionPerformed
 
@@ -3712,6 +3728,22 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton5ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        int row = jTable7.getSelectedRow();
+        Employee loggedINEmployee = empDir.sendParticularUser(usernameTextField1.getText(), String.valueOf(passwordField1.getPassword()));
+        //cardPrevious = RegulatoryHealthManager;
+        if (row != -1){
+            String ID = jTable7.getValueAt(row, 0).toString();
+            MedicalReport med = new MedicalReport();
+            for(MedicalReport me:mediRepp.getMediRep()){
+                if(me.getReportID().equals(ID)){
+                    med = me;
+                }
+            }med.setFinalApproval("Rejected");
+            populatweTableMedicalOfficerHome(loggedINEmployee);
+        }
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
