@@ -16,6 +16,7 @@ import com.finalproject.backend.MedicalReport;
 import com.finalproject.backend.MedicalReportDirectory;
 import com.finalproject.backend.ResearchReport;
 import com.finalproject.backend.ResearchReportDirectory;
+import com.finalproject.backend.backendDBConnection;
 import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.DefaultListModel;
@@ -37,6 +38,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     public static String gender;
     public static String inspectiontype;
     public static String inspectionresult;
+    backendDBConnection conForSQL = new backendDBConnection();
     EmployeeDirectory empDir = new EmployeeDirectory();
     ResearchReportDirectory repDir = new ResearchReportDirectory();
     DevelopmentReportDir devRepDir = new DevelopmentReportDir();
@@ -54,6 +56,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         ResearchReportPage1ResearchBy.setEnabled(false);
         usernameTextFieldR5.setEnabled(false);
         jTextArea9.setEnabled(false);
+        conForSQL.connectoDB();
     }
 
     
