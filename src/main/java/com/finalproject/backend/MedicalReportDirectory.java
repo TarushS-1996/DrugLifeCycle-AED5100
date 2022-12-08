@@ -30,4 +30,14 @@ public class MedicalReportDirectory {
         mediRep.add(med);
         return med;        
     }
+    
+    public MedicalReport sendSpecificMedicalReport(String ID){
+        MedicalReport med = new MedicalReport();
+        for(MedicalReport md: mediRep){
+            if(md.getReportID().equals(ID)){
+                med = md;
+            }
+        }return med;
+    }
+    
 }

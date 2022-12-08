@@ -10,6 +10,8 @@ import com.finalproject.backend.DevelopmentReport;
 import com.finalproject.backend.DevelopmentReportDir;
 import com.finalproject.backend.Employee;
 import com.finalproject.backend.EmployeeDirectory;
+import com.finalproject.backend.InspectionReportDirectory;
+import com.finalproject.backend.InspectionReview;
 import com.finalproject.backend.MedicalReport;
 import com.finalproject.backend.MedicalReportDirectory;
 import com.finalproject.backend.ResearchReport;
@@ -33,11 +35,14 @@ public class drugLifeCycle extends javax.swing.JFrame {
      */
     
     public static String gender;
+    public static String inspectiontype;
+    public static String inspectionresult;
     EmployeeDirectory empDir = new EmployeeDirectory();
     ResearchReportDirectory repDir = new ResearchReportDirectory();
     DevelopmentReportDir devRepDir = new DevelopmentReportDir();
     MedicalReportDirectory mediRepp = new MedicalReportDirectory();
     ClinicalResearcherReportDirectory clinicalresearchdir = new ClinicalResearcherReportDirectory();
+    InspectionReportDirectory inspectRep = new InspectionReportDirectory();
     public static DefaultListModel listOfComposition = new DefaultListModel();
     public static DefaultListModel listOfDosage = new DefaultListModel();
     public static JPanel cardPrevious = null;
@@ -405,6 +410,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jRadioButton4 = new javax.swing.JRadioButton();
         jRadioButton5 = new javax.swing.JRadioButton();
         jDateChooser2 = new com.toedter.calendar.JDateChooser();
+        jLabel94 = new javax.swing.JLabel();
+        jLabel95 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -2627,7 +2634,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         AddAdvertising.add(AssignToDevDecsion3);
-        AssignToDevDecsion3.setBounds(812, 420, 100, 23);
+        AssignToDevDecsion3.setBounds(812, 420, 100, 24);
 
         CancelAssigning3.setText("Cancel");
         CancelAssigning3.addActionListener(new java.awt.event.ActionListener() {
@@ -2636,31 +2643,31 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         AddAdvertising.add(CancelAssigning3);
-        CancelAssigning3.setBounds(730, 420, 72, 23);
+        CancelAssigning3.setBounds(730, 420, 76, 24);
 
         jLabel83.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
         jLabel83.setText("Add Advertising Info");
         AddAdvertising.add(jLabel83);
-        jLabel83.setBounds(30, 40, 270, 30);
+        jLabel83.setBounds(30, 40, 270, 28);
 
         jLabel86.setText("Product Claim Information:");
         AddAdvertising.add(jLabel86);
-        jLabel86.setBounds(30, 210, 160, 17);
+        jLabel86.setBounds(30, 210, 160, 18);
 
         jLabel77.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel77.setText("found in medical journals, newspapers, and magazines, and on the Internet, television, or radio.");
         AddAdvertising.add(jLabel77);
-        jLabel77.setBounds(30, 120, 910, 18);
+        jLabel77.setBounds(30, 120, 910, 17);
 
         jLabel78.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel78.setText("All advertisements, such as product claims or reminder ads, cannot be false or misleading. They must contain truthful information about a ");
         AddAdvertising.add(jLabel78);
-        jLabel78.setBounds(30, 80, 910, 18);
+        jLabel78.setBounds(30, 80, 910, 17);
 
         jLabel79.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel79.setText("They must contain truthful information about a drug’s effectiveness, side effects, and prescribing information. These advertisements can be ");
         AddAdvertising.add(jLabel79);
-        jLabel79.setBounds(30, 100, 910, 18);
+        jLabel79.setBounds(30, 100, 910, 17);
 
         jTextArea12.setColumns(20);
         jTextArea12.setRows(5);
@@ -2717,7 +2724,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 AssignToDevDecsion4ActionPerformed(evt);
             }
         });
-        InspectionVisit.add(AssignToDevDecsion4, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 540, 100, -1));
+        InspectionVisit.add(AssignToDevDecsion4, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 530, 100, -1));
 
         CancelAssigning4.setText("Cancel");
         CancelAssigning4.addActionListener(new java.awt.event.ActionListener() {
@@ -2725,7 +2732,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 CancelAssigning4ActionPerformed(evt);
             }
         });
-        InspectionVisit.add(CancelAssigning4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 540, -1, -1));
+        InspectionVisit.add(CancelAssigning4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 530, -1, -1));
 
         jLabel84.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
         jLabel84.setText("Add Inspection Visit");
@@ -2743,18 +2750,23 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jTextArea13.setRows(5);
         jScrollPane28.setViewportView(jTextArea13);
 
-        InspectionVisit.add(jScrollPane28, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 710, 90));
+        InspectionVisit.add(jScrollPane28, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, 710, 90));
         InspectionVisit.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 880, 20));
 
         jLabel88.setText("Remarks:");
-        InspectionVisit.add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 160, -1));
+        InspectionVisit.add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 160, -1));
 
         jLabel89.setText("Inspection Type:");
-        InspectionVisit.add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 160, 20));
+        InspectionVisit.add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 160, 20));
 
         inspectionResult.add(jRadioButton1);
         jRadioButton1.setText("Pass");
-        InspectionVisit.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, 60, -1));
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
+        InspectionVisit.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 410, 60, -1));
 
         inspectionResult.add(jRadioButton3);
         jRadioButton3.setText("Fail");
@@ -2763,17 +2775,22 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 jRadioButton3ActionPerformed(evt);
             }
         });
-        InspectionVisit.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 380, 60, -1));
+        InspectionVisit.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 410, 60, -1));
 
         jLabel90.setText("Inspection Result:");
-        InspectionVisit.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 160, 20));
+        InspectionVisit.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 160, 20));
 
         jLabel91.setText("Inspection Date:");
-        InspectionVisit.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 160, 20));
+        InspectionVisit.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 160, 20));
 
         inspectionType.add(jRadioButton4);
         jRadioButton4.setText("Routine");
-        InspectionVisit.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 90, -1));
+        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton4ActionPerformed(evt);
+            }
+        });
+        InspectionVisit.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 90, -1));
 
         inspectionType.add(jRadioButton5);
         jRadioButton5.setText("Due to problem");
@@ -2782,8 +2799,14 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 jRadioButton5ActionPerformed(evt);
             }
         });
-        InspectionVisit.add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 120, -1));
-        InspectionVisit.add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, 190, -1));
+        InspectionVisit.add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, 140, -1));
+        InspectionVisit.add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 190, -1));
+
+        jLabel94.setText("Report ID:");
+        InspectionVisit.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
+
+        jLabel95.setText("jLabel95");
+        InspectionVisit.add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, -1, -1));
 
         leftComponent.add(InspectionVisit, "card9");
 
@@ -3017,6 +3040,15 @@ public class drugLifeCycle extends javax.swing.JFrame {
         }
     }
     
+        public void populateAdvertisingTable(Employee emp){
+            DefaultTableModel model = (DefaultTableModel) AddSpecialistTable.getModel();
+            model.setRowCount(0);
+            for(InspectionReview irr:inspectRep.getInspectionRepo()){
+                String[] addToTable = {irr.getReportID(), irr.getDrugName(), irr.getDate().toString(), irr.getDiseaseTarget(), irr.getReportTo()};
+                model.addRow(addToTable);
+            }
+        }
+    
         public void addToDistAndDos(ResearchReport RR, DevelopmentReport DR){
         addToDisAndDev(RR);
         DefaultListModel mod = new DefaultListModel();
@@ -3034,8 +3066,10 @@ public class drugLifeCycle extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) jTable9.getModel();
         model.setRowCount(0);
         for(MedicalReport me:mediRepp.getMediRep()){
+            if (me.getFinalApproval().equals("Approve")){
             String[] addToTable = {me.getReportID(), me.getDrugName(), me.getDate().toString(), me.getDiseaseTarget(), me.getToxicologySpecialist()};
             model.addRow(addToTable);
+            }
         }
     }
         
@@ -3218,19 +3252,17 @@ public class drugLifeCycle extends javax.swing.JFrame {
             populatweTableMedicalOfficerHome(empWorkSpace);
             
         }
-        
-        //AdvertisingSpecialist added here
-        
         if (empWorkSpace.getRole().equals("Advertising Specialist")){
             PanelPaint(Workspace);
             SplitPanelPain(AdvertisingSpecialist); 
-            populateSafetyInspectorHome(empWorkSpace);
+            populateAdvertisingTable(empWorkSpace);
         }
         
         //Safety Inspector added here
         if (empWorkSpace.getRole().equals("Safety Inspector")){
             PanelPaint(Workspace);
             SplitPanelPain(SafetyInspectorOfficer); 
+            populateSafetyInspectorHome(empWorkSpace);
         }
         
     }
@@ -3724,11 +3756,22 @@ public class drugLifeCycle extends javax.swing.JFrame {
         int row = jTable9.getSelectedRow();
         if(row != -1){
             SplitPanelPain(InspectionVisit);
+            jLabel95.setText(jTable9.getValueAt(row, 0).toString());
         }
     }//GEN-LAST:event_AssignToDevDecsion5ActionPerformed
 
     private void AssignToDevDecsion4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignToDevDecsion4ActionPerformed
-        
+        InspectionReview ir = inspectRep.addInspectionReport();
+        MedicalReport md = mediRepp.sendSpecificMedicalReport(jLabel95.getText());
+        ir.setReportID(md.getReportID());
+        ir.setDrugName(md.getDrugName());
+        ir.setDate(md.getDate());
+        ir.setDiseaseTarget(md.getDiseaseTarget());
+        ir.setInspectionType(inspectiontype);
+        ir.setInspectionDate(jDateChooser2.getDate());
+        ir.setInspectionRemarks(jTextArea13.getText());
+        ir.setInspectionResult(inspectionresult);
+        SplitPanelPain(SafetyInspectorOfficer);
     }//GEN-LAST:event_AssignToDevDecsion4ActionPerformed
 
     private void CancelAssigning4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelAssigning4ActionPerformed
@@ -3736,11 +3779,11 @@ public class drugLifeCycle extends javax.swing.JFrame {
     }//GEN-LAST:event_CancelAssigning4ActionPerformed
 
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
-        // TODO add your handling code here:
+        inspectionresult = "Fail";
     }//GEN-LAST:event_jRadioButton3ActionPerformed
 
     private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
-        // TODO add your handling code here:
+        inspectiontype = "Due to problem";
     }//GEN-LAST:event_jRadioButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -3758,6 +3801,14 @@ public class drugLifeCycle extends javax.swing.JFrame {
             populatweTableMedicalOfficerHome(loggedINEmployee);
         }
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+        inspectiontype = "Routine";
+    }//GEN-LAST:event_jRadioButton4ActionPerformed
+
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+       inspectionresult = "Pass";
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -4005,6 +4056,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel91;
     private javax.swing.JLabel jLabel92;
     private javax.swing.JLabel jLabel93;
+    private javax.swing.JLabel jLabel94;
+    private javax.swing.JLabel jLabel95;
     private javax.swing.JList<String> jList1;
     private javax.swing.JList<String> jList2;
     private javax.swing.JList<String> jList3;
