@@ -30,4 +30,15 @@ public class ClinicalResearcherReportDirectory {
         clinicalReportDir.add(crr);
         return crr;
     }
+    
+    public ClinicalResearcherReport sendSpecificReport(String ID){
+        ClinicalResearcherReport c = new ClinicalResearcherReport();
+        for (ClinicalResearcherReport cr : clinicalReportDir){
+            if(cr.getReportID().equals(ID)){
+                c = cr;
+            }
+        }
+        return c;
+    }
+    
 }
