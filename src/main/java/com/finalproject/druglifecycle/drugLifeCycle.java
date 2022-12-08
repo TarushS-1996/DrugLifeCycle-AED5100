@@ -2924,7 +2924,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) jTable7.getModel();
         model.setRowCount(0);
         for(MedicalReport med : mediRepp.getMediRep()){
-            if (med.getMedicalOfficer().equals(emp.getName())){
+            if (med.getToxicologySpecialist().equals(emp.getName())){
                 String[] addToTable = {med.getReportID(), med.getDrugName(), med.getDate().toString(), med.getDiseaseTarget(), med.getToxicologySpecialist(), med.getFinalApproval()};
                 model.addRow(addToTable);
             }
@@ -3679,27 +3679,21 @@ public class drugLifeCycle extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox6ActionPerformed
 
     private void AssignToDevDecsion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignToDevDecsion1ActionPerformed
-
-        ClinicalResearcherReport cr = new ClinicalResearcherReport();
-        for (ClinicalResearcherReport crR: clinicalresearchdir.getClinicalReportDir()){
-            if (crR.getReportID().equals(jLabel75.getText())){
-                crR = cr;
-            }
-        }
-        addToMediReport(cr);
-        SplitPanelPain(RegulatoryHealthManager);
-    }//GEN-LAST:event_AssignToDevDecsion1ActionPerformed
-
-    public void addToMediReport(ClinicalResearcherReport cr){
         Employee loggedINEmployee = empDir.sendParticularUser(usernameTextField1.getText(), String.valueOf(passwordField1.getPassword()));
+        ClinicalResearcherReport cr = clinicalresearchdir.sendSpecificReport(jLabel75.getText());
+        System.out.println(cr.getDate());
+        //addToMediReport(cr);
         MedicalReport medi = mediRepp.addMediReport();
         medi.setReportID(cr.getReportID());
-        medi.setMedicalOfficer(loggedINEmployee.getName());
+        medi.setDrugName(cr.getDrugName());
+        medi.setDate(cr.getDate());
+        medi.setDiseaseTarget(cr.getDiseaseTarget());
+        medi.setReportTo(cr.getName());
+        medi.setFinalApproval("Under review");
         medi.setToxicologySpecialist(jComboBox6.getSelectedItem().toString());
-        medi.setToxinsFound(jTextArea8.getText());
-        medi.setSideEffects(cr.getSideEffects());
-        
-    }
+        medi.setMedicalOfficer(loggedINEmployee.getName());
+        SplitPanelPain(RegulatoryHealthManager);
+    }//GEN-LAST:event_AssignToDevDecsion1ActionPerformed
     
     private void CancelAssigning1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelAssigning1ActionPerformed
         SplitPanelPain(cardPrevious);
