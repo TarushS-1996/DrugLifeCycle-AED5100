@@ -3000,7 +3000,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         }
     }
     
-    
+    //Radiobtn
     private void maleRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maleRadioButton1ActionPerformed
         gender = "Male";
     }//GEN-LAST:event_maleRadioButton1ActionPerformed
