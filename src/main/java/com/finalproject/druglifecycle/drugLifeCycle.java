@@ -16,9 +16,14 @@ import com.finalproject.backend.MedicalReport;
 import com.finalproject.backend.MedicalReportDirectory;
 import com.finalproject.backend.ResearchReport;
 import com.finalproject.backend.ResearchReportDirectory;
-import com.finalproject.backend.backendDBConnection;
+import com.finalproject.SQLDB.backendDBConnection;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -40,6 +45,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
     public static String inspectionresult;
     backendDBConnection conForSQL = new backendDBConnection();
     EmployeeDirectory empDir = new EmployeeDirectory();
+    Connection conn = conForSQL.connectoDB();
+
     ResearchReportDirectory repDir = new ResearchReportDirectory();
     DevelopmentReportDir devRepDir = new DevelopmentReportDir();
     MedicalReportDirectory mediRepp = new MedicalReportDirectory();
@@ -57,6 +64,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         usernameTextFieldR5.setEnabled(false);
         jTextArea9.setEnabled(false);
         conForSQL.connectoDB();
+        retrieveEmployee();
     }
 
     
@@ -2846,6 +2854,14 @@ public class drugLifeCycle extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public void retrieveEmployee(){
+        try{
+            conForSQL.retrieveEmployeeDirectory(conn, empDir);
+        }catch(SQLException e){
+            System.out.println("Error with retrieving the employee data. Error: "+ e);
+        }
+    }
+    
     public void summaryResearchReport(){
         jLabel13.setText(ResearchReportPage1ResearchBy.getText());
         jLabel15.setText(ResearchReportPage1Name.getText());
@@ -3150,6 +3166,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     }
     
     private void submitButtonRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonRActionPerformed
+        Connection con = conForSQL.connectoDB();
         Employee emp = empDir.addEmployee();
         String name = firstnameTextField1.getText() + " "+middlenameTextField1.getText() + " "+lastnameTextField1.getText();
         emp.setName(name);
@@ -3167,6 +3184,11 @@ public class drugLifeCycle extends javax.swing.JFrame {
         emp.setRole(roleComboBoxR.getSelectedItem().toString());
         System.out.println(roleComboBoxR.getSelectedItem().toString());
         PanelPaint(Login);
+        try{
+            conForSQL.addEmployeeToDB(con, emp);
+        }catch (SQLException e){
+            System.out.println("Error in adding employee. Detected "+e);
+        }
     }//GEN-LAST:event_submitButtonRActionPerformed
 
     private void enterpriseComboBoxRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterpriseComboBoxRActionPerformed
@@ -3428,6 +3450,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
         if(jTable3.getSelectedRow() != -1){
             DevelopmentReport Devrep = new DevelopmentReport();
             String ID =  jTable3.getValueAt(jTable3.getSelectedRow(), 0).toString();
+            String datte = jTable3.getValueAt(jTable3.getSelectedRow(), 2).toString();
+            //Date da = datte.toDate();
             for (DevelopmentReport devRep: devRepDir.getDevRepDir()){
                 if (devRep.getReportID().equals(ID)){
                     Devrep = devRep;
