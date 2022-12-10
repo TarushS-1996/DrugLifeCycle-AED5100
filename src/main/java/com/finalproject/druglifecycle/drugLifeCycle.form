@@ -147,9 +147,6 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel87">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="/Users/kalzayy/Documents/AED_DRUG_CYCLE/DrugLifeCycel-AED5100/Images/Loginwallpaper.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="jLabel87"/>
               </Properties>
               <Constraints>
