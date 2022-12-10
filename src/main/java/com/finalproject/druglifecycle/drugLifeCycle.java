@@ -31,6 +31,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.table.DefaultTableModel;
+import java.util.regex.*;
 
 /**
  *
@@ -83,7 +84,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
         inspectionResult = new javax.swing.ButtonGroup();
         Parent = new javax.swing.JPanel();
         Login = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         usernameLabel = new javax.swing.JLabel();
         passwordLabel = new javax.swing.JLabel();
         usernameTextField1 = new javax.swing.JTextField();
@@ -92,43 +92,48 @@ public class drugLifeCycle extends javax.swing.JFrame {
         registerButton = new javax.swing.JButton();
         jLabel87 = new javax.swing.JLabel();
         jLabel92 = new javax.swing.JLabel();
-        jLabel93 = new javax.swing.JLabel();
+        jLabel97 = new javax.swing.JLabel();
+        jLabel96 = new javax.swing.JLabel();
         Registration = new javax.swing.JPanel();
-        Title = new javax.swing.JLabel();
-        nameLabelR = new javax.swing.JLabel();
-        ageLabelR = new javax.swing.JLabel();
-        genderLabelR = new javax.swing.JLabel();
-        dobLabelR = new javax.swing.JLabel();
-        numberLabelR = new javax.swing.JLabel();
-        mailIDLabelR = new javax.swing.JLabel();
-        addressLabelR = new javax.swing.JLabel();
-        zipCodeLabelR = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        lastnameTextField1 = new javax.swing.JTextField();
         firstnameTextField1 = new javax.swing.JTextField();
         middlenameTextField1 = new javax.swing.JTextField();
-        lastnameTextField1 = new javax.swing.JTextField();
+        ageLabelR = new javax.swing.JLabel();
         ageTextField = new javax.swing.JTextField();
         DateofBirthChooser1 = new com.toedter.calendar.JDateChooser();
+        dobLabelR = new javax.swing.JLabel();
+        genderLabelR = new javax.swing.JLabel();
         maleRadioButton1 = new javax.swing.JRadioButton();
         femaleRadioButton1 = new javax.swing.JRadioButton();
         othersRadioButton1 = new javax.swing.JRadioButton();
         numberTextField1 = new javax.swing.JTextField();
+        numberLabelR = new javax.swing.JLabel();
+        mailIDLabelR = new javax.swing.JLabel();
         emailIDTextField1 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         addressTextArea1 = new javax.swing.JTextArea();
+        addressLabelR = new javax.swing.JLabel();
         zipcodeTextField1 = new javax.swing.JTextField();
-        organizationLabelR = new javax.swing.JLabel();
-        organizationComboBoxR = new javax.swing.JComboBox<>();
-        roleLabelR = new javax.swing.JLabel();
-        usernameLabelR = new javax.swing.JLabel();
+        zipCodeLabelR = new javax.swing.JLabel();
+        nameLabelR = new javax.swing.JLabel();
+        ageLabelR1 = new javax.swing.JLabel();
+        ageLabelR2 = new javax.swing.JLabel();
         usernameTextFieldR = new javax.swing.JTextField();
+        usernameLabelR = new javax.swing.JLabel();
         passwordLabelR = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
-        roleComboBoxR = new javax.swing.JComboBox<>();
-        cancelButtonR = new javax.swing.JButton();
-        submitButtonR = new javax.swing.JButton();
-        enterpriseLabelR = new javax.swing.JLabel();
         enterpriseComboBoxR = new javax.swing.JComboBox<>();
-        jSeparator4 = new javax.swing.JSeparator();
+        enterpriseLabelR = new javax.swing.JLabel();
+        organizationComboBoxR = new javax.swing.JComboBox<>();
+        organizationLabelR = new javax.swing.JLabel();
+        roleComboBoxR = new javax.swing.JComboBox<>();
+        roleLabelR = new javax.swing.JLabel();
+        jSeparator5 = new javax.swing.JSeparator();
+        submitButtonR = new javax.swing.JButton();
+        cancelButtonR = new javax.swing.JButton();
+        nameError = new javax.swing.JLabel();
+        Title = new javax.swing.JLabel();
         Workspace = new javax.swing.JPanel();
         jSplitPane1 = new javax.swing.JSplitPane();
         rightComponent = new javax.swing.JPanel();
@@ -427,24 +432,24 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jLabel95 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(245, 245, 245));
+        setLocation(new java.awt.Point(160, 100));
+        setMaximumSize(new java.awt.Dimension(2147483647, 600));
+        setPreferredSize(new java.awt.Dimension(1144, 760));
 
         Parent.setLayout(new java.awt.CardLayout());
 
         Login.setBackground(new java.awt.Color(255, 255, 255));
+        Login.setPreferredSize(new java.awt.Dimension(4120, 770));
         Login.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 36)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Regenero Drugdisk");
-        Login.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 80, 390, 60));
-
         usernameLabel.setText("Username");
-        Login.add(usernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 220, -1, -1));
+        Login.add(usernameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 240, -1, -1));
 
         passwordLabel.setText("Password");
-        Login.add(passwordLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 290, -1, -1));
-        Login.add(usernameTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 240, 220, 30));
-        Login.add(passwordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 310, 220, 30));
+        Login.add(passwordLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 320, -1, -1));
+        Login.add(usernameTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 260, 220, 40));
+        Login.add(passwordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 340, 220, 40));
 
         loginButton.setBackground(new java.awt.Color(0, 102, 204));
         loginButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -454,16 +459,18 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 loginButtonActionPerformed(evt);
             }
         });
-        Login.add(loginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 360, 220, 40));
+        Login.add(loginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 400, 220, 40));
 
+        registerButton.setBackground(new java.awt.Color(245, 245, 245));
         registerButton.setText("Configure Users");
         registerButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 registerButtonActionPerformed(evt);
             }
         });
-        Login.add(registerButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 580, 130, 30));
+        Login.add(registerButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 530, 150, 40));
 
+        jLabel87.setIcon(new javax.swing.ImageIcon("/Users/kalzayy/Documents/AED_DRUG_CYCLE/DrugLifeCycel-AED5100/Images/Loginwallpaper.png")); // NOI18N
         jLabel87.setText("jLabel87");
         Login.add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 770));
 
@@ -471,60 +478,77 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jLabel92.setForeground(new java.awt.Color(102, 102, 102));
         jLabel92.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel92.setText("Admin Settings");
-        Login.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 550, 170, 30));
+        Login.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 500, 170, 30));
 
-        jLabel93.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        jLabel93.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel93.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel93.setText("Drug Track Application");
-        Login.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 140, 390, 30));
+        jLabel97.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel97.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel97.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel97.setText("Drug Management Application");
+        Login.add(jLabel97, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 160, 390, 40));
+
+        jLabel96.setFont(new java.awt.Font("Helvetica Neue", 1, 36)); // NOI18N
+        jLabel96.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel96.setText("Domainex");
+        Login.add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 110, 390, 60));
 
         Parent.add(Login, "card2");
 
-        Registration.setBackground(new java.awt.Color(255, 255, 255));
-        Registration.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Registration.setBackground(new java.awt.Color(245, 245, 245));
+        Registration.setMaximumSize(new java.awt.Dimension(1144, 781));
+        Registration.setMinimumSize(new java.awt.Dimension(1144, 781));
+        Registration.setPreferredSize(new java.awt.Dimension(1144, 781));
+        Registration.setLayout(null);
 
-        Title.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
-        Title.setText("Registration");
-        Registration.add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, -1, -1));
-
-        nameLabelR.setText("Name:");
-        Registration.add(nameLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 83, -1));
-
-        ageLabelR.setText("Age:");
-        Registration.add(ageLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, 83, 20));
-
-        genderLabelR.setText("Gender:");
-        Registration.add(genderLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 94, -1));
-
-        dobLabelR.setText("Date of birth:");
-        Registration.add(dobLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, -1, 24));
-
-        numberLabelR.setText("Contact No.:");
-        Registration.add(numberLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, -1, 24));
-
-        mailIDLabelR.setText("Email ID:");
-        Registration.add(mailIDLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 250, 83, 30));
-
-        addressLabelR.setText("Address:");
-        Registration.add(addressLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 73, -1));
-
-        zipCodeLabelR.setText("Zip Code:");
-        Registration.add(zipCodeLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 370, 73, 24));
-
-        firstnameTextField1.setForeground(new java.awt.Color(153, 153, 153));
-        firstnameTextField1.setText("First name");
-        Registration.add(firstnameTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, 115, -1));
-
-        middlenameTextField1.setForeground(new java.awt.Color(153, 153, 153));
-        middlenameTextField1.setText("Middle name");
-        Registration.add(middlenameTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 120, 120, -1));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(null);
 
         lastnameTextField1.setForeground(new java.awt.Color(153, 153, 153));
         lastnameTextField1.setText("Last name");
-        Registration.add(lastnameTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 120, 126, -1));
-        Registration.add(ageTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 170, 50, -1));
-        Registration.add(DateofBirthChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, 110, -1));
+        lastnameTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                lastnameTextField1KeyReleased(evt);
+            }
+        });
+        jPanel1.add(lastnameTextField1);
+        lastnameTextField1.setBounds(550, 140, 170, 30);
+
+        firstnameTextField1.setForeground(new java.awt.Color(153, 153, 153));
+        firstnameTextField1.setText("First name");
+        firstnameTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                firstnameTextField1KeyReleased(evt);
+            }
+        });
+        jPanel1.add(firstnameTextField1);
+        firstnameTextField1.setBounds(190, 140, 170, 30);
+
+        middlenameTextField1.setForeground(new java.awt.Color(153, 153, 153));
+        middlenameTextField1.setText("Middle name");
+        middlenameTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                middlenameTextField1KeyReleased(evt);
+            }
+        });
+        jPanel1.add(middlenameTextField1);
+        middlenameTextField1.setBounds(370, 140, 170, 30);
+
+        ageLabelR.setText("Age:");
+        jPanel1.add(ageLabelR);
+        ageLabelR.setBounds(450, 300, 30, 20);
+        jPanel1.add(ageTextField);
+        ageTextField.setBounds(530, 300, 190, 30);
+
+        DateofBirthChooser1.setBackground(new java.awt.Color(245, 245, 245));
+        jPanel1.add(DateofBirthChooser1);
+        DateofBirthChooser1.setBounds(190, 350, 170, 30);
+
+        dobLabelR.setText("DOB:");
+        jPanel1.add(dobLabelR);
+        dobLabelR.setBounds(110, 350, 32, 24);
+
+        genderLabelR.setText("Gender:");
+        jPanel1.add(genderLabelR);
+        genderLabelR.setBounds(450, 360, 50, 17);
 
         maleRadioButton1.setText("Male");
         maleRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -532,7 +556,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 maleRadioButton1ActionPerformed(evt);
             }
         });
-        Registration.add(maleRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, -1, -1));
+        jPanel1.add(maleRadioButton1);
+        maleRadioButton1.setBounds(520, 360, 60, 20);
 
         femaleRadioButton1.setText("Female");
         femaleRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -540,7 +565,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 femaleRadioButton1ActionPerformed(evt);
             }
         });
-        Registration.add(femaleRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, -1, -1));
+        jPanel1.add(femaleRadioButton1);
+        femaleRadioButton1.setBounds(580, 360, 65, 21);
 
         othersRadioButton1.setText("Others");
         othersRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -548,76 +574,88 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 othersRadioButton1ActionPerformed(evt);
             }
         });
-        Registration.add(othersRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 210, -1, -1));
+        jPanel1.add(othersRadioButton1);
+        othersRadioButton1.setBounds(660, 360, 62, 21);
 
-        numberTextField1.setText("1234567890");
         numberTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numberTextField1ActionPerformed(evt);
             }
         });
-        Registration.add(numberTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, 220, -1));
+        numberTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                numberTextField1KeyReleased(evt);
+            }
+        });
+        jPanel1.add(numberTextField1);
+        numberTextField1.setBounds(530, 250, 190, 30);
 
-        emailIDTextField1.setText("abc@gmail.com");
-        Registration.add(emailIDTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 250, 170, -1));
+        numberLabelR.setText("Phone:");
+        jPanel1.add(numberLabelR);
+        numberLabelR.setBounds(450, 250, 73, 24);
+
+        mailIDLabelR.setText("Email ID:");
+        jPanel1.add(mailIDLabelR);
+        mailIDLabelR.setBounds(110, 250, 83, 20);
+
+        emailIDTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                emailIDTextField1KeyReleased(evt);
+            }
+        });
+        jPanel1.add(emailIDTextField1);
+        emailIDTextField1.setBounds(190, 250, 170, 30);
 
         addressTextArea1.setColumns(20);
         addressTextArea1.setRows(5);
         jScrollPane1.setViewportView(addressTextArea1);
 
-        Registration.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 300, 490, 50));
-        Registration.add(zipcodeTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 370, 90, -1));
+        jPanel1.add(jScrollPane1);
+        jScrollPane1.setBounds(190, 190, 530, 40);
 
-        organizationLabelR.setText("Organization:");
-        Registration.add(organizationLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 560, 80, 24));
+        addressLabelR.setText("Address:");
+        jPanel1.add(addressLabelR);
+        addressLabelR.setBounds(110, 190, 73, 17);
 
-        organizationComboBoxR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New organization", "Research", "Development", "GLP Regulators", "Clinical Researcher", "Review", "Approval", "Manufacturer inspections", "Drug advertising" }));
-        organizationComboBoxR.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                organizationComboBoxRActionPerformed(evt);
+        zipcodeTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                zipcodeTextField1KeyReleased(evt);
             }
         });
-        Registration.add(organizationComboBoxR, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 560, 210, -1));
+        jPanel1.add(zipcodeTextField1);
+        zipcodeTextField1.setBounds(190, 300, 170, 30);
 
-        roleLabelR.setText("Role:");
-        Registration.add(roleLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 610, 94, 20));
+        zipCodeLabelR.setText("Zip Code:");
+        jPanel1.add(zipCodeLabelR);
+        zipCodeLabelR.setBounds(110, 300, 73, 24);
+
+        nameLabelR.setText("Name:");
+        jPanel1.add(nameLabelR);
+        nameLabelR.setBounds(110, 140, 83, 30);
+
+        ageLabelR1.setFont(new java.awt.Font("Helvetica Neue", 0, 12)); // NOI18N
+        ageLabelR1.setForeground(new java.awt.Color(102, 102, 102));
+        ageLabelR1.setText("ROLE DETAILS");
+        jPanel1.add(ageLabelR1);
+        ageLabelR1.setBounds(110, 430, 100, 20);
+
+        ageLabelR2.setFont(new java.awt.Font("Helvetica Neue", 0, 12)); // NOI18N
+        ageLabelR2.setForeground(new java.awt.Color(102, 102, 102));
+        ageLabelR2.setText("BASIC DETAILS");
+        jPanel1.add(ageLabelR2);
+        ageLabelR2.setBounds(110, 100, 100, 20);
+        jPanel1.add(usernameTextFieldR);
+        usernameTextFieldR.setBounds(190, 470, 170, 30);
 
         usernameLabelR.setText("Username:");
-        Registration.add(usernameLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 510, 83, -1));
-        Registration.add(usernameTextFieldR, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 510, 160, -1));
+        jPanel1.add(usernameLabelR);
+        usernameLabelR.setBounds(110, 470, 83, 30);
 
         passwordLabelR.setText("Password:");
-        Registration.add(passwordLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 510, 130, 20));
-        Registration.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 510, 220, -1));
-
-        roleComboBoxR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New role", "Research Scientist", "Research lead", "CTEP medical officer", "Manufacturing Analyst", "GLP Officer", "Clinical researcher", "Medical Officer", "Toxicology Specialist", "Advertising Specialist", "Safety Inspector" }));
-        roleComboBoxR.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                roleComboBoxRActionPerformed(evt);
-            }
-        });
-        Registration.add(roleComboBoxR, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 610, 150, -1));
-
-        cancelButtonR.setText("Cancel");
-        cancelButtonR.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cancelButtonRActionPerformed(evt);
-            }
-        });
-        Registration.add(cancelButtonR, new org.netbeans.lib.awtextra.AbsoluteConstraints(612, 673, 90, 30));
-
-        submitButtonR.setBackground(new java.awt.Color(51, 102, 255));
-        submitButtonR.setForeground(new java.awt.Color(255, 255, 255));
-        submitButtonR.setText("Create User");
-        submitButtonR.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitButtonRActionPerformed(evt);
-            }
-        });
-        Registration.add(submitButtonR, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 673, 120, 30));
-
-        enterpriseLabelR.setText("Enterprise:");
-        Registration.add(enterpriseLabelR, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 560, 100, -1));
+        jPanel1.add(passwordLabelR);
+        passwordLabelR.setBounds(440, 470, 70, 30);
+        jPanel1.add(jPasswordField1);
+        jPasswordField1.setBounds(530, 470, 190, 30);
 
         enterpriseComboBoxR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New enterprise", "Medical institute" }));
         enterpriseComboBoxR.addActionListener(new java.awt.event.ActionListener() {
@@ -625,8 +663,73 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 enterpriseComboBoxRActionPerformed(evt);
             }
         });
-        Registration.add(enterpriseComboBoxR, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 560, 150, -1));
-        Registration.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 460, 580, -1));
+        jPanel1.add(enterpriseComboBoxR);
+        enterpriseComboBoxR.setBounds(190, 520, 170, 30);
+
+        enterpriseLabelR.setText("Enterprise:");
+        jPanel1.add(enterpriseLabelR);
+        enterpriseLabelR.setBounds(110, 520, 100, 30);
+
+        organizationComboBoxR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New organization", "Research", "Development", "GLP Regulators", "Clinical Researcher", "Review", "Approval", "Manufacturer inspections", "Drug advertising" }));
+        organizationComboBoxR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                organizationComboBoxRActionPerformed(evt);
+            }
+        });
+        jPanel1.add(organizationComboBoxR);
+        organizationComboBoxR.setBounds(530, 520, 190, 30);
+
+        organizationLabelR.setText("Organization:");
+        jPanel1.add(organizationLabelR);
+        organizationLabelR.setBounds(440, 520, 80, 30);
+
+        roleComboBoxR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New role", "Research Scientist", "Research lead", "CTEP medical officer", "Manufacturing Analyst", "GLP Officer", "Clinical researcher", "Medical Officer", "Toxicology Specialist", "Advertising Specialist", "Safety Inspector" }));
+        roleComboBoxR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                roleComboBoxRActionPerformed(evt);
+            }
+        });
+        jPanel1.add(roleComboBoxR);
+        roleComboBoxR.setBounds(190, 570, 150, 30);
+
+        roleLabelR.setText("Role:");
+        jPanel1.add(roleLabelR);
+        roleLabelR.setBounds(110, 570, 94, 30);
+        jPanel1.add(jSeparator5);
+        jSeparator5.setBounds(110, 640, 610, 30);
+
+        submitButtonR.setBackground(new java.awt.Color(51, 102, 255));
+        submitButtonR.setForeground(new java.awt.Color(255, 255, 255));
+        submitButtonR.setText("Register User");
+        submitButtonR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitButtonRActionPerformed(evt);
+            }
+        });
+        jPanel1.add(submitButtonR);
+        submitButtonR.setBounds(600, 660, 120, 30);
+
+        cancelButtonR.setText("Cancel");
+        cancelButtonR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelButtonRActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cancelButtonR);
+        cancelButtonR.setBounds(500, 660, 90, 30);
+
+        nameError.setFont(new java.awt.Font("Helvetica Neue", 0, 15)); // NOI18N
+        nameError.setForeground(new java.awt.Color(255, 0, 51));
+        jPanel1.add(nameError);
+        nameError.setBounds(110, 660, 370, 30);
+
+        Title.setFont(new java.awt.Font("Helvetica Neue", 1, 32)); // NOI18N
+        Title.setText("Register User");
+        jPanel1.add(Title);
+        Title.setBounds(110, 40, 220, 40);
+
+        Registration.add(jPanel1);
+        jPanel1.setBounds(150, 0, 840, 780);
 
         Parent.add(Registration, "card3");
 
@@ -712,7 +815,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                             .addComponent(firstLoginEnterpriseTypeComboBox, 0, 200, Short.MAX_VALUE)
                             .addComponent(firstLoginEnterpriseMyRoleTextField)
                             .addComponent(firstLoginEnterpriseMyOrganizationTextField))))
-                .addContainerGap(479, Short.MAX_VALUE))
+                .addContainerGap(3467, Short.MAX_VALUE))
         );
         firstLoginEnterpriseLayout.setVerticalGroup(
             firstLoginEnterpriseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -777,7 +880,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                             .addComponent(firstLoginOrganizationAddButton)
                             .addComponent(firstLoginOrganizationNameTextField)
                             .addComponent(firstLoginOrganizationRoleTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE))))
-                .addContainerGap(469, Short.MAX_VALUE))
+                .addContainerGap(3473, Short.MAX_VALUE))
         );
         firstLoginOrganizationLayout.setVerticalGroup(
             firstLoginOrganizationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -838,7 +941,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ResearchScientistHomeLayout.createSequentialGroup()
-                .addContainerGap(171, Short.MAX_VALUE)
+                .addContainerGap(3159, Short.MAX_VALUE)
                 .addGroup(ResearchScientistHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 839, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(ResearchScientistHomeLayout.createSequentialGroup()
@@ -894,7 +997,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         ResearchLeadHomeLayout.setHorizontalGroup(
             ResearchLeadHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ResearchLeadHomeLayout.createSequentialGroup()
-                .addContainerGap(120, Short.MAX_VALUE)
+                .addContainerGap(3108, Short.MAX_VALUE)
                 .addGroup(ResearchLeadHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 889, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(ResearchLeadHomeLayout.createSequentialGroup()
@@ -991,7 +1094,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                     .addComponent(dateleadAssign, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane10)
                     .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(607, Short.MAX_VALUE))
+                .addContainerGap(3621, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ResearchLeadApprovalLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(CancelAssigning)
@@ -1096,7 +1199,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                     .addComponent(jComboBox1, 0, 291, Short.MAX_VALUE)
                     .addComponent(ResearchReportPage1ResearchBy)
                     .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(584, Short.MAX_VALUE))
+                .addContainerGap(3572, Short.MAX_VALUE))
         );
         page1Layout.setVerticalGroup(
             page1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1191,7 +1294,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                         .addComponent(addChemicalComposition)
                         .addGap(18, 18, 18)
                         .addComponent(deleteChemicalComposition)))
-                .addContainerGap(331, Short.MAX_VALUE))
+                .addContainerGap(3307, Short.MAX_VALUE))
         );
         page2Layout.setVerticalGroup(
             page2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1267,7 +1370,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(page3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(page3Layout.createSequentialGroup()
-                        .addGap(0, 877, Short.MAX_VALUE)
+                        .addGap(0, 3853, Short.MAX_VALUE)
                         .addComponent(ResearchReportCancelReport)
                         .addGap(18, 18, 18)
                         .addComponent(ResearchReportSubmitReport))
@@ -1380,7 +1483,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             .addGroup(ManufacturingAnalystHomeLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(ManufacturingAnalystHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 1027, Short.MAX_VALUE)
+                    .addComponent(jScrollPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 4015, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ManufacturingAnalystHomeLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton2)
@@ -1482,7 +1585,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                         .addComponent(jLabel40, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jScrollPane12, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)))
-                .addContainerGap(477, Short.MAX_VALUE))
+                .addContainerGap(3482, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddManufacturingDetailsLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton6)
@@ -1616,7 +1719,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 .addComponent(jLabel31)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(225, Short.MAX_VALUE))
+                .addContainerGap(3227, Short.MAX_VALUE))
             .addGroup(DiscoveryDevelopmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(DiscoveryDevelopmentLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -1635,7 +1738,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                             .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 829, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel27))
-                    .addGap(0, 196, Short.MAX_VALUE)))
+                    .addGap(0, 2811, Short.MAX_VALUE)))
         );
         DiscoveryDevelopmentLayout.setVerticalGroup(
             DiscoveryDevelopmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1718,7 +1821,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                             .addComponent(jTextField13)
                             .addComponent(jTextField12)
                             .addComponent(jScrollPane13))))
-                .addContainerGap(555, Short.MAX_VALUE))
+                .addContainerGap(3543, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1805,7 +1908,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                         .addComponent(jScrollPane26, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE)
                         .addComponent(jScrollPane25, javax.swing.GroupLayout.Alignment.LEADING))
                     .addComponent(jLabel47))
-                .addContainerGap(244, Short.MAX_VALUE))
+                .addContainerGap(3232, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1889,7 +1992,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                         .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(229, Short.MAX_VALUE))
+                .addContainerGap(3217, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2069,7 +2172,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                     .addGroup(ClinicalResearchersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(ViewReport2)
                         .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, 858, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(132, Short.MAX_VALUE))
+                .addContainerGap(3120, Short.MAX_VALUE))
         );
         ClinicalResearchersLayout.setVerticalGroup(
             ClinicalResearchersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2134,7 +2237,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                         .addComponent(jLabel63)
                         .addComponent(jLabel62)
                         .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 839, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(151, Short.MAX_VALUE))
+                .addContainerGap(3139, Short.MAX_VALUE))
         );
         GLPOfficersHomeLayout.setVerticalGroup(
             GLPOfficersHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2435,7 +2538,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             .addGroup(MedicalOfficerHomeLayout.createSequentialGroup()
                 .addGap(322, 322, 322)
                 .addComponent(jLabel69)
-                .addContainerGap(499, Short.MAX_VALUE))
+                .addContainerGap(3475, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MedicalOfficerHomeLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(MedicalOfficerHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2647,7 +2750,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         AddAdvertising.add(AssignToDevDecsion3);
-        AssignToDevDecsion3.setBounds(812, 420, 100, 24);
+        AssignToDevDecsion3.setBounds(812, 420, 100, 23);
 
         CancelAssigning3.setText("Cancel");
         CancelAssigning3.addActionListener(new java.awt.event.ActionListener() {
@@ -2656,31 +2759,31 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         AddAdvertising.add(CancelAssigning3);
-        CancelAssigning3.setBounds(730, 420, 76, 24);
+        CancelAssigning3.setBounds(730, 420, 72, 23);
 
         jLabel83.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
         jLabel83.setText("Add Advertising Info");
         AddAdvertising.add(jLabel83);
-        jLabel83.setBounds(30, 40, 270, 28);
+        jLabel83.setBounds(30, 40, 270, 30);
 
         jLabel86.setText("Product Claim Information:");
         AddAdvertising.add(jLabel86);
-        jLabel86.setBounds(30, 210, 160, 18);
+        jLabel86.setBounds(30, 210, 160, 17);
 
         jLabel77.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel77.setText("found in medical journals, newspapers, and magazines, and on the Internet, television, or radio.");
         AddAdvertising.add(jLabel77);
-        jLabel77.setBounds(30, 120, 910, 17);
+        jLabel77.setBounds(30, 120, 910, 18);
 
         jLabel78.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel78.setText("All advertisements, such as product claims or reminder ads, cannot be false or misleading. They must contain truthful information about a ");
         AddAdvertising.add(jLabel78);
-        jLabel78.setBounds(30, 80, 910, 17);
+        jLabel78.setBounds(30, 80, 910, 18);
 
         jLabel79.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel79.setText("They must contain truthful information about a drug’s effectiveness, side effects, and prescribing information. These advertisements can be ");
         AddAdvertising.add(jLabel79);
-        jLabel79.setBounds(30, 100, 910, 17);
+        jLabel79.setBounds(30, 100, 910, 18);
 
         jTextArea12.setColumns(20);
         jTextArea12.setRows(5);
@@ -3853,6 +3956,91 @@ public class drugLifeCycle extends javax.swing.JFrame {
        inspectionresult = "Pass";
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
+    private void firstnameTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_firstnameTextField1KeyReleased
+        String convention = "[a-zA-Z]{0,30}$";
+        Pattern ptt = Pattern.compile(convention);
+        Matcher match = ptt.matcher(firstnameTextField1.getText());
+        if(!match.matches()){
+            nameError.setText("ERROR: First name should contain letters only");
+            submitButtonR.setEnabled(false);
+    }
+        else {
+            nameError.setText("");
+            submitButtonR.setEnabled(true);
+                }
+    }//GEN-LAST:event_firstnameTextField1KeyReleased
+
+    private void middlenameTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_middlenameTextField1KeyReleased
+        String convention = "[a-zA-Z]{0,30}$";
+        Pattern ptt = Pattern.compile(convention);
+        Matcher match = ptt.matcher(middlenameTextField1.getText());
+        if(!match.matches()){
+            nameError.setText("ERROR: Middle name should contain letters only");
+            submitButtonR.setEnabled(false);
+    }
+        else {
+            nameError.setText("");
+            submitButtonR.setEnabled(true);
+                }
+    }//GEN-LAST:event_middlenameTextField1KeyReleased
+
+    private void lastnameTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lastnameTextField1KeyReleased
+         String convention = "[a-zA-Z]{0,30}$";
+        Pattern ptt = Pattern.compile(convention);
+        Matcher match = ptt.matcher(lastnameTextField1.getText());
+        if(!match.matches()){
+            nameError.setText("ERROR: Last name should contain letters only");
+            submitButtonR.setEnabled(false);
+    }
+        else {
+            nameError.setText("");
+            submitButtonR.setEnabled(true);
+                }
+    }//GEN-LAST:event_lastnameTextField1KeyReleased
+
+    private void numberTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numberTextField1KeyReleased
+       String convention = "[0-9]{0,10}$";
+        Pattern ptt = Pattern.compile(convention);
+        Matcher match = ptt.matcher(numberTextField1.getText());
+        if(!match.matches()){
+            nameError.setText("ERROR: Phone should have 10 numbers only.");
+            submitButtonR.setEnabled(false);  
+    }
+        else {
+            nameError.setText("");
+             submitButtonR.setEnabled(true);
+                }
+    }//GEN-LAST:event_numberTextField1KeyReleased
+
+    private void emailIDTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_emailIDTextField1KeyReleased
+       String convention = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
+        Pattern ptt = Pattern.compile(convention);
+        Matcher match = ptt.matcher(emailIDTextField1.getText());
+        if(!match.matches()){
+            nameError.setText("ERROR: Enter valid email ID!");
+            submitButtonR.setEnabled(false);  
+    }
+        else {
+            nameError.setText("");
+             submitButtonR.setEnabled(true);
+                }
+
+    }//GEN-LAST:event_emailIDTextField1KeyReleased
+
+    private void zipcodeTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_zipcodeTextField1KeyReleased
+        String convention = "[0-9]{0,5}$";
+        Pattern ptt = Pattern.compile(convention);
+        Matcher match = ptt.matcher(zipcodeTextField1.getText());
+        if(!match.matches()){
+            nameError.setText("ERROR: Zip Code should have 5 numbers only.");
+            submitButtonR.setEnabled(false);  
+    }
+        else {
+            nameError.setText("");
+             submitButtonR.setEnabled(true);
+                }
+    }//GEN-LAST:event_zipcodeTextField1KeyReleased
+
     /**
      * @param args the command line arguments
      */
@@ -3960,6 +4148,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JLabel addressLabelR;
     private javax.swing.JTextArea addressTextArea1;
     private javax.swing.JLabel ageLabelR;
+    private javax.swing.JLabel ageLabelR1;
+    private javax.swing.JLabel ageLabelR2;
     private javax.swing.JTextField ageTextField;
     private javax.swing.JButton cancelButtonR;
     private javax.swing.JButton createTrail;
@@ -4006,7 +4196,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox6;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private com.toedter.calendar.JDateChooser jDateChooser2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -4098,9 +4287,10 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel90;
     private javax.swing.JLabel jLabel91;
     private javax.swing.JLabel jLabel92;
-    private javax.swing.JLabel jLabel93;
     private javax.swing.JLabel jLabel94;
     private javax.swing.JLabel jLabel95;
+    private javax.swing.JLabel jLabel96;
+    private javax.swing.JLabel jLabel97;
     private javax.swing.JList<String> jList1;
     private javax.swing.JList<String> jList2;
     private javax.swing.JList<String> jList3;
@@ -4108,6 +4298,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JList<String> jList5;
     private javax.swing.JList<String> jList6;
     private javax.swing.JList<String> jList8;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -4150,7 +4341,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
@@ -4198,6 +4389,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JLabel mailIDLabelR;
     private javax.swing.JRadioButton maleRadioButton1;
     private javax.swing.JTextField middlenameTextField1;
+    private javax.swing.JLabel nameError;
     private javax.swing.JLabel nameLabelR;
     private javax.swing.JLabel numberLabelR;
     private javax.swing.JTextField numberTextField1;
