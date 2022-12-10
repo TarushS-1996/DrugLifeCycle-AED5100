@@ -434,8 +434,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(245, 245, 245));
         setLocation(new java.awt.Point(160, 100));
-        setMaximumSize(new java.awt.Dimension(2147483647, 600));
-        setPreferredSize(new java.awt.Dimension(1144, 760));
 
         Parent.setLayout(new java.awt.CardLayout());
 
@@ -470,7 +468,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
         });
         Login.add(registerButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 530, 150, 40));
 
-        jLabel87.setIcon(new javax.swing.ImageIcon("/Users/kalzayy/Documents/AED_DRUG_CYCLE/DrugLifeCycel-AED5100/Images/Loginwallpaper.png")); // NOI18N
         jLabel87.setText("jLabel87");
         Login.add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 770));
 
@@ -3608,7 +3605,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
         devrep.setDosage(temp);
         devrep.setStatus("Approved for clinical");
         SplitPanelPain(ManufacturingAnalystHome);
-
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void viewReportBackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewReportBackButtonActionPerformed
