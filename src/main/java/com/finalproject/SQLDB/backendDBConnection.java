@@ -23,7 +23,7 @@ public class backendDBConnection {
     public Connection connectoDB(){
         Connection con = null;
         try{
-            Connection conn = DriverManager.getConnection("jdbc:sqlite:backendDB.sqlite");
+            Connection conn = DriverManager.getConnection("jdbc:sqlite:backednDB.sqlite");
             System.out.println("Connected successfully");
             con = conn;
         }catch(Exception e){
