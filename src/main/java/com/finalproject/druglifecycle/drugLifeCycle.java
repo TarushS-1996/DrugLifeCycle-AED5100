@@ -17,6 +17,8 @@ import com.finalproject.backend.MedicalReportDirectory;
 import com.finalproject.backend.ResearchReport;
 import com.finalproject.backend.ResearchReportDirectory;
 import com.finalproject.SQLDB.backendDBConnection;
+import com.finalproject.backend.AddAdvertising;
+import com.finalproject.backend.AddAdvertisingDirectory;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -46,7 +48,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     backendDBConnection conForSQL = new backendDBConnection();
     EmployeeDirectory empDir = new EmployeeDirectory();
     Connection conn = conForSQL.connectoDB();
-
+    AddAdvertisingDirectory addDir = new AddAdvertisingDirectory();
     ResearchReportDirectory repDir = new ResearchReportDirectory();
     DevelopmentReportDir devRepDir = new DevelopmentReportDir();
     MedicalReportDirectory mediRepp = new MedicalReportDirectory();
@@ -3763,16 +3765,30 @@ public class drugLifeCycle extends javax.swing.JFrame {
     }//GEN-LAST:event_AddReport2MouseClicked
 
     private void AssignToDevDecsion3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignToDevDecsion3ActionPerformed
-        // TODO add your handling code here:
+        addAdvertisingData();
     }//GEN-LAST:event_AssignToDevDecsion3ActionPerformed
 
+    public void addAdvertisingData(){
+        Employee loggedINEmployee = empDir.sendParticularUser(usernameTextField1.getText(), String.valueOf(passwordField1.getPassword()));
+        int row = AddSpecialistTable.getSelectedRow();
+        AddAdvertising data = addDir.addAdvertisingData();
+        data.setReportID(AddSpecialistTable.getValueAt(row, 0).toString());
+        data.setDrugName(AddSpecialistTable.getValueAt(row, 1).toString());
+        data.setDiseaseTarget(AddSpecialistTable.getValueAt(row, 3).toString());
+        data.setReportTo(loggedINEmployee.getName());
+        data.setAdvertisingInfo(jTextArea12.getText());
+    }
+    
     private void CancelAssigning3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelAssigning3ActionPerformed
     
         SplitPanelPain(AdvertisingSpecialist );
     }//GEN-LAST:event_CancelAssigning3ActionPerformed
 
     private void AssignToDevDecsion2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignToDevDecsion2ActionPerformed
-       SplitPanelPain(AddAdvertising);
+       if(AddSpecialistTable.getSelectedRow() != -1){
+        SplitPanelPain(AddAdvertising);
+        
+       }
     }//GEN-LAST:event_AssignToDevDecsion2ActionPerformed
 
     private void roleComboBoxRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roleComboBoxRActionPerformed
