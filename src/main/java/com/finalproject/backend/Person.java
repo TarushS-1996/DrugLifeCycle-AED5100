@@ -14,7 +14,7 @@ public class Person extends Organization{
     private String name;
     private int age;
     private String gender;
-    private Date dateofBirth;
+    private String dateofBirth;
     private int phoneNumber;
     private String mailID;
     private String address;
@@ -44,11 +44,11 @@ public class Person extends Organization{
         this.gender = gender;
     }
 
-    public Date getDateofBirth() {
+    public String getDateofBirth() {
         return dateofBirth;
     }
 
-    public void setDateofBirth(Date dateofBirth) {
+    public void setDateofBirth(String dateofBirth) {
         this.dateofBirth = dateofBirth;
     }
 
