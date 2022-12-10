@@ -12,7 +12,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -23,7 +28,7 @@ public class backendDBConnection {
     public Connection connectoDB(){
         Connection con = null;
         try{
-            Connection conn = DriverManager.getConnection("jdbc:sqlite:backednDB.sqlite");
+            Connection conn = DriverManager.getConnection("jdbc:sqlite:backendDB.sqlite");
             System.out.println("Connected successfully");
             con = conn;
         }catch(Exception e){
@@ -57,11 +62,14 @@ public class backendDBConnection {
          EmployeeDirectory emdir = empDir;
          ArrayList<Employee> empdir = empDir.getEmpDir();
          Statement stmt = conn.createStatement();
+         DateFormat format = new SimpleDateFormat("dd/MM/yyyy");
          ResultSet rs = stmt.executeQuery(retrieveData);
          while (rs.next()){
              Employee emp = new Employee();
+             String date = rs.getString("DateOfBirth");
              emp.setName(rs.getString("Name"));
              emp.setAge(rs.getInt("Age"));
+             emp.setDateofBirth(rs.getString("DateOfBirth"));
              emp.setUsername(rs.getString("Username"));
              emp.setPassword(rs.getString("Passwrd"));
              emp.setGender(rs.getString("Gender"));

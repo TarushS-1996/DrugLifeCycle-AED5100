@@ -3268,7 +3268,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         String name = firstnameTextField1.getText() + " "+middlenameTextField1.getText() + " "+lastnameTextField1.getText();
         emp.setName(name);
         emp.setAge(Integer.valueOf(ageTextField.getText()));
-        emp.setDateofBirth(DateofBirthChooser1.getDate());
+        emp.setDateofBirth(DateofBirthChooser1.getDate().toString());
         emp.setUsername(usernameTextFieldR.getText());
         emp.setPassword(String.valueOf(jPasswordField1.getPassword()));
         emp.setGender(gender);
