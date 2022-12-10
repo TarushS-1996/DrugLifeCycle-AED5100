@@ -470,7 +470,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
         });
         Login.add(registerButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 530, 150, 40));
 
-        jLabel87.setIcon(new javax.swing.ImageIcon("/Users/kalzayy/Documents/AED_DRUG_CYCLE/DrugLifeCycel-AED5100/Images/Loginwallpaper.png")); // NOI18N
         jLabel87.setText("jLabel87");
         Login.add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 770));
 
@@ -2958,7 +2957,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //To retrieve data from DB
     public void retrieveEmployee(){
         try{
             conForSQL.retrieveEmployeeDirectory(conn, empDir);
