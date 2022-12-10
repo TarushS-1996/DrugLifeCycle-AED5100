@@ -547,11 +547,11 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         dobLabelR.setText("DOB:");
         jPanel1.add(dobLabelR);
-        dobLabelR.setBounds(110, 350, 32, 24);
+        dobLabelR.setBounds(110, 350, 37, 24);
 
         genderLabelR.setText("Gender:");
         jPanel1.add(genderLabelR);
-        genderLabelR.setBounds(450, 360, 50, 17);
+        genderLabelR.setBounds(430, 360, 70, 18);
 
         maleRadioButton1.setText("Male");
         maleRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -569,7 +569,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         jPanel1.add(femaleRadioButton1);
-        femaleRadioButton1.setBounds(580, 360, 65, 21);
+        femaleRadioButton1.setBounds(580, 360, 72, 22);
 
         othersRadioButton1.setText("Others");
         othersRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -578,7 +578,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         jPanel1.add(othersRadioButton1);
-        othersRadioButton1.setBounds(660, 360, 62, 21);
+        othersRadioButton1.setBounds(660, 360, 68, 22);
 
         numberTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -595,7 +595,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         numberLabelR.setText("Phone:");
         jPanel1.add(numberLabelR);
-        numberLabelR.setBounds(450, 250, 73, 24);
+        numberLabelR.setBounds(430, 250, 73, 24);
 
         mailIDLabelR.setText("Email ID:");
         jPanel1.add(mailIDLabelR);
@@ -618,7 +618,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         addressLabelR.setText("Address:");
         jPanel1.add(addressLabelR);
-        addressLabelR.setBounds(110, 190, 73, 17);
+        addressLabelR.setBounds(110, 190, 73, 18);
 
         zipcodeTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -684,7 +684,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         organizationLabelR.setText("Organization:");
         jPanel1.add(organizationLabelR);
-        organizationLabelR.setBounds(440, 520, 80, 30);
+        organizationLabelR.setBounds(430, 520, 90, 30);
 
         roleComboBoxR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New role", "Research Scientist", "Research lead", "CTEP medical officer", "Manufacturing Analyst", "GLP Officer", "Clinical researcher", "Medical Officer", "Toxicology Specialist", "Advertising Specialist", "Safety Inspector" }));
         roleComboBoxR.addActionListener(new java.awt.event.ActionListener() {
@@ -729,7 +729,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         Title.setFont(new java.awt.Font("Helvetica Neue", 1, 32)); // NOI18N
         Title.setText("Register User");
         jPanel1.add(Title);
-        Title.setBounds(110, 40, 220, 40);
+        Title.setBounds(110, 40, 220, 38);
 
         Registration.add(jPanel1);
         jPanel1.setBounds(150, 0, 840, 780);
@@ -2515,7 +2515,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jLabel69.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jLabel69.setText("Welcome Medical Officer");
         MedicalOfficerHome.add(jLabel69);
-        jLabel69.setBounds(322, 20, 230, 22);
+        jLabel69.setBounds(322, 20, 218, 22);
 
         jTable7.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -2537,7 +2537,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         MedicalOfficerHome.add(ViewReport4);
-        ViewReport4.setBounds(560, 520, 101, 23);
+        ViewReport4.setBounds(560, 520, 109, 24);
 
         AddReport2.setText("Approve");
         AddReport2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -2551,7 +2551,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         MedicalOfficerHome.add(AddReport2);
-        AddReport2.setBounds(690, 520, 79, 23);
+        AddReport2.setBounds(690, 520, 83, 24);
 
         jButton7.setText("Reject");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -2560,7 +2560,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         MedicalOfficerHome.add(jButton7);
-        jButton7.setBounds(790, 520, 72, 23);
+        jButton7.setBounds(790, 520, 72, 24);
 
         leftComponent.add(MedicalOfficerHome, "card4");
 
@@ -2744,7 +2744,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         AddAdvertising.add(AssignToDevDecsion3);
-        AssignToDevDecsion3.setBounds(812, 420, 100, 23);
+        AssignToDevDecsion3.setBounds(812, 420, 100, 24);
 
         CancelAssigning3.setText("Cancel");
         CancelAssigning3.addActionListener(new java.awt.event.ActionListener() {
@@ -2753,31 +2753,31 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         AddAdvertising.add(CancelAssigning3);
-        CancelAssigning3.setBounds(730, 420, 72, 23);
+        CancelAssigning3.setBounds(730, 420, 76, 24);
 
         jLabel83.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
         jLabel83.setText("Add Advertising Info");
         AddAdvertising.add(jLabel83);
-        jLabel83.setBounds(30, 40, 270, 30);
+        jLabel83.setBounds(30, 40, 270, 28);
 
         jLabel86.setText("Product Claim Information:");
         AddAdvertising.add(jLabel86);
-        jLabel86.setBounds(30, 210, 160, 17);
+        jLabel86.setBounds(30, 210, 160, 18);
 
         jLabel77.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel77.setText("found in medical journals, newspapers, and magazines, and on the Internet, television, or radio.");
         AddAdvertising.add(jLabel77);
-        jLabel77.setBounds(30, 120, 910, 18);
+        jLabel77.setBounds(30, 120, 910, 17);
 
         jLabel78.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel78.setText("All advertisements, such as product claims or reminder ads, cannot be false or misleading. They must contain truthful information about a ");
         AddAdvertising.add(jLabel78);
-        jLabel78.setBounds(30, 80, 910, 18);
+        jLabel78.setBounds(30, 80, 910, 17);
 
         jLabel79.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel79.setText("They must contain truthful information about a drug’s effectiveness, side effects, and prescribing information. These advertisements can be ");
         AddAdvertising.add(jLabel79);
-        jLabel79.setBounds(30, 100, 910, 18);
+        jLabel79.setBounds(30, 100, 910, 17);
 
         jTextArea12.setColumns(20);
         jTextArea12.setRows(5);
@@ -3013,6 +3013,28 @@ public class drugLifeCycle extends javax.swing.JFrame {
         }
     }
     
+    public void showSpecificRoles(String role){
+        roleComboBoxR.removeAllItems();
+        roleComboBoxR.addItem("New Role");
+        if(role.equals("Research")){
+            roleComboBoxR.addItem("Research Scientist");
+            roleComboBoxR.addItem("Research lead");
+        }else if(role.equals("Development")){
+            roleComboBoxR.addItem("Manufacturing Analyst");
+        }else if(role.equals("GLP Regulators")){
+            roleComboBoxR.addItem("GLP Officer");
+        }else if(role.equals("Clinical Researcher")){
+            roleComboBoxR.addItem("Clinical researcher");        
+        }else if(role.equals("Review")){
+            roleComboBoxR.addItem("Medical Officer");
+            roleComboBoxR.addItem("Toxicology Specialist");
+        }else if (role.equals("Manufacturer inspections")){
+            roleComboBoxR.addItem("Safety Inspector");
+        }else if(role.equals("Drug advertising")){
+            roleComboBoxR.addItem("Advertising Specialist");
+        }                   
+    }
+    
     public void addResearchersLead(Employee empp){
         Employee loggedINEmployee = empp;
         jComboBox1.removeAllItems();
@@ -3116,6 +3138,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
     private void organizationComboBoxRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organizationComboBoxRActionPerformed
         disableDropdownRole();
+        String org = organizationComboBoxR.getSelectedItem().toString();
+        showSpecificRoles(org);
     }//GEN-LAST:event_organizationComboBoxRActionPerformed
 
     private void cancelButtonRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonRActionPerformed
