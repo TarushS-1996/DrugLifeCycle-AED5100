@@ -158,16 +158,19 @@ public class drugLifeCycle extends javax.swing.JFrame {
         firstLoginOrganizationRoleTextField1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         ResearchScientistHome = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         ViewReport = new javax.swing.JButton();
         AddReport = new javax.swing.JButton();
+        Title2 = new javax.swing.JLabel();
+        ageLabelR4 = new javax.swing.JLabel();
         ResearchLeadHome = new javax.swing.JPanel();
         jScrollPane6 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         viewReportResearchLead = new javax.swing.JButton();
         researchLeadApproval = new javax.swing.JButton();
+        ageLabelR3 = new javax.swing.JLabel();
+        Title1 = new javax.swing.JLabel();
         ResearchLeadApproval = new javax.swing.JPanel();
         RepID = new javax.swing.JLabel();
         RepBy = new javax.swing.JLabel();
@@ -434,11 +437,14 @@ public class drugLifeCycle extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(245, 245, 245));
         setLocation(new java.awt.Point(160, 100));
+        setMaximumSize(new java.awt.Dimension(1121, 760));
+        setPreferredSize(new java.awt.Dimension(1121, 760));
 
         Parent.setLayout(new java.awt.CardLayout());
 
         Login.setBackground(new java.awt.Color(255, 255, 255));
-        Login.setPreferredSize(new java.awt.Dimension(4120, 770));
+        Login.setMaximumSize(new java.awt.Dimension(1440, 2147483647));
+        Login.setPreferredSize(new java.awt.Dimension(1440, 770));
         Login.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         usernameLabel.setText("Username");
@@ -541,11 +547,11 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         dobLabelR.setText("DOB:");
         jPanel1.add(dobLabelR);
-        dobLabelR.setBounds(110, 350, 37, 24);
+        dobLabelR.setBounds(110, 350, 32, 24);
 
         genderLabelR.setText("Gender:");
         jPanel1.add(genderLabelR);
-        genderLabelR.setBounds(450, 360, 50, 18);
+        genderLabelR.setBounds(450, 360, 50, 17);
 
         maleRadioButton1.setText("Male");
         maleRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -563,7 +569,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         jPanel1.add(femaleRadioButton1);
-        femaleRadioButton1.setBounds(580, 360, 72, 22);
+        femaleRadioButton1.setBounds(580, 360, 65, 21);
 
         othersRadioButton1.setText("Others");
         othersRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -572,7 +578,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         jPanel1.add(othersRadioButton1);
-        othersRadioButton1.setBounds(660, 360, 68, 22);
+        othersRadioButton1.setBounds(660, 360, 62, 21);
 
         numberTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -612,7 +618,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         addressLabelR.setText("Address:");
         jPanel1.add(addressLabelR);
-        addressLabelR.setBounds(110, 190, 73, 18);
+        addressLabelR.setBounds(110, 190, 73, 17);
 
         zipcodeTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -723,7 +729,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         Title.setFont(new java.awt.Font("Helvetica Neue", 1, 32)); // NOI18N
         Title.setText("Register User");
         jPanel1.add(Title);
-        Title.setBounds(110, 40, 220, 38);
+        Title.setBounds(110, 40, 220, 40);
 
         Registration.add(jPanel1);
         jPanel1.setBounds(150, 0, 840, 780);
@@ -745,17 +751,17 @@ public class drugLifeCycle extends javax.swing.JFrame {
         rightComponent.setLayout(rightComponentLayout);
         rightComponentLayout.setHorizontalGroup(
             rightComponentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(rightComponentLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(logoutButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, rightComponentLayout.createSequentialGroup()
+                .addContainerGap(22, Short.MAX_VALUE)
+                .addComponent(logoutButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17))
         );
         rightComponentLayout.setVerticalGroup(
             rightComponentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, rightComponentLayout.createSequentialGroup()
-                .addContainerGap(679, Short.MAX_VALUE)
+            .addGroup(rightComponentLayout.createSequentialGroup()
+                .addGap(361, 361, 361)
                 .addComponent(logoutButton1)
-                .addGap(74, 74, 74))
+                .addContainerGap(2715, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(rightComponent);
@@ -812,7 +818,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                             .addComponent(firstLoginEnterpriseTypeComboBox, 0, 200, Short.MAX_VALUE)
                             .addComponent(firstLoginEnterpriseMyRoleTextField)
                             .addComponent(firstLoginEnterpriseMyOrganizationTextField))))
-                .addContainerGap(3859, Short.MAX_VALUE))
+                .addContainerGap(3858, Short.MAX_VALUE))
         );
         firstLoginEnterpriseLayout.setVerticalGroup(
             firstLoginEnterpriseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -837,12 +843,13 @@ public class drugLifeCycle extends javax.swing.JFrame {
                     .addComponent(firstLoginEnterpriseMyOrganizationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(addEnterpriseButton)
-                .addContainerGap(511, Short.MAX_VALUE))
+                .addContainerGap(2837, Short.MAX_VALUE))
         );
 
         leftComponent.add(firstLoginEnterprise, "card2");
 
         firstLoginOrganization.setBackground(new java.awt.Color(255, 255, 255));
+        firstLoginOrganization.setPreferredSize(new java.awt.Dimension(1219, 600));
 
         firstLoginOrganizationTitleLabel.setText("Welcome");
 
@@ -877,7 +884,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                             .addComponent(firstLoginOrganizationAddButton)
                             .addComponent(firstLoginOrganizationNameTextField)
                             .addComponent(firstLoginOrganizationRoleTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE))))
-                .addContainerGap(3849, Short.MAX_VALUE))
+                .addContainerGap(3864, Short.MAX_VALUE))
         );
         firstLoginOrganizationLayout.setVerticalGroup(
             firstLoginOrganizationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -895,15 +902,12 @@ public class drugLifeCycle extends javax.swing.JFrame {
                         .addGap(3, 3, 3))
                     .addComponent(firstLoginOrganizationRoleTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addComponent(firstLoginOrganizationAddButton)
-                .addContainerGap(627, Short.MAX_VALUE))
+                .addContainerGap(2953, Short.MAX_VALUE))
         );
 
         leftComponent.add(firstLoginOrganization, "card3");
 
         ResearchScientistHome.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel3.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
-        jLabel3.setText("Welcome research scientist");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -929,36 +933,44 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
 
+        Title2.setFont(new java.awt.Font("Helvetica Neue", 1, 28)); // NOI18N
+        Title2.setText("Research Scientist");
+
+        ageLabelR4.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        ageLabelR4.setForeground(new java.awt.Color(102, 102, 102));
+        ageLabelR4.setText("As a research scientist, you will initiate reports and assign leads to them to continue the research work.");
+
         javax.swing.GroupLayout ResearchScientistHomeLayout = new javax.swing.GroupLayout(ResearchScientistHome);
         ResearchScientistHome.setLayout(ResearchScientistHomeLayout);
         ResearchScientistHomeLayout.setHorizontalGroup(
             ResearchScientistHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ResearchScientistHomeLayout.createSequentialGroup()
-                .addGap(322, 322, 322)
-                .addComponent(jLabel3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ResearchScientistHomeLayout.createSequentialGroup()
-                .addContainerGap(3551, Short.MAX_VALUE)
-                .addGroup(ResearchScientistHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 839, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(ResearchScientistHomeLayout.createSequentialGroup()
-                        .addComponent(ViewReport)
-                        .addGap(18, 18, 18)
-                        .addComponent(AddReport)))
+                .addContainerGap(40, Short.MAX_VALUE)
+                .addGroup(ResearchScientistHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ageLabelR4)
+                    .addComponent(Title2)
+                    .addGroup(ResearchScientistHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 839, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(ResearchScientistHomeLayout.createSequentialGroup()
+                            .addComponent(ViewReport)
+                            .addGap(18, 18, 18)
+                            .addComponent(AddReport))))
                 .addGap(29, 29, 29))
         );
         ResearchScientistHomeLayout.setVerticalGroup(
             ResearchScientistHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ResearchScientistHomeLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel3)
-                .addGap(44, 44, 44)
+                .addGap(40, 40, 40)
+                .addComponent(Title2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ageLabelR4)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
                 .addGroup(ResearchScientistHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ViewReport)
                     .addComponent(AddReport))
-                .addContainerGap(207, Short.MAX_VALUE))
+                .addContainerGap(2499, Short.MAX_VALUE))
         );
 
         leftComponent.add(ResearchScientistHome, "card4");
@@ -989,30 +1001,44 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
 
+        ageLabelR3.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        ageLabelR3.setForeground(new java.awt.Color(102, 102, 102));
+        ageLabelR3.setText("As a research lead, you will continue on field research on these report and update them. ");
+
+        Title1.setFont(new java.awt.Font("Helvetica Neue", 1, 28)); // NOI18N
+        Title1.setText("Research Lead");
+
         javax.swing.GroupLayout ResearchLeadHomeLayout = new javax.swing.GroupLayout(ResearchLeadHome);
         ResearchLeadHome.setLayout(ResearchLeadHomeLayout);
         ResearchLeadHomeLayout.setHorizontalGroup(
             ResearchLeadHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ResearchLeadHomeLayout.createSequentialGroup()
-                .addContainerGap(3500, Short.MAX_VALUE)
-                .addGroup(ResearchLeadHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 889, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(ResearchLeadHomeLayout.createSequentialGroup()
-                        .addComponent(viewReportResearchLead)
-                        .addGap(35, 35, 35)
-                        .addComponent(researchLeadApproval)))
-                .addGap(30, 30, 30))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ResearchLeadHomeLayout.createSequentialGroup()
+                .addContainerGap(32, Short.MAX_VALUE)
+                .addGroup(ResearchLeadHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ageLabelR3)
+                    .addComponent(Title1)
+                    .addGroup(ResearchLeadHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(ResearchLeadHomeLayout.createSequentialGroup()
+                            .addComponent(viewReportResearchLead)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(researchLeadApproval))
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 912, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(33, 33, 33))
         );
         ResearchLeadHomeLayout.setVerticalGroup(
             ResearchLeadHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ResearchLeadHomeLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 505, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51)
+                .addGap(40, 40, 40)
+                .addComponent(Title1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ageLabelR3)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
                 .addGroup(ResearchLeadHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(viewReportResearchLead)
-                    .addComponent(researchLeadApproval))
-                .addContainerGap(172, Short.MAX_VALUE))
+                    .addComponent(researchLeadApproval)
+                    .addComponent(viewReportResearchLead))
+                .addContainerGap(2517, Short.MAX_VALUE))
         );
 
         leftComponent.add(ResearchLeadHome, "card5");
@@ -1091,7 +1117,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                     .addComponent(dateleadAssign, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane10)
                     .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(3987, Short.MAX_VALUE))
+                .addContainerGap(4012, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ResearchLeadApprovalLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(CancelAssigning)
@@ -1126,7 +1152,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 .addGroup(ResearchLeadApprovalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RepPushToDev)
                     .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 350, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 2675, Short.MAX_VALUE)
                 .addGroup(ResearchLeadApprovalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AssignToDevDecsion)
                     .addComponent(CancelAssigning))
@@ -1196,7 +1222,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                     .addComponent(jComboBox1, 0, 291, Short.MAX_VALUE)
                     .addComponent(ResearchReportPage1ResearchBy)
                     .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(3964, Short.MAX_VALUE))
+                .addContainerGap(3963, Short.MAX_VALUE))
         );
         page1Layout.setVerticalGroup(
             page1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1225,7 +1251,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 .addGroup(page1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 307, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 2627, Short.MAX_VALUE)
                 .addComponent(TabbedPaneNext1)
                 .addGap(21, 21, 21))
         );
@@ -1291,7 +1317,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                         .addComponent(addChemicalComposition)
                         .addGap(18, 18, 18)
                         .addComponent(deleteChemicalComposition)))
-                .addContainerGap(3690, Short.MAX_VALUE))
+                .addContainerGap(3698, Short.MAX_VALUE))
         );
         page2Layout.setVerticalGroup(
             page2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1306,7 +1332,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                     .addComponent(jLabel11))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 389, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 2713, Short.MAX_VALUE)
                 .addComponent(TabbedPaneNext2)
                 .addGap(23, 23, 23))
         );
@@ -1367,7 +1393,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(page3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(page3Layout.createSequentialGroup()
-                        .addGap(0, 4237, Short.MAX_VALUE)
+                        .addGap(0, 4244, Short.MAX_VALUE)
                         .addComponent(ResearchReportCancelReport)
                         .addGap(18, 18, 18)
                         .addComponent(ResearchReportSubmitReport))
@@ -1436,7 +1462,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 .addGroup(page3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel22)
                     .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 233, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 2553, Short.MAX_VALUE)
                 .addGroup(page3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ResearchReportSubmitReport)
                     .addComponent(ResearchReportCancelReport))
@@ -1478,15 +1504,15 @@ public class drugLifeCycle extends javax.swing.JFrame {
         ManufacturingAnalystHomeLayout.setHorizontalGroup(
             ManufacturingAnalystHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ManufacturingAnalystHomeLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(ManufacturingAnalystHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 4407, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ManufacturingAnalystHomeLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
                 .addContainerGap())
+            .addGroup(ManufacturingAnalystHomeLayout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 832, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         ManufacturingAnalystHomeLayout.setVerticalGroup(
             ManufacturingAnalystHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1497,7 +1523,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 .addGroup(ManufacturingAnalystHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addContainerGap(177, Short.MAX_VALUE))
+                .addContainerGap(2500, Short.MAX_VALUE))
         );
 
         leftComponent.add(ManufacturingAnalystHome, "card8");
@@ -1582,7 +1608,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                         .addComponent(jLabel40, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jScrollPane12, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)))
-                .addContainerGap(3857, Short.MAX_VALUE))
+                .addContainerGap(3873, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddManufacturingDetailsLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton6)
@@ -1620,7 +1646,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                     .addComponent(jButton4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 325, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 2653, Short.MAX_VALUE)
                 .addGroup(AddManufacturingDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton5)
                     .addComponent(jButton6))
@@ -1716,7 +1742,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 .addComponent(jLabel31)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(3605, Short.MAX_VALUE))
+                .addContainerGap(3618, Short.MAX_VALUE))
             .addGroup(DiscoveryDevelopmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(DiscoveryDevelopmentLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -1818,7 +1844,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                             .addComponent(jTextField13)
                             .addComponent(jTextField12)
                             .addComponent(jScrollPane13))))
-                .addContainerGap(3935, Short.MAX_VALUE))
+                .addContainerGap(3934, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1905,7 +1931,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                         .addComponent(jScrollPane26, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE)
                         .addComponent(jScrollPane25, javax.swing.GroupLayout.Alignment.LEADING))
                     .addComponent(jLabel47))
-                .addContainerGap(3624, Short.MAX_VALUE))
+                .addContainerGap(3623, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1989,7 +2015,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                         .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(3609, Short.MAX_VALUE))
+                .addContainerGap(3608, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2121,7 +2147,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         ResearchScientistViewReportLayout.setVerticalGroup(
             ResearchScientistViewReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ResearchScientistViewReportLayout.createSequentialGroup()
-                .addContainerGap(61, Short.MAX_VALUE)
+                .addContainerGap(2384, Short.MAX_VALUE)
                 .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 635, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2169,7 +2195,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                     .addGroup(ClinicalResearchersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(ViewReport2)
                         .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, 858, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(3512, Short.MAX_VALUE))
+                .addContainerGap(3511, Short.MAX_VALUE))
         );
         ClinicalResearchersLayout.setVerticalGroup(
             ClinicalResearchersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2182,7 +2208,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(ViewReport2)
-                .addContainerGap(187, Short.MAX_VALUE))
+                .addContainerGap(2507, Short.MAX_VALUE))
         );
 
         leftComponent.add(ClinicalResearchers, "card8");
@@ -2234,7 +2260,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                         .addComponent(jLabel63)
                         .addComponent(jLabel62)
                         .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 839, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(3531, Short.MAX_VALUE))
+                .addContainerGap(3530, Short.MAX_VALUE))
         );
         GLPOfficersHomeLayout.setVerticalGroup(
             GLPOfficersHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2249,7 +2275,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 .addGroup(GLPOfficersHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ViewReport1)
                     .addComponent(createTrail))
-                .addContainerGap(185, Short.MAX_VALUE))
+                .addContainerGap(2505, Short.MAX_VALUE))
         );
 
         leftComponent.add(GLPOfficersHome, "card8");
@@ -2417,7 +2443,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                     .addGroup(CreateTrailLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jScrollPane19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 181, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 2513, Short.MAX_VALUE)
                 .addComponent(createTrail1)
                 .addGap(18, 18, 18))
         );
@@ -2488,9 +2514,14 @@ public class drugLifeCycle extends javax.swing.JFrame {
         leftComponent.add(RegulatoryHealthManager, "card4");
 
         MedicalOfficerHome.setBackground(new java.awt.Color(255, 255, 255));
+        MedicalOfficerHome.setMaximumSize(new java.awt.Dimension(1129, 760));
+        MedicalOfficerHome.setPreferredSize(new java.awt.Dimension(1129, 760));
+        MedicalOfficerHome.setLayout(null);
 
         jLabel69.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jLabel69.setText("Welcome Medical Officer");
+        MedicalOfficerHome.add(jLabel69);
+        jLabel69.setBounds(322, 20, 230, 22);
 
         jTable7.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -2502,12 +2533,17 @@ public class drugLifeCycle extends javax.swing.JFrame {
         ));
         jScrollPane21.setViewportView(jTable7);
 
+        MedicalOfficerHome.add(jScrollPane21);
+        jScrollPane21.setBounds(30, 80, 839, 402);
+
         ViewReport4.setText("View Report");
         ViewReport4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ViewReport4ActionPerformed(evt);
             }
         });
+        MedicalOfficerHome.add(ViewReport4);
+        ViewReport4.setBounds(560, 520, 101, 23);
 
         AddReport2.setText("Approve");
         AddReport2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -2520,6 +2556,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 AddReport2ActionPerformed(evt);
             }
         });
+        MedicalOfficerHome.add(AddReport2);
+        AddReport2.setBounds(690, 520, 79, 23);
 
         jButton7.setText("Reject");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -2527,43 +2565,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout MedicalOfficerHomeLayout = new javax.swing.GroupLayout(MedicalOfficerHome);
-        MedicalOfficerHome.setLayout(MedicalOfficerHomeLayout);
-        MedicalOfficerHomeLayout.setHorizontalGroup(
-            MedicalOfficerHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MedicalOfficerHomeLayout.createSequentialGroup()
-                .addGap(322, 322, 322)
-                .addComponent(jLabel69)
-                .addContainerGap(3879, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MedicalOfficerHomeLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(MedicalOfficerHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MedicalOfficerHomeLayout.createSequentialGroup()
-                        .addComponent(ViewReport4)
-                        .addGap(33, 33, 33)
-                        .addComponent(AddReport2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton7))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MedicalOfficerHomeLayout.createSequentialGroup()
-                        .addComponent(jScrollPane21, javax.swing.GroupLayout.PREFERRED_SIZE, 839, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(25, 25, 25)))
-                .addGap(892, 892, 892))
-        );
-        MedicalOfficerHomeLayout.setVerticalGroup(
-            MedicalOfficerHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MedicalOfficerHomeLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel69)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addGroup(MedicalOfficerHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ViewReport4)
-                    .addComponent(AddReport2)
-                    .addComponent(jButton7))
-                .addContainerGap(241, Short.MAX_VALUE))
-        );
+        MedicalOfficerHome.add(jButton7);
+        jButton7.setBounds(790, 520, 72, 23);
 
         leftComponent.add(MedicalOfficerHome, "card4");
 
@@ -2693,7 +2696,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 .addGroup(AddToxicologyReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RepPushToDev1)
                     .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 255, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 2586, Short.MAX_VALUE)
                 .addGroup(AddToxicologyReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AssignToDevDecsion1)
                     .addComponent(CancelAssigning1))
@@ -2747,7 +2750,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         AddAdvertising.add(AssignToDevDecsion3);
-        AssignToDevDecsion3.setBounds(812, 420, 100, 24);
+        AssignToDevDecsion3.setBounds(812, 420, 100, 23);
 
         CancelAssigning3.setText("Cancel");
         CancelAssigning3.addActionListener(new java.awt.event.ActionListener() {
@@ -2756,31 +2759,31 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         AddAdvertising.add(CancelAssigning3);
-        CancelAssigning3.setBounds(730, 420, 76, 24);
+        CancelAssigning3.setBounds(730, 420, 72, 23);
 
         jLabel83.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
         jLabel83.setText("Add Advertising Info");
         AddAdvertising.add(jLabel83);
-        jLabel83.setBounds(30, 40, 270, 28);
+        jLabel83.setBounds(30, 40, 270, 30);
 
         jLabel86.setText("Product Claim Information:");
         AddAdvertising.add(jLabel86);
-        jLabel86.setBounds(30, 210, 160, 18);
+        jLabel86.setBounds(30, 210, 160, 17);
 
         jLabel77.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel77.setText("found in medical journals, newspapers, and magazines, and on the Internet, television, or radio.");
         AddAdvertising.add(jLabel77);
-        jLabel77.setBounds(30, 120, 910, 17);
+        jLabel77.setBounds(30, 120, 910, 18);
 
         jLabel78.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel78.setText("All advertisements, such as product claims or reminder ads, cannot be false or misleading. They must contain truthful information about a ");
         AddAdvertising.add(jLabel78);
-        jLabel78.setBounds(30, 80, 910, 17);
+        jLabel78.setBounds(30, 80, 910, 18);
 
         jLabel79.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel79.setText("They must contain truthful information about a drug’s effectiveness, side effects, and prescribing information. These advertisements can be ");
         AddAdvertising.add(jLabel79);
-        jLabel79.setBounds(30, 100, 910, 17);
+        jLabel79.setBounds(30, 100, 910, 18);
 
         jTextArea12.setColumns(20);
         jTextArea12.setRows(5);
@@ -2942,9 +2945,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Parent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(Parent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4129,6 +4130,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JButton TabbedPaneNext1;
     private javax.swing.JButton TabbedPaneNext2;
     private javax.swing.JLabel Title;
+    private javax.swing.JLabel Title1;
+    private javax.swing.JLabel Title2;
     private javax.swing.JButton ViewReport;
     private javax.swing.JButton ViewReport1;
     private javax.swing.JButton ViewReport2;
@@ -4146,6 +4149,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JLabel ageLabelR;
     private javax.swing.JLabel ageLabelR1;
     private javax.swing.JLabel ageLabelR2;
+    private javax.swing.JLabel ageLabelR3;
+    private javax.swing.JLabel ageLabelR4;
     private javax.swing.JTextField ageTextField;
     private javax.swing.JButton cancelButtonR;
     private javax.swing.JButton createTrail;
@@ -4213,7 +4218,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
