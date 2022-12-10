@@ -16,7 +16,7 @@ public class ResearchReport extends Employee{
     private String researchBy;
     private String drugName;
     private String diseaseTarget;
-    private Date date;
+    private String date;
     private String drugNotes;
     private String reportTo;
     private ArrayList<String> composition;
@@ -83,11 +83,11 @@ public class ResearchReport extends Employee{
         this.diseaseTarget = diseaseTarget;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

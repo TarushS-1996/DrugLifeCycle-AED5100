@@ -68,6 +68,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jTextArea9.setEnabled(false);
         conForSQL.connectoDB();
         retrieveEmployee();
+        retrieveResearchReport();
     }
 
     
@@ -2950,6 +2951,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
+
     //To retrieve data from DB
     public void retrieveEmployee(){
         try{
@@ -2959,11 +2962,19 @@ public class drugLifeCycle extends javax.swing.JFrame {
         }
     }
     
+    public void retrieveResearchReport(){
+        try{
+            conForSQL.retrieveResearchReport(conn, repDir);
+        }catch(SQLException e){
+            System.out.println("Error with retrieving research report data. Error: "+ e);
+        }
+    }
+    
     public void summaryResearchReport(){
         jLabel13.setText(ResearchReportPage1ResearchBy.getText());
         jLabel15.setText(ResearchReportPage1Name.getText());
         jLabel20.setText(ResearchReportPage1DiseaseTarget.getText());
-        jLabel21.setText(DateofBirthChooser1.getDate().toString());
+        jLabel21.setText(jDateChooser1.getDate().toString());
         jTextArea2.setText(jTextArea1.getText());
         jLabel23.setText(jComboBox1.getSelectedItem().toString());
     }
@@ -3151,7 +3162,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
         model.setRowCount(0);
         for (ResearchReport rr : repDir.getResearchReportdsDir()){
                 if (rr.getResearchBy().toString().equals(emp.getName())){
-                    
                     String[] addToTable = {rr.getReportID(), rr.getDrugName(), rr.getDate().toString(), rr.getDiseaseTarget(), rr.getReportTo()};
                     model.addRow(addToTable);
                 }
@@ -3544,7 +3554,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         rr.setResearchBy(jLabel13.getText());
         rr.setDrugName(jLabel15.getText());
         rr.setDiseaseTarget(jLabel20.getText());
-        rr.setDate(jDateChooser1.getDate());
+        rr.setDate(jDateChooser1.getDate().toString());
         rr.setDrugNotes(jTextArea2.getText());
         rr.setReportTo(jLabel23.getText());
         rr.setReportID(resRepIDGen());
@@ -3556,6 +3566,13 @@ public class drugLifeCycle extends javax.swing.JFrame {
         rr.setComposition(comp);
         populateTableResearchScientist(loggedINEmployee);
         SplitPanelPain(ResearchScientistHome);
+        Connection con = conForSQL.connectoDB();
+        try{
+            conForSQL.addResearchReport(conn, rr);
+        }catch(SQLException e){
+            System.out.println("Unable to add the report to database due to: "+e);
+        } 
+        
     }//GEN-LAST:event_ResearchReportSubmitReportActionPerformed
 
     private void ResearchReportCancelReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResearchReportCancelReportActionPerformed

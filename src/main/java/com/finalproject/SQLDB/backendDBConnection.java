@@ -6,6 +6,8 @@ package com.finalproject.SQLDB;
 
 import com.finalproject.backend.Employee;
 import com.finalproject.backend.EmployeeDirectory;
+import com.finalproject.backend.ResearchReport;
+import com.finalproject.backend.ResearchReportDirectory;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -16,6 +18,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -83,5 +86,47 @@ public class backendDBConnection {
              empdir.add(emp);
          }
          emdir.setEmpDir(empdir);
+     }
+     
+     public void addResearchReport(Connection conn, ResearchReport rr)throws SQLException{
+         String insertIntoResearcTable = "INSERT INTO ResearchReport(ResearchBy, DrugName, DiseaseTarget, Date, DrugNotes, ReportTo, ReportID, EnterpriseName, Composition) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+         PreparedStatement pstmt = conn.prepareStatement(insertIntoResearcTable);
+         pstmt.setString(1, rr.getResearchBy());
+         pstmt.setString(2, rr.getDrugName());
+         pstmt.setString(3, rr.getDiseaseTarget());
+         pstmt.setString(4, rr.getDate().toString());
+         pstmt.setString(5, rr.getDrugNotes());
+         pstmt.setString(6, rr.getReportTo());
+         pstmt.setString(7, rr.getReportID());
+         pstmt.setString(8, rr.getEnterpriseName());
+         String compString = String.join(", ", rr.getComposition());
+         pstmt.setString(9, compString);
+         pstmt.executeUpdate();
+     }
+     
+     public void retrieveResearchReport(Connection con, ResearchReportDirectory rrd) throws SQLException{
+         String retrieveResearchReportData = "SELECT * from ResearchReport";
+         ResearchReportDirectory rrD = rrd;
+         ArrayList<ResearchReport> rrTemp = rrd.getResearchReportdsDir();
+         Statement stmt = con.createStatement();
+         ResultSet rs = stmt.executeQuery(retrieveResearchReportData);
+         while (rs.next()){
+             ResearchReport rr = new ResearchReport();
+             rr.setResearchBy(rs.getString("ResearchBy"));
+             rr.setDrugName(rs.getString("DrugName"));
+             rr.setDiseaseTarget(rs.getString("DiseaseTarget"));
+             rr.setDate(rs.getString("Date"));
+             rr.setDrugNotes(rs.getString("DrugNotes"));
+             rr.setReportTo(rs.getString("ReportTo"));
+             rr.setReportID(rs.getString("ReportID"));
+             rr.setEnterpriseName(rs.getString("EnterpriseName"));
+             String temp = rs.getString("Composition");
+             String[] strSplit = temp.split(", ");
+             ArrayList<String> compList = new ArrayList<String>(Arrays.asList(strSplit));
+             rr.setComposition(compList);
+             
+             rrTemp.add(rr);
+         }
+         rrD.setResearchReportdsDir(rrTemp);
      }
 }
