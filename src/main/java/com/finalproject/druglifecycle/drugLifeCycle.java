@@ -71,6 +71,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
         conForSQL.connectoDB();
         retrieveEmployee();
         retrieveResearchReport();
+        retrieveDevelopmentReport();
+        retrieveClinicalResearchReport();
     }
 
     
@@ -2739,6 +2741,14 @@ public class drugLifeCycle extends javax.swing.JFrame {
         }
     }
     
+    public void retrieveClinicalResearchReport(){
+        try{
+            conForSQL.retrieveClinicalResearchReport(conn, clinicalresearchdir);
+        }catch(SQLException e){
+            System.out.println("Error with retrieving the clinical reports data. Error: "+ e);
+        }
+    }
+    
     public void retrieveResearchReport(){
         try{
             conForSQL.retrieveResearchReport(conn, repDir);
@@ -3301,6 +3311,11 @@ public class drugLifeCycle extends javax.swing.JFrame {
         devRep.setDevAssigned(jComboBox3.getSelectedItem().toString());
         devRep.setEnterpriseName(ResRep.getEnterpriseName()); //This line needs to be edited.
         SplitPanelPain(ResearchLeadHome);
+        try{
+            conForSQL.addDevelopmentReport(conn, devRep);
+        }catch(SQLException e){
+            System.out.println("Error in adding the development report. Occured due to: "+e);
+        }
     }//GEN-LAST:event_AssignToDevDecsionActionPerformed
 
     private void CancelAssigningActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelAssigningActionPerformed
@@ -3535,6 +3550,11 @@ public class drugLifeCycle extends javax.swing.JFrame {
             dosage.addElement(dos.get(i));
         }
         jList6.setModel(dosage);
+        try{
+            conForSQL.addClinicalResearcherReport(conn, crr);
+        }catch(SQLException e){
+            System.out.println("Error in adding clinical research report. Occured due to: " + e);
+        }
     }
     
     private void createTrail1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createTrail1ActionPerformed
@@ -3558,6 +3578,12 @@ public class drugLifeCycle extends javax.swing.JFrame {
             cr.setSideEffects("Not provided.");
         }
         SplitPanelPain(cardPrevious);
+        
+        try {
+            conForSQL.updateClinicalResearcherReport(conn, cr);
+        }catch(SQLException e){
+            System.out.println("Error in updating the clinical report due to: "+e);
+        }
     }//GEN-LAST:event_createTrail1ActionPerformed
 
     private void usernameTextFieldR1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameTextFieldR1ActionPerformed

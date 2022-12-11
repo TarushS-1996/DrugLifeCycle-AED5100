@@ -5,6 +5,7 @@
 package com.finalproject.SQLDB;
 
 import com.finalproject.backend.ClinicalResearcherReport;
+import com.finalproject.backend.ClinicalResearcherReportDirectory;
 import com.finalproject.backend.DevelopmentReport;
 import com.finalproject.backend.DevelopmentReportDir;
 import com.finalproject.backend.Employee;
@@ -180,6 +181,63 @@ public class backendDBConnection {
      }
      
      public void addClinicalResearcherReport(Connection conn, ClinicalResearcherReport crr) throws SQLException{
-         
+         String insertIntoClincalResearchReport = "INSERT INTO ClinicalResearchReport(ReportID, DrugName, Composition, Date, DiseaseTarget, ResearchBy, ReportTo, EnterpriseName, Dosage, Distribution, DevAssigned, AssignedGLPOfficer) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+         PreparedStatement stmt = conn.prepareStatement(insertIntoClincalResearchReport);
+         stmt.setString(1, crr.getReportID());
+         stmt.setString(2, crr.getDrugName());
+         String compString = String.join(", ", crr.getComposition());
+         stmt.setString(3, compString);
+         stmt.setString(4, crr.getDate());
+         stmt.setString(5, crr.getDiseaseTarget());
+         stmt.setString(6, crr.getResearchBy());
+         stmt.setString(7, crr.getReportTo());
+         stmt.setString(8, crr.getEnterpriseName());
+         String dosage = String.join(", ", crr.getDosage());
+         stmt.setString(9, dosage);
+         stmt.setString(10, crr.getDistribution());
+         stmt.setString(11, crr.getDevAssigned());
+         stmt.setString(12, crr.getAssignedGLPOfficer());
+         stmt.setString(13, crr.getAssignedClinicalResearcher());
+         stmt.executeUpdate();
      }    
+     
+     public void updateClinicalResearcherReport(Connection conn, ClinicalResearcherReport crr)throws SQLException{
+         //String getOneResult = String.format("SELECT * from ClinicalResearchReport WHERE ReportID = '{}'", ID);
+         String updateOneRow = "UPDATE ClinicalResearcherReport set Reactions = ?, SideEffects = ? WHERE ReportID = ?";
+         PreparedStatement stmt = conn.prepareStatement(updateOneRow);
+         stmt.setString(1, crr.getDrugReaction());
+         stmt.setString(2, crr.getSideEffects());
+         stmt.setString(3, crr.getReportID());
+         stmt.executeUpdate();         
+     }
+     
+     public void retrieveClinicalResearchReport(Connection conn, ClinicalResearcherReportDirectory crd) throws SQLException{
+         String retrieveFromDevReports = "SELECT * from DevelopmentReport";
+         ClinicalResearcherReportDirectory crdTemp = crd;
+         ArrayList<ClinicalResearcherReport> crTe = crd.getClinicalReportDir();
+         Statement stmt = conn.createStatement();
+         ResultSet rs = stmt.executeQuery(retrieveFromDevReports);
+         while(rs.next()){
+             ClinicalResearcherReport cr = new ClinicalResearcherReport();
+             cr.setReportID(rs.getString("ReportID"));
+             cr.setDrugName(rs.getString("DrugName"));
+             cr.setComposition(convertStringToArray(rs.getString("Composition")));
+             cr.setDate(rs.getString("Date"));
+             cr.setDiseaseTarget(rs.getString("DiseaseTarget"));
+             cr.setResearchBy(rs.getString("ResearchBy"));
+             cr.setReportTo(rs.getString("ResearchTo"));
+             cr.setEnterpriseName(rs.getString("EnterpriseName"));
+             cr.setDosage(convertStringToArray(rs.getString("Dosage")));
+             cr.setDistribution(rs.getString("Distribution"));
+             cr.setDevAssigned(rs.getString("DevAssigned"));
+             cr.setAssignedGLPOfficer(rs.getString("AssignedGLPOfficer"));
+             cr.setAssignedClinicalResearcher(rs.getString("AssignedClinicalResearcher"));
+             cr.setSideEffects(rs.getString("SideEffects"));
+             cr.setDrugReaction(rs.getString("Reactions"));
+             crTe.add(cr);
+         }
+         
+         crdTemp.setClinicalReportDir(crTe);
+     }
+     
 }
