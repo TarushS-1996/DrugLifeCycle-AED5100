@@ -4,6 +4,7 @@
  */
 package com.finalproject.SQLDB;
 
+import com.finalproject.backend.DevelopmentReport;
 import com.finalproject.backend.Employee;
 import com.finalproject.backend.EmployeeDirectory;
 import com.finalproject.backend.ResearchReport;
@@ -129,4 +130,23 @@ public class backendDBConnection {
          }
          rrD.setResearchReportdsDir(rrTemp);
      }
+     
+     public void addDevelopmentReport(Connection con, DevelopmentReport dr) throws SQLException{
+         String insertIntoDevelopmentReport = "INSERT INTO DevelopmentReport(ReportID, Composition, ResearchBy, DrugName, DiseaseTarget, Date, DrugNotes, ReportTo, DevAssigned, EnterpriseName) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+         PreparedStatement stmt = con.prepareStatement(insertIntoDevelopmentReport);
+         stmt.setString(1, dr.getReportID());
+         String compString = String.join(", ", dr.getComposition());
+         stmt.setString(2, compString);
+         stmt.setString(3, dr.getResearchBy());
+         stmt.setString(4, dr.getDrugName());
+         stmt.setString(5, dr.getDiseaseTarget());
+         stmt.setString(6, dr.getDate());
+         stmt.setString(7, dr.getDrugNotes());
+         stmt.setString(8, dr.getReportTo());
+         stmt.setString(9, dr.getDevAssigned());
+         stmt.setString(10, dr.getEnterpriseName());
+         stmt.executeUpdate();
+     }
+     
+     public void retrieveDevReport(){}
 }
