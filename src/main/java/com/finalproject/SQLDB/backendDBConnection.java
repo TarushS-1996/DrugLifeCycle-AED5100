@@ -185,7 +185,7 @@ public class backendDBConnection {
      }
      
      public void addClinicalResearcherReport(Connection conn, ClinicalResearcherReport crr) throws SQLException{
-         String insertIntoClincalResearchReport = "INSERT INTO ClinicalResearchReport(ReportID, DrugName, Composition, Date, DiseaseTarget, ResearchBy, ReportTo, EnterpriseName, Dosage, Distribution, DevAssigned, AssignedGLPOfficer, AssignedClinicalResearcher, Reactions, SideEffects) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+         String insertIntoClincalResearchReport = "INSERT INTO ClinicalResearcherReport(ReportID, DrugName, Composition, Date, DiseaseTarget, ResearchBy, ReportTo, EnterpriseName, Dosage, Distribution, DevAssigned, AssignedGLPOfficer, AssignedClinicalResearcher, Reactions, SideEffects) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
          PreparedStatement stmt = conn.prepareStatement(insertIntoClincalResearchReport);
          stmt.setString(1, crr.getReportID());
          stmt.setString(2, crr.getDrugName());
@@ -207,16 +207,17 @@ public class backendDBConnection {
      
      public void updateClinicalResearcherReport(Connection conn, ClinicalResearcherReport crr)throws SQLException{
          //String getOneResult = String.format("SELECT * from ClinicalResearchReport WHERE ReportID = '{}'", ID);
-         String updateOneRow = "UPDATE ClinicalResearcherReport set Reactions = ?, SideEffects = ? WHERE ReportID = ?";
+         String updateOneRow = "UPDATE ClinicalResearcherReport set Reactions = ?, SideEffects = ?, AssignedClinicalResearcher = ? WHERE ReportID = ?";
          PreparedStatement stmt = conn.prepareStatement(updateOneRow);
          stmt.setString(1, crr.getDrugReaction());
          stmt.setString(2, crr.getSideEffects());
-         stmt.setString(3, crr.getReportID());
+         stmt.setString(3, crr.getAssignedClinicalResearcher());
+         stmt.setString(4, crr.getReportID());
          stmt.executeUpdate();         
      }
      
      public void retrieveClinicalResearchReport(Connection conn, ClinicalResearcherReportDirectory crd) throws SQLException{
-         String retrieveFromDevReports = "SELECT * from DevelopmentReport";
+         String retrieveFromDevReports = "SELECT * from ClinicalResearcherReport";
          ClinicalResearcherReportDirectory crdTemp = crd;
          ArrayList<ClinicalResearcherReport> crTe = crd.getClinicalReportDir();
          Statement stmt = conn.createStatement();
@@ -229,9 +230,10 @@ public class backendDBConnection {
              cr.setDate(rs.getString("Date"));
              cr.setDiseaseTarget(rs.getString("DiseaseTarget"));
              cr.setResearchBy(rs.getString("ResearchBy"));
-             cr.setReportTo(rs.getString("ResearchTo"));
+             cr.setReportTo(rs.getString("ReportTo"));
              cr.setEnterpriseName(rs.getString("EnterpriseName"));
-             cr.setDosage(convertStringToArray(rs.getString("Dosage")));
+             ArrayList<String> dosage = convertStringToArray(rs.getString("Dosage"));
+             cr.setDosage(dosage);
              cr.setDistribution(rs.getString("Distribution"));
              cr.setDevAssigned(rs.getString("DevAssigned"));
              cr.setAssignedGLPOfficer(rs.getString("AssignedGLPOfficer"));
@@ -284,7 +286,7 @@ public class backendDBConnection {
      }
      
      public void addMedicalReport(Connection conn, MedicalReport mr) throws SQLException{
-         String insertIntoMedicalReport = "INSERT INTO MedicalReport(ReportID, EnterpriseName, DrugName, Date, DiseaseTarget, ReportTo, FinalApproval, ToxicologySpecialist, MedicalOfficer, ToxinsFound) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+         String insertIntoMedicalReport = "INSERT INTO MedicalReport(ReportID, EnterpriseName, DrugName, Date, DiseaseTarget, ReportTo, FinalApproval, ToxicologySpecialist, MedicalOfficer, ToxinsFound) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
          PreparedStatement stmt = conn.prepareStatement(insertIntoMedicalReport);
          stmt.setString(1, mr.getReportID());
          stmt.setString(2, mr.getEnterpriseName());
@@ -300,7 +302,7 @@ public class backendDBConnection {
      }
      
      public void updateMedicalReport(Connection conn, MedicalReport ir) throws SQLException{
-         String updateOneRow = "UPDATE ClinicalResearcherReport set FinalApproval = ? WHERE ReportID = ?";
+         String updateOneRow = "UPDATE MedicalReport set FinalApproval = ? WHERE ReportID = ?";
          PreparedStatement stmt = conn.prepareStatement(updateOneRow);
          stmt.setString(1, ir.getFinalApproval());
          stmt.setString(2, ir.getReportID());
