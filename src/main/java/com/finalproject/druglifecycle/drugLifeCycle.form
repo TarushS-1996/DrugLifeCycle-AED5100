@@ -267,12 +267,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JTextField" name="lastnameTextField1">
-                  <Properties>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="99" green="99" red="99" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Last name"/>
-                  </Properties>
                   <Events>
                     <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="lastnameTextField1KeyReleased"/>
                   </Events>
@@ -283,13 +277,8 @@
                   </Constraints>
                 </Component>
                 <Component class="javax.swing.JTextField" name="firstnameTextField1">
-                  <Properties>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="99" green="99" red="99" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="First name"/>
-                  </Properties>
                   <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="firstnameTextField1ActionPerformed"/>
                     <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="firstnameTextField1KeyReleased"/>
                   </Events>
                   <Constraints>
@@ -299,12 +288,6 @@
                   </Constraints>
                 </Component>
                 <Component class="javax.swing.JTextField" name="middlenameTextField1">
-                  <Properties>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="99" green="99" red="99" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Middle name"/>
-                  </Properties>
                   <Events>
                     <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="middlenameTextField1KeyReleased"/>
                   </Events>
@@ -724,7 +707,7 @@
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="110" y="660" width="370" height="30"/>
+                      <AbsoluteConstraints x="70" y="590" width="370" height="30"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -5035,11 +5018,11 @@
                             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="66" green="66" red="66" type="rgb"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="As a research scientist, you will initiate reports and assign leads to them to continue the research work."/>
+                            <Property name="text" type="java.lang.String" value="As a afety Officer, you&apos;ll conduct frequent visits to the manufactoring facility to ensure the process meets the standards."/>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="40" y="81" width="-1" height="-1"/>
+                              <AbsoluteConstraints x="40" y="81" width="770" height="-1"/>
                             </Constraint>
                           </Constraints>
                         </Component>
@@ -5048,7 +5031,7 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Helvetica Neue" size="28" style="1"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Research Scientist"/>
+                            <Property name="text" type="java.lang.String" value="Safety Inspection Officer"/>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
