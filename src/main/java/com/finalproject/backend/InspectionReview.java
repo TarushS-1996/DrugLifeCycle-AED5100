@@ -13,7 +13,7 @@ import java.util.Date;
 public class InspectionReview extends MedicalReport{
     private String inspectionRemarks;
     private String inspectionType;
-    private Date inspectionDate;
+    private String inspectionDate;
     private String inspectionResult;
 
     public String getInspectionRemarks() {
@@ -32,11 +32,11 @@ public class InspectionReview extends MedicalReport{
         this.inspectionType = inspectionType;
     }
 
-    public Date getInspectionDate() {
+    public String getInspectionDate() {
         return inspectionDate;
     }
 
-    public void setInspectionDate(Date inspectionDate) {
+    public void setInspectionDate(String inspectionDate) {
         this.inspectionDate = inspectionDate;
     }
 
