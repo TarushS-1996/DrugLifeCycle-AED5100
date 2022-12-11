@@ -4,7 +4,9 @@
  */
 package com.finalproject.SQLDB;
 
+import com.finalproject.backend.ClinicalResearcherReport;
 import com.finalproject.backend.DevelopmentReport;
+import com.finalproject.backend.DevelopmentReportDir;
 import com.finalproject.backend.Employee;
 import com.finalproject.backend.EmployeeDirectory;
 import com.finalproject.backend.ResearchReport;
@@ -40,6 +42,12 @@ public class backendDBConnection {
             return null;
         }
         return con;
+    }
+    
+    public ArrayList<String> convertStringToArray(String data){
+     String[] strSplit = data.split(", " );
+     ArrayList<String> array = new ArrayList<String>(Arrays.asList(strSplit));
+     return array;
     }
     
     public void addEmployeeToDB(Connection conn, Employee emp) throws SQLException{
@@ -148,5 +156,30 @@ public class backendDBConnection {
          stmt.executeUpdate();
      }
      
-     public void retrieveDevReport(){}
+     public void retrieveDevReport(Connection con, DevelopmentReportDir drr) throws SQLException{
+         String retrieveFromDevReports = "SELECT * from DevelopmentReport";
+         DevelopmentReportDir drrTemp = drr;
+         ArrayList<DevelopmentReport> drrArray = drr.getDevRepDir();
+         Statement stmt = con.createStatement();
+         ResultSet rs = stmt.executeQuery(retrieveFromDevReports);
+         while(rs.next()){
+             DevelopmentReport dr = new DevelopmentReport();
+             dr.setReportID(rs.getString("ReportID"));
+             dr.setComposition(convertStringToArray(rs.getString("Composition")));
+             dr.setResearchBy(rs.getString("ResearchBy"));
+             dr.setDrugName(rs.getString("DrugName"));
+             dr.setDiseaseTarget(rs.getString("DiseaseTarget"));
+             dr.setDate(rs.getString("Date"));
+             dr.setDrugNotes(rs.getString("DrugNotes"));
+             dr.setReportTo(rs.getString("ReportTo"));
+             dr.setDevAssigned(rs.getString("DevAssigned"));
+             dr.setEnterpriseName(rs.getString("EnterpriseName"));
+             drrArray.add(dr);
+         }
+         drrTemp.setDevRepDir(drrArray);
+     }
+     
+     public void addClinicalResearcherReport(Connection conn, ClinicalResearcherReport crr) throws SQLException{
+         
+     }    
 }
