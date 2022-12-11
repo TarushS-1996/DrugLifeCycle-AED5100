@@ -10,6 +10,10 @@ import com.finalproject.backend.DevelopmentReport;
 import com.finalproject.backend.DevelopmentReportDir;
 import com.finalproject.backend.Employee;
 import com.finalproject.backend.EmployeeDirectory;
+import com.finalproject.backend.InspectionReportDirectory;
+import com.finalproject.backend.InspectionReview;
+import com.finalproject.backend.MedicalReport;
+import com.finalproject.backend.MedicalReportDirectory;
 import com.finalproject.backend.ResearchReport;
 import com.finalproject.backend.ResearchReportDirectory;
 import java.sql.Connection;
@@ -181,7 +185,7 @@ public class backendDBConnection {
      }
      
      public void addClinicalResearcherReport(Connection conn, ClinicalResearcherReport crr) throws SQLException{
-         String insertIntoClincalResearchReport = "INSERT INTO ClinicalResearchReport(ReportID, DrugName, Composition, Date, DiseaseTarget, ResearchBy, ReportTo, EnterpriseName, Dosage, Distribution, DevAssigned, AssignedGLPOfficer) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+         String insertIntoClincalResearchReport = "INSERT INTO ClinicalResearchReport(ReportID, DrugName, Composition, Date, DiseaseTarget, ResearchBy, ReportTo, EnterpriseName, Dosage, Distribution, DevAssigned, AssignedGLPOfficer, AssignedClinicalResearcher, Reactions, SideEffects) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
          PreparedStatement stmt = conn.prepareStatement(insertIntoClincalResearchReport);
          stmt.setString(1, crr.getReportID());
          stmt.setString(2, crr.getDrugName());
@@ -238,6 +242,92 @@ public class backendDBConnection {
          }
          
          crdTemp.setClinicalReportDir(crTe);
+     }
+     
+     public void addInspectionReport(Connection conn, InspectionReview ir) throws SQLException{
+         String insertIntoInspectionReport = "INSERT INTO InspectionReport(ReportID, EnterpriseName, InspectorName, DrugName, Date, DiseaseTarget, InspectionType, InspectionDate, InspectionRemarks, InspectionResult) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+         PreparedStatement stmt = conn.prepareStatement(insertIntoInspectionReport);
+         stmt.setString(1, ir.getReportID());
+         stmt.setString(2, ir.getEnterpriseName());
+         stmt.setString(3, ir.getName());
+         stmt.setString(4, ir.getDrugName());
+         stmt.setString(5, ir.getDate());
+         stmt.setString(6, ir.getDiseaseTarget());
+         stmt.setString(7, ir.getInspectionType());
+         stmt.setString(8, ir.getInspectionDate());
+         stmt.setString(9, ir.getInspectionRemarks());
+         stmt.setString(10, ir.getInspectionResult());
+         stmt.executeUpdate();
+     }
+     
+     public void retrieveInspectionReport(Connection conn, InspectionReportDirectory ird) throws SQLException{
+         String retrieveFromDevReports = "SELECT * from DevelopmentReport";
+         InspectionReportDirectory irdTemp = ird;
+         ArrayList<InspectionReview> irArray = ird.getInspectionRepo();
+         Statement stmt = conn.createStatement();
+         ResultSet rs = stmt.executeQuery(retrieveFromDevReports);
+         while(rs.next()){
+             InspectionReview ir = new InspectionReview();
+             ir.setReportID(rs.getString("ReportID"));
+             ir.setEnterpriseName(rs.getString("EnterpriseName"));
+             ir.setName(rs.getString("InspectorName"));
+             ir.setDrugName(rs.getString("DrugName"));
+             ir.setDate(rs.getString("Date"));
+             ir.setDiseaseTarget(rs.getString("DiseaseTarget"));
+             ir.setInspectionType(rs.getString("InspectionType"));
+             ir.setInspectionDate(rs.getString("InspectionDate"));
+             ir.setInspectionRemarks(rs.getString("InspectionRemarks"));
+             ir.setInspectionResult(rs.getString("InpsectionResult"));
+             irArray.add(ir);
+         }
+         irdTemp.setInspectionRepo(irArray);
+     }
+     
+     public void addMedicalReport(Connection conn, MedicalReport mr) throws SQLException{
+         String insertIntoMedicalReport = "INSERT INTO MedicalReport(ReportID, EnterpriseName, DrugName, Date, DiseaseTarget, ReportTo, FinalApproval, ToxicologySpecialist, MedicalOfficer, ToxinsFound) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+         PreparedStatement stmt = conn.prepareStatement(insertIntoMedicalReport);
+         stmt.setString(1, mr.getReportID());
+         stmt.setString(2, mr.getEnterpriseName());
+         stmt.setString(3, mr.getDrugName());
+         stmt.setString(4, mr.getDate());
+         stmt.setString(5, mr.getDiseaseTarget());
+         stmt.setString(6, mr.getReportTo());
+         stmt.setString(7, mr.getFinalApproval());
+         stmt.setString(8, mr.getToxicologySpecialist());
+         stmt.setString(9, mr.getMedicalOfficer());
+         stmt.setString(10, mr.getToxinsFound());
+         stmt.executeUpdate();
+     }
+     
+     public void updateMedicalReport(Connection conn, MedicalReport ir) throws SQLException{
+         String updateOneRow = "UPDATE ClinicalResearcherReport set FinalApproval = ? WHERE ReportID = ?";
+         PreparedStatement stmt = conn.prepareStatement(updateOneRow);
+         stmt.setString(1, ir.getFinalApproval());
+         stmt.setString(2, ir.getReportID());
+         stmt.executeUpdate();
+     }
+     
+     public void retrieveMedicalReport(Connection conn, MedicalReportDirectory medrd) throws SQLException{
+         String retrieveFromMedicalReport = "SELECT * from MedicalReport";
+         MedicalReportDirectory mrdTemp = medrd;
+         ArrayList<MedicalReport> medArray = medrd.getMediRep();
+         Statement stmt = conn.createStatement();
+         ResultSet rs = stmt.executeQuery(retrieveFromMedicalReport);
+         while(rs.next()){
+             MedicalReport med = new MedicalReport();
+             med.setReportID(rs.getString("ReportID"));
+             med.setEnterpriseName(rs.getString("EnterpriseName"));
+             med.setDrugName(rs.getString("DrugName"));
+             med.setDate(rs.getString("Date"));
+             med.setDiseaseTarget(rs.getString("DiseaseTarget"));
+             med.setReportTo(rs.getString("ReportTo"));
+             med.setFinalApproval(rs.getString("FinalApproval"));
+             med.setToxicologySpecialist(rs.getString("ToxicologySpecialist"));
+             med.setMedicalOfficer(rs.getString("MedicalOfficer"));
+             med.setToxinsFound(rs.getString("ToxinsFound"));
+             medArray.add(med);
+         }
+         mrdTemp.setMediRep(medArray);
      }
      
 }

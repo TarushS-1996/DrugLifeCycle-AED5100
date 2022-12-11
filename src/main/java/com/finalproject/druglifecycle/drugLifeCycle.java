@@ -73,6 +73,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
         retrieveResearchReport();
         retrieveDevelopmentReport();
         retrieveClinicalResearchReport();
+        retrieveInspectionReport();
+        retrieveMedicalReport();
     }
 
     
@@ -2765,6 +2767,22 @@ public class drugLifeCycle extends javax.swing.JFrame {
         }            
     }
     
+    public void retrieveInspectionReport(){
+        try{
+            conForSQL.retrieveDevReport(conn, devRepDir);
+        }catch(SQLException e){
+            System.out.println("Error with retrieving inspection report. Error: "+ e);
+        }
+    }
+    
+    public void retrieveMedicalReport(){
+        try{
+            conForSQL.retrieveMedicalReport(conn, mediRepp);
+        }catch(SQLException e){
+            System.out.println("Error with retrieving medical report. Error: "+e);
+        }
+    }
+    
     public void summaryResearchReport(){
         jLabel13.setText(ResearchReportPage1ResearchBy.getText());
         jLabel15.setText(ResearchReportPage1Name.getText());
@@ -3674,7 +3692,13 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 }
             }med.setFinalApproval("Approve");
             populatweTableMedicalOfficerHome(loggedINEmployee);
+            try{
+                conForSQL.updateMedicalReport(conn, med);
+            }catch(SQLException e){
+                System.out.println("Error with updating the medical report status in the database. Error: "+ e);
+            }
         }
+        
     }//GEN-LAST:event_AddReport2ActionPerformed
 
     private void jComboBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox6ActionPerformed
@@ -3697,6 +3721,11 @@ public class drugLifeCycle extends javax.swing.JFrame {
         medi.setToxicologySpecialist(jComboBox6.getSelectedItem().toString());
         medi.setMedicalOfficer(loggedINEmployee.getName());
         SplitPanelPain(RegulatoryHealthManager);
+        try{
+            conForSQL.addMedicalReport(conn, medi);
+        }catch(SQLException e){
+            System.out.println("Error in adding the inspection report. Error: "+ e);
+        }
     }//GEN-LAST:event_AssignToDevDecsion1ActionPerformed
     
     private void CancelAssigning1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelAssigning1ActionPerformed
@@ -3757,10 +3786,15 @@ public class drugLifeCycle extends javax.swing.JFrame {
         ir.setDate(md.getDate());
         ir.setDiseaseTarget(md.getDiseaseTarget());
         ir.setInspectionType(inspectiontype);
-        ir.setInspectionDate(jDateChooser2.getDate());
+        ir.setInspectionDate(jDateChooser2.getDate().toString());
         ir.setInspectionRemarks(jTextArea13.getText());
         ir.setInspectionResult(inspectionresult);
         SplitPanelPain(SafetyInspectorOfficer);
+        try{
+            conForSQL.addInspectionReport(conn, ir);
+        }catch(SQLException e){
+            System.out.println("Error with adding the inspection report to the databaese. Error: "+e);
+        }
     }//GEN-LAST:event_AssignToDevDecsion4ActionPerformed
 
     private void CancelAssigning4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelAssigning4ActionPerformed
@@ -3788,6 +3822,11 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 }
             }med.setFinalApproval("Rejected");
             populatweTableMedicalOfficerHome(loggedINEmployee);
+            try{
+                conForSQL.updateMedicalReport(conn, med);
+            }catch(SQLException e){
+                System.out.println("Error with updating the medical report status in the database. Error: "+ e);
+            }
         }
     }//GEN-LAST:event_jButton7ActionPerformed
 
