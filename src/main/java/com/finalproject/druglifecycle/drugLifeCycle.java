@@ -81,6 +81,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         retrieveClinicalResearchReport();
         retrieveInspectionReport();
         retrieveMedicalReport();
+        retrieveAdvertisingInfo();
     }
 
     
@@ -2522,7 +2523,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         Title10.setFont(new java.awt.Font("Helvetica Neue", 1, 28)); // NOI18N
         Title10.setText("Advertising Specialist");
         AdvertisingSpecialist.add(Title10);
-        Title10.setBounds(40, 40, 300, 33);
+        Title10.setBounds(40, 40, 360, 33);
 
         ageLabelR27.setText("Search");
         AdvertisingSpecialist.add(ageLabelR27);
@@ -2847,6 +2848,14 @@ public class drugLifeCycle extends javax.swing.JFrame {
             conForSQL.retrieveEmployeeDirectory(conn, empDir);
         }catch(SQLException e){
             System.out.println("Error with retrieving the employee data. Error: "+ e);
+        }
+    }
+    
+    public void retrieveAdvertisingInfo(){
+        try{
+            conForSQL.retrieveAdvertisingInformation(conn, addDir);
+        }catch(SQLException e){
+            System.out.println("Error in retrieving advertising information. Error: "+e);
         }
     }
     
@@ -3880,6 +3889,13 @@ public class drugLifeCycle extends javax.swing.JFrame {
         data.setDiseaseTarget(AddSpecialistTable.getValueAt(row, 3).toString());
         data.setReportTo(loggedINEmployee.getName());
         data.setAdvertisingInfo(jTextArea12.getText());
+        data.setName(loggedINEmployee.getName());
+        
+        try{
+            conForSQL.addToAdvertisingTable(conn, data);
+        }catch(SQLException e){
+            System.out.println("Error in adding data to advertising table. Error: "+e);
+        }
     }
     
     private void CancelAssigning3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelAssigning3ActionPerformed
@@ -3889,8 +3905,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
     private void AssignToDevDecsion2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssignToDevDecsion2ActionPerformed
        if(AddSpecialistTable.getSelectedRow() != -1){
-        SplitPanelPain(AddAdvertising);
-        
+            SplitPanelPain(AddAdvertising);
+            
        }
     }//GEN-LAST:event_AssignToDevDecsion2ActionPerformed
 
