@@ -22,6 +22,7 @@ import com.finalproject.backend.AddAdvertisingDirectory;
 import com.finalproject.backend.ConfigurationApp;
 import com.finalproject.backend.Enterprise;
 import com.finalproject.backend.EnterpriseDirectory;
+import com.finalproject.backend.MailHandling;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -35,6 +36,7 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.table.DefaultTableModel;
 import java.util.regex.*;
+import javax.mail.MessagingException;
 import javax.swing.RowFilter;
 import javax.swing.table.TableRowSorter;
 
@@ -3246,6 +3248,12 @@ public class drugLifeCycle extends javax.swing.JFrame {
         emp.setRole(roleComboBoxR.getSelectedItem().toString());
         System.out.println(roleComboBoxR.getSelectedItem().toString());
         PanelPaint(Login);
+        try {
+            MailHandling mail = new MailHandling(emp.getMailID(), "Welcome to organization", "We are happy to have you abord.");
+        } catch (MessagingException ex) {
+            Logger.getLogger(drugLifeCycle.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
         try{
             conForSQL.addEmployeeToDB(conn, emp);
         }catch (SQLException e){
