@@ -234,8 +234,10 @@ public class backendDBConnection {
              cr.setResearchBy(rs.getString("ResearchBy"));
              cr.setReportTo(rs.getString("ReportTo"));
              cr.setEnterpriseName(rs.getString("EnterpriseName"));
-             ArrayList<String> dosage = convertStringToArray(rs.getString("Dosage"));
-             cr.setDosage(dosage);
+             String temp = rs.getString("Dosage");
+             String[] strSplit = temp.split(", " );
+             ArrayList<String> array = new ArrayList<String>(Arrays.asList(strSplit));
+             cr.setDosage(array);
              cr.setDistribution(rs.getString("Distribution"));
              cr.setDevAssigned(rs.getString("DevAssigned"));
              cr.setAssignedGLPOfficer(rs.getString("AssignedGLPOfficer"));
