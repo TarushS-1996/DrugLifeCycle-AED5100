@@ -4,6 +4,8 @@
  */
 package com.finalproject.SQLDB;
 
+import com.finalproject.backend.AddAdvertising;
+import com.finalproject.backend.AddAdvertisingDirectory;
 import com.finalproject.backend.ClinicalResearcherReport;
 import com.finalproject.backend.ClinicalResearcherReportDirectory;
 import com.finalproject.backend.DevelopmentReport;
@@ -330,6 +332,37 @@ public class backendDBConnection {
              medArray.add(med);
          }
          mrdTemp.setMediRep(medArray);
+     }
+     
+     public void addToAdvertisingTable(Connection conn, AddAdvertising ad)throws SQLException{
+         String insertIntoAdvertisingReport = "INSERT INTO AdvertisingReport(ReportID, DrugName, DiseaseTarget, ReportTo, AdvertisingInfo, Name) VALUES(?, ?, ?, ?, ?, ?)";
+         PreparedStatement stmt = conn.prepareStatement(insertIntoAdvertisingReport);
+         stmt.setString(1, ad.getReportID());
+         stmt.setString(2, ad.getDrugName());
+         stmt.setString(3, ad.getDiseaseTarget());
+         stmt.setString(4, ad.getReportTo());
+         stmt.setString(5, ad.getAdvertisingInfo());
+         stmt.setString(6, ad.getName());
+         stmt.executeUpdate();
+     }
+     
+     public void retrieveAdvertisingInformation(Connection conn, AddAdvertisingDirectory addDir)throws SQLException{
+         String retrievefromAdvertisingTable = "SELECT * from AdvertisingReport";
+         AddAdvertisingDirectory addTemp = addDir;
+         ArrayList<AddAdvertising> addArray = addDir.getAdvertisingDir();
+         Statement stmt = conn.createStatement();
+         ResultSet rs = stmt.executeQuery(retrievefromAdvertisingTable);
+         while(rs.next()){
+             AddAdvertising ad = new AddAdvertising();
+             ad.setReportID(rs.getString("ReportID"));
+             ad.setDrugName(rs.getString("DrugName"));
+             ad.setDiseaseTarget(rs.getString("DiseaseTarget"));
+             ad.setReportTo(rs.getString("ReportTo"));
+             ad.setAdvertisingInfo(rs.getString("AdvertisingInfo"));
+             ad.setName(rs.getString("Name"));
+             addArray.add(ad);
+         }
+         addTemp.setAdvertisingDir(addArray);
      }
      
 }
