@@ -51,6 +51,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     public static String gender;
     public static String inspectiontype;
     public static String inspectionresult;
+    public static String reportIDforView;
     EnterpriseDirectory entDir = new EnterpriseDirectory();
     //ConfigurationApp app = new ConfigurationApp();
     backendDBConnection conForSQL = new backendDBConnection();
@@ -58,6 +59,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     Connection conn = conForSQL.connectoDB();
     AddAdvertisingDirectory addDir = new AddAdvertisingDirectory();
     ResearchReportDirectory repDir = new ResearchReportDirectory();
+    
     DevelopmentReportDir devRepDir = new DevelopmentReportDir();
     MedicalReportDirectory mediRepp = new MedicalReportDirectory();
     ClinicalResearcherReportDirectory clinicalresearchdir = new ClinicalResearcherReportDirectory();
@@ -75,6 +77,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
         usernameTextFieldR5.setEnabled(false);
         jTextArea9.setEnabled(false);
         conForSQL.connectoDB();
+        //repDir = retrieveResearchReport();
+        //repDir.setResearchReportdsDir(retrieveResearchReport());
         retrieveEmployee();
         retrieveResearchReport();
         retrieveDevelopmentReport();
@@ -167,10 +171,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
         firstLoginEnterpriseType = new javax.swing.JLabel();
         firstLoginEnterpriseTypeComboBox = new javax.swing.JComboBox<>();
         addEnterpriseButton = new javax.swing.JButton();
-        firstLoginEnterpriseMyRoleLabel = new javax.swing.JLabel();
-        firstLoginEnterpriseMyRoleTextField = new javax.swing.JTextField();
-        firstLoginEnterpriseMyOrganizationLabel = new javax.swing.JLabel();
-        firstLoginEnterpriseMyOrganizationTextField = new javax.swing.JTextField();
         firstLoginOrganization = new javax.swing.JPanel();
         firsLognOrganzationNameLabel = new javax.swing.JLabel();
         firstLoginOrganizationNameTextField = new javax.swing.JTextField();
@@ -305,7 +305,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         DiscoveryDevelopment = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
-        jLabel31 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
         jLabel33 = new javax.swing.JLabel();
@@ -315,8 +314,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jLabel36 = new javax.swing.JLabel();
         jScrollPane8 = new javax.swing.JScrollPane();
         jTextArea3 = new javax.swing.JTextArea();
-        jScrollPane9 = new javax.swing.JScrollPane();
-        jList3 = new javax.swing.JList<>();
         viewReportBackButton = new javax.swing.JButton();
         jLabel59 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -324,9 +321,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jTextField12 = new javax.swing.JTextField();
         jTextField13 = new javax.swing.JTextField();
         jLabel44 = new javax.swing.JLabel();
-        jLabel45 = new javax.swing.JLabel();
-        jScrollPane13 = new javax.swing.JScrollPane();
-        jList5 = new javax.swing.JList<>();
         jPanel3 = new javax.swing.JPanel();
         jLabel46 = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
@@ -906,18 +900,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
         });
         firstLoginEnterprise.add(addEnterpriseButton);
         addEnterpriseButton.setBounds(250, 320, 124, 30);
-
-        firstLoginEnterpriseMyRoleLabel.setText("My Role:");
-        firstLoginEnterprise.add(firstLoginEnterpriseMyRoleLabel);
-        firstLoginEnterpriseMyRoleLabel.setBounds(40, 210, 56, 18);
-        firstLoginEnterprise.add(firstLoginEnterpriseMyRoleTextField);
-        firstLoginEnterpriseMyRoleTextField.setBounds(170, 210, 200, 24);
-
-        firstLoginEnterpriseMyOrganizationLabel.setText("Organization:");
-        firstLoginEnterprise.add(firstLoginEnterpriseMyOrganizationLabel);
-        firstLoginEnterpriseMyOrganizationLabel.setBounds(40, 260, 87, 20);
-        firstLoginEnterprise.add(firstLoginEnterpriseMyOrganizationTextField);
-        firstLoginEnterpriseMyOrganizationTextField.setBounds(170, 260, 200, 24);
 
         leftComponent.add(firstLoginEnterprise, "card2");
 
@@ -1654,11 +1636,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
         DiscoveryDevelopment.add(jTextField1);
         jTextField1.setBounds(460, 60, 180, 24);
 
-        jLabel31.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        jLabel31.setText("Drug Composition");
-        DiscoveryDevelopment.add(jLabel31);
-        jLabel31.setBounds(20, 110, 125, 17);
-
         jLabel32.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel32.setText("Notes");
         DiscoveryDevelopment.add(jLabel32);
@@ -1707,11 +1684,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
         DiscoveryDevelopment.add(jScrollPane8);
         jScrollPane8.setBounds(20, 280, 860, 90);
 
-        jScrollPane9.setViewportView(jList3);
-
-        DiscoveryDevelopment.add(jScrollPane9);
-        jScrollPane9.setBounds(20, 140, 860, 80);
-
         viewReportBackButton.setText("Back");
         viewReportBackButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1755,16 +1727,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jLabel44.setText("Manufactoring Analyst");
         jPanel2.add(jLabel44);
         jLabel44.setBounds(18, 31, 167, 17);
-
-        jLabel45.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        jLabel45.setText("Dosage");
-        jPanel2.add(jLabel45);
-        jLabel45.setBounds(20, 250, 150, 17);
-
-        jScrollPane13.setViewportView(jList5);
-
-        jPanel2.add(jScrollPane13);
-        jScrollPane13.setBounds(20, 280, 870, 110);
 
         jTabbedPane1.addTab("Distribution and Dosage", jPanel2);
 
@@ -2839,6 +2801,12 @@ public class drugLifeCycle extends javax.swing.JFrame {
         en4.setEnterpriseType("Inspection");
         en4.setEnterpriseID(entIDGen());
         enterpriseComboBoxR.addItem(en4.getEnterpriseName());
+        
+        Enterprise en5 = entDir.addEnterprise();
+        en5.setEnterpriseName("Advertising");
+        en5.setEnterpriseType("Advertising");
+        en5.setEnterpriseID(entIDGen());
+        enterpriseComboBoxR.addItem(en5.getEnterpriseName());
     }
     
     
@@ -2971,6 +2939,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
             organizationComboBoxR.addItem("Review");
         }else if(ent.getEnterpriseType().equals("Inspection")){
             organizationComboBoxR.addItem("Manufacturer inspections");
+        }else if(ent.getEnterpriseType().equals("Advertising")){
+            organizationComboBoxR.addItem("Drug advertising");
         }
     }
     
@@ -3052,12 +3022,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         }
     }
-    
-
-
-    //Advertising Detail
-
-    
     public void populateAddSpecialistTable(Employee emp){
         DefaultTableModel model = (DefaultTableModel) AddSpecialistTable.getModel();
         model.setRowCount(0);
@@ -3156,10 +3120,10 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jTextField12.setText(DR.getDistribution());
         ArrayList<String> dosageList = DR.getDosage();
         
-        for(int i = 0; i<dosageList.size(); i++){
+        /*for(int i = 0; i<dosageList.size(); i++){
             mod.addElement(i);
         }
-        jList5.setModel(mod);
+        jList5.setModel(mod);*/
     }
         
     public void populateSafetyInspectorHome(Employee emp){
@@ -3180,12 +3144,13 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jTextField1.setText(RR.getResearchBy());
         jTextArea3.setText(RR.getDrugNotes());
         jLabel59.setText(RR.getReportTo());
+        /*listOfComposition.removeAllElements();
         ArrayList<String> compList = RR.getComposition(); 
         for (int i = 0; i<compList.size(); i++){
             listOfComposition.addElement(i);
             
         }
-        jList3.setModel(listOfComposition);
+        jList3.setModel(listOfComposition);*/
     }
         
     public void addMedicalOfficers(Employee emp){
@@ -3246,7 +3211,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
                 crRepo = crrep;       
             }
         }
-        
+        addToDisAndDev(RR);
         if(medR != null){
             addToFDAReport(RR, devR, crRepo, medR);
         }
@@ -3263,7 +3228,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     }
     
     private void submitButtonRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonRActionPerformed
-        Connection con = conForSQL.connectoDB();
+        //Connection con = conForSQL.connectoDB();
         Employee emp = empDir.addEmployee();
         String name = firstnameTextField1.getText() + " "+middlenameTextField1.getText() + " "+lastnameTextField1.getText();
         emp.setName(name);
@@ -3282,7 +3247,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         System.out.println(roleComboBoxR.getSelectedItem().toString());
         PanelPaint(Login);
         try{
-            conForSQL.addEmployeeToDB(con, emp);
+            conForSQL.addEmployeeToDB(conn, emp);
         }catch (SQLException e){
             System.out.println("Error in adding employee. Detected "+e);
         }
@@ -3302,11 +3267,11 @@ public class drugLifeCycle extends javax.swing.JFrame {
         Employee loggedINEmployee = empDir.sendParticularUser(usernameTextField1.getText(), String.valueOf(passwordField1.getPassword()));
         loggedINEmployee.setEnterpriseName(firstLoginEnterpriseNameTextField.getText());
         loggedINEmployee.setEnterpriseType(firstLoginEnterpriseTypeComboBox.getSelectedItem().toString());
-        loggedINEmployee.setRole(firstLoginEnterpriseMyRoleTextField.getText());
-        loggedINEmployee.setOrganizationName(firstLoginEnterpriseMyOrganizationTextField.getText());
+        //loggedINEmployee.setRole(firstLoginEnterpriseMyRoleTextField.getText());
+        //loggedINEmployee.setOrganizationName(firstLoginEnterpriseMyOrganizationTextField.getText());
         JOptionPane.showMessageDialog(this, "Enterprise created. Please re-login.");
         enterpriseComboBoxR.addItem(firstLoginEnterpriseNameTextField.getText());
-        organizationComboBoxR.addItem(firstLoginEnterpriseMyOrganizationTextField.getText());
+        //organizationComboBoxR.addItem(firstLoginEnterpriseMyOrganizationTextField.getText());
     }//GEN-LAST:event_addEnterpriseButtonActionPerformed
 
     private void firstLoginOrganizationAddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstLoginOrganizationAddButtonActionPerformed
@@ -3542,7 +3507,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         rr.setComposition(comp);
         populateTableResearchScientist(loggedINEmployee);
         SplitPanelPain(ResearchScientistHome);
-        Connection con = conForSQL.connectoDB();
+        //Connection con = conForSQL.connectoDB();
         try{
             conForSQL.addResearchReport(conn, rr);
         }catch(SQLException e){
@@ -4406,10 +4371,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JRadioButton femaleRadioButton1;
     private javax.swing.JLabel firsLognOrganzationNameLabel;
     private javax.swing.JPanel firstLoginEnterprise;
-    private javax.swing.JLabel firstLoginEnterpriseMyOrganizationLabel;
-    private javax.swing.JTextField firstLoginEnterpriseMyOrganizationTextField;
-    private javax.swing.JLabel firstLoginEnterpriseMyRoleLabel;
-    private javax.swing.JTextField firstLoginEnterpriseMyRoleTextField;
     private javax.swing.JLabel firstLoginEnterpriseName;
     private javax.swing.JTextField firstLoginEnterpriseNameTextField;
     private javax.swing.JLabel firstLoginEnterpriseTitle;
@@ -4469,7 +4430,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
@@ -4484,7 +4444,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
@@ -4537,9 +4496,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel99;
     private javax.swing.JList<String> jList1;
     private javax.swing.JList<String> jList2;
-    private javax.swing.JList<String> jList3;
     private javax.swing.JList<String> jList4;
-    private javax.swing.JList<String> jList5;
     private javax.swing.JList<String> jList6;
     private javax.swing.JList<String> jList8;
     private javax.swing.JPanel jPanel1;
@@ -4558,7 +4515,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
-    private javax.swing.JScrollPane jScrollPane13;
     private javax.swing.JScrollPane jScrollPane14;
     private javax.swing.JScrollPane jScrollPane15;
     private javax.swing.JScrollPane jScrollPane16;
@@ -4583,7 +4539,6 @@ public class drugLifeCycle extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;

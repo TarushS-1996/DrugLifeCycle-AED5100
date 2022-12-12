@@ -1024,40 +1024,6 @@
                             </Constraint>
                           </Constraints>
                         </Component>
-                        <Component class="javax.swing.JLabel" name="firstLoginEnterpriseMyRoleLabel">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="My Role:"/>
-                          </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="40" y="210" width="-1" height="-1"/>
-                            </Constraint>
-                          </Constraints>
-                        </Component>
-                        <Component class="javax.swing.JTextField" name="firstLoginEnterpriseMyRoleTextField">
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="170" y="210" width="200" height="-1"/>
-                            </Constraint>
-                          </Constraints>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="firstLoginEnterpriseMyOrganizationLabel">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Organization:"/>
-                          </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="40" y="260" width="-1" height="20"/>
-                            </Constraint>
-                          </Constraints>
-                        </Component>
-                        <Component class="javax.swing.JTextField" name="firstLoginEnterpriseMyOrganizationTextField">
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="170" y="260" width="200" height="-1"/>
-                            </Constraint>
-                          </Constraints>
-                        </Component>
                       </SubComponents>
                     </Container>
                     <Container class="javax.swing.JPanel" name="firstLoginOrganization">
@@ -2785,19 +2751,6 @@
                                     </Constraint>
                                   </Constraints>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel31">
-                                  <Properties>
-                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Helvetica Neue" size="14" style="0"/>
-                                    </Property>
-                                    <Property name="text" type="java.lang.String" value="Drug Composition"/>
-                                  </Properties>
-                                  <Constraints>
-                                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="20" y="110" width="-1" height="-1"/>
-                                    </Constraint>
-                                  </Constraints>
-                                </Component>
                                 <Component class="javax.swing.JLabel" name="jLabel32">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -2903,30 +2856,6 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JScrollPane" name="jScrollPane9">
-                                  <AuxValues>
-                                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-                                  </AuxValues>
-                                  <Constraints>
-                                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="20" y="140" width="860" height="80"/>
-                                    </Constraint>
-                                  </Constraints>
-
-                                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-                                  <SubComponents>
-                                    <Component class="javax.swing.JList" name="jList3">
-                                      <Properties>
-                                        <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-                                          <StringArray count="0"/>
-                                        </Property>
-                                      </Properties>
-                                      <AuxValues>
-                                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                                      </AuxValues>
-                                    </Component>
-                                  </SubComponents>
-                                </Container>
                                 <Component class="javax.swing.JButton" name="viewReportBackButton">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="Back"/>
@@ -3016,43 +2945,6 @@
                                     </Constraint>
                                   </Constraints>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel45">
-                                  <Properties>
-                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Helvetica Neue" size="14" style="0"/>
-                                    </Property>
-                                    <Property name="text" type="java.lang.String" value="Dosage"/>
-                                  </Properties>
-                                  <Constraints>
-                                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="20" y="250" width="150" height="-1"/>
-                                    </Constraint>
-                                  </Constraints>
-                                </Component>
-                                <Container class="javax.swing.JScrollPane" name="jScrollPane13">
-                                  <AuxValues>
-                                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-                                  </AuxValues>
-                                  <Constraints>
-                                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                      <AbsoluteConstraints x="20" y="280" width="870" height="110"/>
-                                    </Constraint>
-                                  </Constraints>
-
-                                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-                                  <SubComponents>
-                                    <Component class="javax.swing.JList" name="jList5">
-                                      <Properties>
-                                        <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-                                          <StringArray count="0"/>
-                                        </Property>
-                                      </Properties>
-                                      <AuxValues>
-                                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                                      </AuxValues>
-                                    </Component>
-                                  </SubComponents>
-                                </Container>
                               </SubComponents>
                             </Container>
                             <Container class="javax.swing.JPanel" name="jPanel3">
