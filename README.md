@@ -34,7 +34,7 @@ It’s hard for a big team of researchers working on a pharmaceutical drug to tr
 ## Domain Model
 ---
 ##### Class Diagram
-![Drug Life Cycle - Class Diagram]()
+![Drug Life Cycle - Class Diagram](https://github.com/TarushS-1996/DrugLifeCycel-AED5100/blob/main/Images/AED_Project_Class_Diagram.drawio.png)
 
 ##### Sequence Diagram
 ![Drug Life Cycle - Sequence Diagram]()
