@@ -27,9 +27,9 @@ public class MailHandling {
         this.emailto = emailto;
         this.subject = subject;
         this.body = body;
-        String fromUser = "tarush.singh29@gmail.com";
-        String fromUserEmailPassword = "ltioyfzzdnwijgug";
-        sendEmail(fromUser, fromUserEmailPassword, emailto, subject, body);
+        String mailID = "tarush.singh29@gmail.com";
+        String passwd = "ltioyfzzdnwijgug";
+        sendEmail(mailID, passwd, emailto, subject, body);
     }
  
     private void sendEmail(String from, String pass, String to, String subject, String body) throws AddressException, MessagingException {
