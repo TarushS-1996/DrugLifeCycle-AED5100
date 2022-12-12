@@ -19,6 +19,9 @@ import com.finalproject.backend.ResearchReportDirectory;
 import com.finalproject.SQLDB.backendDBConnection;
 import com.finalproject.backend.AddAdvertising;
 import com.finalproject.backend.AddAdvertisingDirectory;
+import com.finalproject.backend.ConfigurationApp;
+import com.finalproject.backend.Enterprise;
+import com.finalproject.backend.EnterpriseDirectory;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -48,6 +51,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
     public static String gender;
     public static String inspectiontype;
     public static String inspectionresult;
+    EnterpriseDirectory entDir = new EnterpriseDirectory();
+    //ConfigurationApp app = new ConfigurationApp();
     backendDBConnection conForSQL = new backendDBConnection();
     EmployeeDirectory empDir = new EmployeeDirectory();
     Connection conn = conForSQL.connectoDB();
@@ -62,6 +67,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
     public static JPanel cardPrevious = null;
     public drugLifeCycle() {
         initComponents();
+        populateEnterprise();
         organizationComboBoxR.setEnabled(false);
         roleComboBoxR.setEnabled(false);
         jTextArea2.setEnabled(false);
@@ -546,7 +552,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         passwordLabel.setText("Password");
         jPanel7.add(passwordLabel);
-        passwordLabel.setBounds(280, 260, 58, 17);
+        passwordLabel.setBounds(280, 260, 66, 18);
 
         loginButton.setBackground(new java.awt.Color(0, 102, 204));
         loginButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -614,11 +620,11 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         dobLabelR.setText("DOB:");
         jPanel1.add(dobLabelR);
-        dobLabelR.setBounds(70, 310, 32, 24);
+        dobLabelR.setBounds(70, 310, 37, 24);
 
         genderLabelR.setText("Gender:");
         jPanel1.add(genderLabelR);
-        genderLabelR.setBounds(380, 320, 70, 17);
+        genderLabelR.setBounds(380, 320, 70, 18);
 
         maleRadioButton1.setText("Male");
         maleRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -636,7 +642,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         jPanel1.add(femaleRadioButton1);
-        femaleRadioButton1.setBounds(540, 320, 65, 21);
+        femaleRadioButton1.setBounds(540, 320, 72, 22);
 
         othersRadioButton1.setText("Others");
         othersRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -645,7 +651,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         jPanel1.add(othersRadioButton1);
-        othersRadioButton1.setBounds(620, 320, 62, 21);
+        othersRadioButton1.setBounds(620, 320, 68, 22);
 
         numberTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -685,7 +691,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         addressLabelR.setText("Address:");
         jPanel1.add(addressLabelR);
-        addressLabelR.setBounds(70, 180, 73, 17);
+        addressLabelR.setBounds(70, 180, 73, 18);
 
         zipcodeTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -727,7 +733,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jPanel1.add(jPasswordField1);
         jPasswordField1.setBounds(480, 420, 200, 30);
 
-        enterpriseComboBoxR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New enterprise", "Medical institute", "Clinical Research Institute", "FDA", "Safety Monitoring" }));
+        enterpriseComboBoxR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "New enterprise" }));
         enterpriseComboBoxR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 enterpriseComboBoxRActionPerformed(evt);
@@ -794,7 +800,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         Title.setFont(new java.awt.Font("Helvetica Neue", 1, 28)); // NOI18N
         Title.setText("Register User");
         jPanel1.add(Title);
-        Title.setBounds(70, 40, 220, 35);
+        Title.setBounds(70, 40, 220, 33);
         jPanel1.add(jSeparator7);
         jSeparator7.setBounds(70, 560, 610, 30);
 
@@ -832,13 +838,13 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Dominex");
         rightComponent.add(jLabel1);
-        jLabel1.setBounds(10, 50, 102, 30);
+        jLabel1.setBounds(10, 50, 117, 29);
 
         jLabel3.setFont(new java.awt.Font("Helvetica Neue", 0, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(153, 153, 153));
         jLabel3.setText("Drug Management Application");
         rightComponent.add(jLabel3);
-        jLabel3.setBounds(10, 80, 162, 15);
+        jLabel3.setBounds(10, 80, 189, 15);
 
         jLabel93.setFont(new java.awt.Font("Helvetica Neue", 0, 12)); // NOI18N
         jLabel93.setForeground(new java.awt.Color(153, 153, 153));
@@ -871,23 +877,23 @@ public class drugLifeCycle extends javax.swing.JFrame {
         firstLoginEnterpriseTitle.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
         firstLoginEnterpriseTitle.setText("Welcome to Enterprise creation");
         firstLoginEnterprise.add(firstLoginEnterpriseTitle);
-        firstLoginEnterpriseTitle.setBounds(40, 50, 387, 30);
+        firstLoginEnterpriseTitle.setBounds(40, 50, 360, 28);
 
         firstLoginEnterpriseName.setText("Enterprise name:");
         firstLoginEnterprise.add(firstLoginEnterpriseName);
-        firstLoginEnterpriseName.setBounds(40, 110, 99, 17);
+        firstLoginEnterpriseName.setBounds(40, 110, 112, 18);
 
         firstLoginEnterpriseNameTextField.setToolTipText("");
         firstLoginEnterprise.add(firstLoginEnterpriseNameTextField);
-        firstLoginEnterpriseNameTextField.setBounds(170, 110, 200, 23);
+        firstLoginEnterpriseNameTextField.setBounds(170, 110, 200, 24);
 
         firstLoginEnterpriseType.setText("Enterprise type:");
         firstLoginEnterprise.add(firstLoginEnterpriseType);
-        firstLoginEnterpriseType.setBounds(40, 160, 112, 17);
+        firstLoginEnterpriseType.setBounds(40, 160, 112, 18);
 
         firstLoginEnterpriseTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Not selected", "Research institute", "Mass manufacturers", "Chemical suppliers", "Pre/Post clinical trials handling", "Food and drug administration" }));
         firstLoginEnterprise.add(firstLoginEnterpriseTypeComboBox);
-        firstLoginEnterpriseTypeComboBox.setBounds(170, 160, 200, 23);
+        firstLoginEnterpriseTypeComboBox.setBounds(170, 160, 200, 24);
 
         addEnterpriseButton.setBackground(new java.awt.Color(0, 102, 153));
         addEnterpriseButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -898,19 +904,19 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         firstLoginEnterprise.add(addEnterpriseButton);
-        addEnterpriseButton.setBounds(250, 320, 116, 30);
+        addEnterpriseButton.setBounds(250, 320, 124, 30);
 
         firstLoginEnterpriseMyRoleLabel.setText("My Role:");
         firstLoginEnterprise.add(firstLoginEnterpriseMyRoleLabel);
-        firstLoginEnterpriseMyRoleLabel.setBounds(40, 210, 52, 17);
+        firstLoginEnterpriseMyRoleLabel.setBounds(40, 210, 56, 18);
         firstLoginEnterprise.add(firstLoginEnterpriseMyRoleTextField);
-        firstLoginEnterpriseMyRoleTextField.setBounds(170, 210, 200, 23);
+        firstLoginEnterpriseMyRoleTextField.setBounds(170, 210, 200, 24);
 
         firstLoginEnterpriseMyOrganizationLabel.setText("Organization:");
         firstLoginEnterprise.add(firstLoginEnterpriseMyOrganizationLabel);
-        firstLoginEnterpriseMyOrganizationLabel.setBounds(40, 260, 76, 20);
+        firstLoginEnterpriseMyOrganizationLabel.setBounds(40, 260, 87, 20);
         firstLoginEnterprise.add(firstLoginEnterpriseMyOrganizationTextField);
-        firstLoginEnterpriseMyOrganizationTextField.setBounds(170, 260, 200, 23);
+        firstLoginEnterpriseMyOrganizationTextField.setBounds(170, 260, 200, 24);
 
         leftComponent.add(firstLoginEnterprise, "card2");
 
@@ -921,9 +927,9 @@ public class drugLifeCycle extends javax.swing.JFrame {
         firsLognOrganzationNameLabel.setText("Organization name:");
         firsLognOrganzationNameLabel.setToolTipText("");
         firstLoginOrganization.add(firsLognOrganzationNameLabel);
-        firsLognOrganzationNameLabel.setBounds(40, 110, 112, 17);
+        firsLognOrganzationNameLabel.setBounds(40, 110, 128, 18);
         firstLoginOrganization.add(firstLoginOrganizationNameTextField);
-        firstLoginOrganizationNameTextField.setBounds(170, 110, 290, 23);
+        firstLoginOrganizationNameTextField.setBounds(170, 110, 290, 24);
 
         firstLoginOrganizationAddButton.setBackground(new java.awt.Color(0, 102, 153));
         firstLoginOrganizationAddButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -936,7 +942,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         firstLoginOrganization.add(firstLoginOrganizationAddButton);
         firstLoginOrganizationAddButton.setBounds(380, 200, 80, 30);
         firstLoginOrganization.add(firstLoginOrganizationRoleTextField1);
-        firstLoginOrganizationRoleTextField1.setBounds(170, 150, 290, 23);
+        firstLoginOrganizationRoleTextField1.setBounds(170, 150, 290, 24);
 
         jLabel2.setText("My Role:");
         firstLoginOrganization.add(jLabel2);
@@ -946,7 +952,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         firstLoginEnterpriseTitle1.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
         firstLoginEnterpriseTitle1.setText("Welcome to Organization Creation");
         firstLoginOrganization.add(firstLoginEnterpriseTitle1);
-        firstLoginEnterpriseTitle1.setBounds(40, 50, 440, 30);
+        firstLoginEnterpriseTitle1.setBounds(40, 50, 440, 28);
 
         leftComponent.add(firstLoginOrganization, "card3");
 
@@ -973,7 +979,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         ResearchScientistHome.add(ViewReport);
-        ViewReport.setBounds(630, 560, 101, 35);
+        ViewReport.setBounds(630, 560, 109, 35);
 
         AddReport.setBackground(new java.awt.Color(0, 102, 204));
         AddReport.setForeground(new java.awt.Color(255, 255, 255));
@@ -984,27 +990,27 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         ResearchScientistHome.add(AddReport);
-        AddReport.setBounds(750, 560, 127, 35);
+        AddReport.setBounds(750, 560, 136, 35);
 
         Title2.setFont(new java.awt.Font("Helvetica Neue", 1, 28)); // NOI18N
         Title2.setText("Research Scientist");
         ResearchScientistHome.add(Title2);
-        Title2.setBounds(40, 40, 251, 35);
+        Title2.setBounds(40, 40, 296, 33);
 
         ageLabelR4.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         ageLabelR4.setForeground(new java.awt.Color(102, 102, 102));
         ageLabelR4.setText("As a research scientist, you will initiate reports and assign leads to them to continue the research work.");
         ResearchScientistHome.add(ageLabelR4);
-        ageLabelR4.setBounds(40, 81, 656, 18);
+        ageLabelR4.setBounds(40, 81, 710, 17);
 
         ageLabelR5.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         ageLabelR5.setText("All Reports");
         ResearchScientistHome.add(ageLabelR5);
-        ageLabelR5.setBounds(40, 130, 110, 18);
+        ageLabelR5.setBounds(40, 130, 110, 17);
 
         ageLabelR6.setText("Search");
         ResearchScientistHome.add(ageLabelR6);
-        ageLabelR6.setBounds(680, 120, 40, 30);
+        ageLabelR6.setBounds(680, 120, 47, 30);
 
         jTextField9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1062,16 +1068,16 @@ public class drugLifeCycle extends javax.swing.JFrame {
         ageLabelR3.setForeground(new java.awt.Color(102, 102, 102));
         ageLabelR3.setText("As a research lead, you will continue on field research on these report and update them. ");
         ResearchLeadHome.add(ageLabelR3);
-        ageLabelR3.setBounds(40, 80, 566, 18);
+        ageLabelR3.setBounds(40, 80, 611, 17);
 
         Title1.setFont(new java.awt.Font("Helvetica Neue", 1, 28)); // NOI18N
         Title1.setText("Research Lead");
         ResearchLeadHome.add(Title1);
-        Title1.setBounds(40, 40, 201, 35);
+        Title1.setBounds(40, 40, 233, 33);
 
         ageLabelR7.setText("Search");
         ResearchLeadHome.add(ageLabelR7);
-        ageLabelR7.setBounds(710, 120, 40, 30);
+        ageLabelR7.setBounds(710, 120, 47, 30);
 
         jTextField10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1089,7 +1095,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         ageLabelR8.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         ageLabelR8.setText("All Reports");
         ResearchLeadHome.add(ageLabelR8);
-        ageLabelR8.setBounds(40, 130, 110, 18);
+        ageLabelR8.setBounds(40, 130, 110, 17);
 
         leftComponent.add(ResearchLeadHome, "card5");
 
@@ -1099,27 +1105,27 @@ public class drugLifeCycle extends javax.swing.JFrame {
         RepID.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
         RepID.setText("Report ID:");
         ResearchLeadApproval.add(RepID);
-        RepID.setBounds(30, 150, 160, 19);
+        RepID.setBounds(30, 150, 160, 18);
 
         RepBy.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
         RepBy.setText("Drug name:");
         ResearchLeadApproval.add(RepBy);
-        RepBy.setBounds(30, 190, 160, 19);
+        RepBy.setBounds(30, 190, 160, 18);
 
         RepName.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
         RepName.setText("Disease target");
         ResearchLeadApproval.add(RepName);
-        RepName.setBounds(30, 230, 160, 19);
+        RepName.setBounds(30, 230, 160, 18);
 
         RepTarget.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
         RepTarget.setText("Date:");
         ResearchLeadApproval.add(RepTarget);
-        RepTarget.setBounds(30, 270, 160, 19);
+        RepTarget.setBounds(30, 270, 160, 18);
 
         RepNotes.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
         RepNotes.setText("Notes:");
         ResearchLeadApproval.add(RepNotes);
-        RepNotes.setBounds(30, 400, 160, 19);
+        RepNotes.setBounds(30, 400, 160, 18);
 
         RepPushToDev.setFont(new java.awt.Font("Liberation Sans", 0, 14)); // NOI18N
         RepPushToDev.setForeground(new java.awt.Color(102, 102, 102));
@@ -1129,26 +1135,26 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         IDleadAssign.setText("jLabel25");
         ResearchLeadApproval.add(IDleadAssign);
-        IDleadAssign.setBounds(220, 150, 196, 17);
+        IDleadAssign.setBounds(220, 150, 196, 18);
 
         NameleadAssign.setText("jLabel25");
         ResearchLeadApproval.add(NameleadAssign);
-        NameleadAssign.setBounds(220, 190, 196, 17);
+        NameleadAssign.setBounds(220, 190, 196, 18);
 
         targetleadAssign.setText("jLabel25");
         ResearchLeadApproval.add(targetleadAssign);
-        targetleadAssign.setBounds(220, 230, 196, 17);
+        targetleadAssign.setBounds(220, 230, 196, 18);
 
         dateleadAssign.setText("jLabel25");
         ResearchLeadApproval.add(dateleadAssign);
-        dateleadAssign.setBounds(220, 270, 196, 17);
+        dateleadAssign.setBounds(220, 270, 196, 18);
 
         jTextArea4.setColumns(20);
         jTextArea4.setRows(5);
         jScrollPane10.setViewportView(jTextArea4);
 
         ResearchLeadApproval.add(jScrollPane10);
-        jScrollPane10.setBounds(220, 390, 610, 91);
+        jScrollPane10.setBounds(220, 390, 610, 96);
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "None" }));
         jComboBox3.addActionListener(new java.awt.event.ActionListener() {
@@ -1182,7 +1188,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         RepPushToDev2.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
         RepPushToDev2.setText("Assign to developer:");
         ResearchLeadApproval.add(RepPushToDev2);
-        RepPushToDev2.setBounds(30, 340, 160, 30);
+        RepPushToDev2.setBounds(30, 340, 146, 30);
 
         RepPushToDev3.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
         RepPushToDev3.setText("Development Push Request");
@@ -1232,7 +1238,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         jLabel7.setText("Notes:");
         page1.add(jLabel7);
-        jLabel7.setBounds(30, 280, 99, 17);
+        jLabel7.setBounds(30, 280, 99, 18);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -1251,7 +1257,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         jLabel9.setText("Research by:");
         page1.add(jLabel9);
-        jLabel9.setBounds(30, 80, 78, 30);
+        jLabel9.setBounds(30, 80, 87, 30);
         page1.add(ResearchReportPage1ResearchBy);
         ResearchReportPage1ResearchBy.setBounds(150, 80, 291, 30);
         page1.add(jDateChooser1);
@@ -1261,7 +1267,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         firstLoginEnterpriseTitle2.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
         firstLoginEnterpriseTitle2.setText("Drug Details");
         page1.add(firstLoginEnterpriseTitle2);
-        firstLoginEnterpriseTitle2.setBounds(30, 30, 157, 30);
+        firstLoginEnterpriseTitle2.setBounds(30, 30, 141, 28);
 
         ResearchReportCancelReport2.setBackground(new java.awt.Color(245, 245, 245));
         ResearchReportCancelReport2.setText("Cancel");
@@ -1292,7 +1298,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(102, 102, 102));
         jLabel10.setText("Select added componds to delete from list");
         page2.add(jLabel10);
-        jLabel10.setBounds(30, 330, 260, 17);
+        jLabel10.setBounds(30, 330, 260, 18);
 
         addChemicalComposition.setText("Add");
         addChemicalComposition.addActionListener(new java.awt.event.ActionListener() {
@@ -1320,7 +1326,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         page2.add(deleteChemicalComposition);
-        deleteChemicalComposition.setBounds(480, 330, 72, 23);
+        deleteChemicalComposition.setBounds(480, 330, 72, 24);
 
         jLabel11.setText("gram");
         page2.add(jLabel11);
@@ -1335,16 +1341,16 @@ public class drugLifeCycle extends javax.swing.JFrame {
         firstLoginEnterpriseTitle3.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
         firstLoginEnterpriseTitle3.setText("Drug Composition");
         page2.add(firstLoginEnterpriseTitle3);
-        firstLoginEnterpriseTitle3.setBounds(30, 30, 240, 30);
+        firstLoginEnterpriseTitle3.setBounds(30, 30, 240, 28);
 
         jLabel27.setText("Composition:");
         page2.add(jLabel27);
-        jLabel27.setBounds(30, 77, 77, 30);
+        jLabel27.setBounds(30, 77, 86, 30);
 
         jLabel35.setForeground(new java.awt.Color(102, 102, 102));
         jLabel35.setText("Compound List");
         page2.add(jLabel35);
-        jLabel35.setBounds(30, 140, 110, 17);
+        jLabel35.setBounds(30, 140, 110, 18);
 
         ResearchReportCancelReport1.setBackground(new java.awt.Color(245, 245, 245));
         ResearchReportCancelReport1.setText("Cancel");
@@ -1384,47 +1390,47 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         jLabel12.setText("Research by:");
         page3.add(jLabel12);
-        jLabel12.setBounds(30, 80, 105, 17);
+        jLabel12.setBounds(30, 80, 105, 18);
 
         jLabel13.setText("jLabel13");
         page3.add(jLabel13);
-        jLabel13.setBounds(140, 80, 147, 17);
+        jLabel13.setBounds(140, 80, 147, 18);
 
         jLabel14.setText("Drug name:");
         page3.add(jLabel14);
-        jLabel14.setBounds(30, 110, 105, 17);
+        jLabel14.setBounds(30, 110, 105, 18);
 
         jLabel15.setText("jLabel13");
         page3.add(jLabel15);
-        jLabel15.setBounds(140, 110, 147, 17);
+        jLabel15.setBounds(140, 110, 147, 18);
 
         jLabel16.setText("Disease target:");
         page3.add(jLabel16);
-        jLabel16.setBounds(30, 140, 105, 17);
+        jLabel16.setBounds(30, 140, 105, 18);
 
         jLabel17.setText("Date:");
         page3.add(jLabel17);
-        jLabel17.setBounds(30, 170, 105, 17);
+        jLabel17.setBounds(30, 170, 105, 18);
 
         jLabel18.setText("Notes:");
         page3.add(jLabel18);
-        jLabel18.setBounds(30, 240, 105, 17);
+        jLabel18.setBounds(30, 240, 105, 18);
 
         jLabel19.setText("Research lead:");
         page3.add(jLabel19);
-        jLabel19.setBounds(30, 200, 105, 17);
+        jLabel19.setBounds(30, 200, 105, 18);
 
         jLabel20.setText("jLabel13");
         page3.add(jLabel20);
-        jLabel20.setBounds(140, 140, 147, 17);
+        jLabel20.setBounds(140, 140, 147, 18);
 
         jLabel21.setText("jLabel13");
         page3.add(jLabel21);
-        jLabel21.setBounds(140, 170, 147, 17);
+        jLabel21.setBounds(140, 170, 147, 18);
 
         jLabel23.setText("jLabel13");
         page3.add(jLabel23);
-        jLabel23.setBounds(140, 200, 147, 17);
+        jLabel23.setBounds(140, 200, 147, 18);
 
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
@@ -1435,7 +1441,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         jLabel22.setText("Composition:");
         page3.add(jLabel22);
-        jLabel22.setBounds(30, 320, 105, 17);
+        jLabel22.setBounds(30, 320, 105, 18);
 
         jScrollPane5.setViewportView(jList2);
 
@@ -1446,7 +1452,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         firstLoginEnterpriseTitle4.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
         firstLoginEnterpriseTitle4.setText("Summary");
         page3.add(firstLoginEnterpriseTitle4);
-        firstLoginEnterpriseTitle4.setBounds(30, 30, 115, 30);
+        firstLoginEnterpriseTitle4.setBounds(30, 30, 108, 28);
 
         ResearchScientistReport.addTab("Summary", page3);
 
@@ -1491,22 +1497,22 @@ public class drugLifeCycle extends javax.swing.JFrame {
         Title3.setFont(new java.awt.Font("Helvetica Neue", 1, 28)); // NOI18N
         Title3.setText("Manufacturing Analyst");
         ManufacturingAnalystHome.add(Title3);
-        Title3.setBounds(40, 40, 310, 35);
+        Title3.setBounds(40, 40, 310, 33);
 
         ageLabelR9.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         ageLabelR9.setForeground(new java.awt.Color(102, 102, 102));
         ageLabelR9.setText("As a manufacturing analyst, you need to add details about the distribution and dosage to the report.");
         ManufacturingAnalystHome.add(ageLabelR9);
-        ageLabelR9.setBounds(40, 81, 631, 18);
+        ageLabelR9.setBounds(40, 81, 687, 17);
 
         ageLabelR10.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         ageLabelR10.setText("All Reports");
         ManufacturingAnalystHome.add(ageLabelR10);
-        ageLabelR10.setBounds(40, 130, 110, 18);
+        ageLabelR10.setBounds(40, 130, 110, 17);
 
         ageLabelR11.setText("Search");
         ManufacturingAnalystHome.add(ageLabelR11);
-        ageLabelR11.setBounds(670, 120, 40, 30);
+        ageLabelR11.setBounds(670, 120, 47, 30);
 
         jTextField11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1528,23 +1534,23 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         jLabel25.setText("Report ID:");
         AddManufacturingDetails.add(jLabel25);
-        jLabel25.setBounds(40, 140, 59, 17);
+        jLabel25.setBounds(40, 140, 66, 18);
 
         jLabel26.setText("Research by:");
         AddManufacturingDetails.add(jLabel26);
-        jLabel26.setBounds(40, 170, 78, 17);
+        jLabel26.setBounds(40, 170, 87, 18);
 
         jLabel28.setText("Report lead:");
         AddManufacturingDetails.add(jLabel28);
-        jLabel28.setBounds(40, 200, 78, 17);
+        jLabel28.setBounds(40, 200, 78, 18);
 
         jLabel29.setText("Distribution:");
         AddManufacturingDetails.add(jLabel29);
-        jLabel29.setBounds(40, 240, 78, 17);
+        jLabel29.setBounds(40, 240, 78, 18);
 
         jLabel30.setText("Dosage Details");
         AddManufacturingDetails.add(jLabel30);
-        jLabel30.setBounds(40, 390, 100, 17);
+        jLabel30.setBounds(40, 390, 100, 18);
         AddManufacturingDetails.add(jTextField2);
         jTextField2.setBounds(150, 240, 750, 70);
 
@@ -1557,13 +1563,13 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         jLabel38.setText("Age");
         AddManufacturingDetails.add(jLabel38);
-        jLabel38.setBounds(220, 340, 22, 30);
+        jLabel38.setBounds(220, 340, 25, 30);
         AddManufacturingDetails.add(jTextField4);
         jTextField4.setBounds(270, 340, 70, 30);
 
         jLabel39.setText("Quantity");
         AddManufacturingDetails.add(jLabel39);
-        jLabel39.setBounds(350, 340, 49, 30);
+        jLabel39.setBounds(350, 340, 54, 30);
 
         jButton3.setBackground(new java.awt.Color(245, 245, 245));
         jButton3.setText("Add");
@@ -1584,7 +1590,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         AddManufacturingDetails.add(jButton4);
-        jButton4.setBounds(500, 530, 72, 23);
+        jButton4.setBounds(500, 530, 72, 24);
 
         jButton5.setBackground(new java.awt.Color(0, 102, 204));
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
@@ -1604,30 +1610,30 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         jLabel40.setText("jLabel40");
         AddManufacturingDetails.add(jLabel40);
-        jLabel40.setBounds(150, 140, 258, 17);
+        jLabel40.setBounds(150, 140, 258, 18);
 
         jLabel41.setText("jLabel41");
         AddManufacturingDetails.add(jLabel41);
-        jLabel41.setBounds(150, 170, 258, 17);
+        jLabel41.setBounds(150, 170, 258, 18);
 
         jLabel42.setText("jLabel42");
         AddManufacturingDetails.add(jLabel42);
-        jLabel42.setBounds(150, 200, 258, 17);
+        jLabel42.setBounds(150, 200, 258, 18);
 
         ageLabelR12.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         ageLabelR12.setForeground(new java.awt.Color(102, 102, 102));
         ageLabelR12.setText("Specify distribution and dosage details here");
         AddManufacturingDetails.add(ageLabelR12);
-        ageLabelR12.setBounds(40, 81, 277, 18);
+        ageLabelR12.setBounds(40, 81, 301, 17);
 
         Title4.setFont(new java.awt.Font("Helvetica Neue", 1, 28)); // NOI18N
         Title4.setText("Add Details");
         AddManufacturingDetails.add(Title4);
-        Title4.setBounds(40, 40, 310, 35);
+        Title4.setBounds(40, 40, 310, 33);
 
         jLabel58.setText("Dosage:");
         AddManufacturingDetails.add(jLabel58);
-        jLabel58.setBounds(40, 340, 78, 17);
+        jLabel58.setBounds(40, 340, 78, 18);
 
         leftComponent.add(AddManufacturingDetails, "card10");
 
@@ -1645,17 +1651,17 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         DiscoveryDevelopment.add(jTextField1);
-        jTextField1.setBounds(460, 60, 180, 23);
+        jTextField1.setBounds(460, 60, 180, 24);
 
         jLabel31.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel31.setText("Drug Composition");
         DiscoveryDevelopment.add(jLabel31);
-        jLabel31.setBounds(20, 110, 114, 18);
+        jLabel31.setBounds(20, 110, 125, 17);
 
         jLabel32.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel32.setText("Notes");
         DiscoveryDevelopment.add(jLabel32);
-        jLabel32.setBounds(20, 250, 37, 18);
+        jLabel32.setBounds(20, 250, 41, 17);
 
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1663,7 +1669,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         DiscoveryDevelopment.add(jTextField5);
-        jTextField5.setBounds(240, 60, 180, 23);
+        jTextField5.setBounds(240, 60, 180, 24);
 
         jLabel33.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel33.setText("Disease Target:");
@@ -1676,7 +1682,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         DiscoveryDevelopment.add(jTextField6);
-        jTextField6.setBounds(20, 60, 180, 23);
+        jTextField6.setBounds(20, 60, 180, 24);
 
         jLabel34.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel34.setText("Drug Name");
@@ -1686,12 +1692,12 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jLabel37.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel37.setText("Research Lead:");
         DiscoveryDevelopment.add(jLabel37);
-        jLabel37.setBounds(680, 30, 102, 18);
+        jLabel37.setBounds(680, 30, 108, 17);
 
         jLabel36.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel36.setText("Research By:");
         DiscoveryDevelopment.add(jLabel36);
-        jLabel36.setBounds(460, 30, 87, 18);
+        jLabel36.setBounds(460, 30, 92, 17);
 
         jTextArea3.setColumns(20);
         jTextArea3.setRows(5);
@@ -1712,7 +1718,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         DiscoveryDevelopment.add(viewReportBackButton);
-        viewReportBackButton.setBounds(677, 521, 72, 23);
+        viewReportBackButton.setBounds(677, 521, 72, 24);
 
         jLabel59.setText("jLabel59");
         DiscoveryDevelopment.add(jLabel59);
@@ -1726,7 +1732,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jLabel43.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel43.setText("Distribution");
         jPanel2.add(jLabel43);
-        jLabel43.setBounds(20, 110, 150, 18);
+        jLabel43.setBounds(20, 110, 150, 17);
 
         jTextField12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1742,17 +1748,17 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jTextField13);
-        jTextField13.setBounds(20, 60, 258, 23);
+        jTextField13.setBounds(20, 60, 258, 24);
 
         jLabel44.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel44.setText("Manufactoring Analyst");
         jPanel2.add(jLabel44);
-        jLabel44.setBounds(18, 31, 167, 18);
+        jLabel44.setBounds(18, 31, 167, 17);
 
         jLabel45.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel45.setText("Dosage");
         jPanel2.add(jLabel45);
-        jLabel45.setBounds(20, 250, 150, 18);
+        jLabel45.setBounds(20, 250, 150, 17);
 
         jScrollPane13.setViewportView(jList5);
 
@@ -1767,12 +1773,12 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jLabel46.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel46.setText("GLP Officer");
         jPanel3.add(jLabel46);
-        jLabel46.setBounds(18, 29, 150, 18);
+        jLabel46.setBounds(18, 29, 150, 17);
 
         jLabel47.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel47.setText("Side effects");
         jPanel3.add(jLabel47);
-        jLabel47.setBounds(20, 230, 75, 18);
+        jLabel47.setBounds(20, 230, 81, 17);
 
         jTextField15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1780,7 +1786,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jTextField15);
-        jTextField15.setBounds(20, 60, 180, 23);
+        jTextField15.setBounds(20, 60, 180, 24);
 
         jTextField18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1788,21 +1794,21 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jTextField18);
-        jTextField18.setBounds(230, 60, 190, 23);
+        jTextField18.setBounds(230, 60, 190, 24);
 
         jLabel49.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel49.setText("Researcher");
         jPanel3.add(jLabel49);
-        jLabel49.setBounds(230, 30, 150, 18);
+        jLabel49.setBounds(230, 30, 150, 17);
 
         jLabel48.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel48.setText("Success");
         jPanel3.add(jLabel48);
-        jLabel48.setBounds(700, 30, 150, 18);
+        jLabel48.setBounds(700, 30, 150, 17);
 
         jLabel76.setText("Value");
         jPanel3.add(jLabel76);
-        jLabel76.setBounds(490, 60, 49, 17);
+        jLabel76.setBounds(490, 60, 49, 18);
 
         jTextArea10.setColumns(20);
         jTextArea10.setRows(5);
@@ -1816,17 +1822,17 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jScrollPane26.setViewportView(jTextArea11);
 
         jPanel3.add(jScrollPane26);
-        jScrollPane26.setBounds(20, 260, 870, 91);
+        jScrollPane26.setBounds(20, 260, 870, 96);
 
         jLabel101.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel101.setText("Reactions");
         jPanel3.add(jLabel101);
-        jLabel101.setBounds(20, 110, 150, 18);
+        jLabel101.setBounds(20, 110, 150, 17);
 
         jLabel102.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel102.setText("Total test conducted:");
         jPanel3.add(jLabel102);
-        jLabel102.setBounds(480, 30, 150, 18);
+        jLabel102.setBounds(480, 30, 150, 17);
 
         jTabbedPane1.addTab("Clinical Testing", jPanel3);
 
@@ -1839,17 +1845,17 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         jPanel4.add(jTextField19);
-        jTextField19.setBounds(20, 70, 190, 23);
+        jTextField19.setBounds(20, 70, 190, 24);
 
         jLabel50.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel50.setText("Toxicology Specialist");
         jPanel4.add(jLabel50);
-        jLabel50.setBounds(20, 40, 150, 18);
+        jLabel50.setBounds(20, 40, 150, 17);
 
         jLabel51.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel51.setText("FDA Project Manager");
         jPanel4.add(jLabel51);
-        jLabel51.setBounds(260, 40, 150, 18);
+        jLabel51.setBounds(260, 40, 150, 17);
 
         jTextField20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1857,17 +1863,17 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         jPanel4.add(jTextField20);
-        jTextField20.setBounds(260, 70, 190, 23);
+        jTextField20.setBounds(260, 70, 190, 24);
 
         jLabel52.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel52.setText("Toxicology Remarks");
         jPanel4.add(jLabel52);
-        jLabel52.setBounds(20, 120, 150, 18);
+        jLabel52.setBounds(20, 120, 150, 17);
 
         jLabel53.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel53.setText("FDA Approval Status");
         jPanel4.add(jLabel53);
-        jLabel53.setBounds(20, 270, 150, 18);
+        jLabel53.setBounds(20, 270, 150, 17);
 
         jTextArea5.setColumns(20);
         jTextArea5.setRows(5);
@@ -1888,7 +1894,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jLabel54.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel54.setText("FDA Regulator");
         jPanel5.add(jLabel54);
-        jLabel54.setBounds(270, 30, 150, 18);
+        jLabel54.setBounds(270, 30, 150, 17);
 
         jTextField23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1896,7 +1902,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         jPanel5.add(jTextField23);
-        jTextField23.setBounds(270, 60, 190, 23);
+        jTextField23.setBounds(270, 60, 190, 24);
 
         jTextField24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1904,12 +1910,12 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         jPanel5.add(jTextField24);
-        jTextField24.setBounds(26, 61, 190, 23);
+        jTextField24.setBounds(26, 61, 190, 24);
 
         jLabel55.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel55.setText("FDA Official");
         jPanel5.add(jLabel55);
-        jLabel55.setBounds(26, 32, 150, 18);
+        jLabel55.setBounds(26, 32, 150, 17);
 
         jTextField25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1922,7 +1928,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jLabel56.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel56.setText("Distrubution Regulations");
         jPanel5.add(jLabel56);
-        jLabel56.setBounds(30, 120, 179, 18);
+        jLabel56.setBounds(30, 120, 179, 17);
 
         jTextField26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1935,7 +1941,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jLabel57.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel57.setText("Monitoring Methods");
         jPanel5.add(jLabel57);
-        jLabel57.setBounds(30, 250, 164, 18);
+        jLabel57.setBounds(30, 250, 164, 17);
 
         jTabbedPane1.addTab("Saftey Monitoring", jPanel5);
 
@@ -2017,23 +2023,23 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         ageLabelR13.setText("Search");
         ClinicalResearchers.add(ageLabelR13);
-        ageLabelR13.setBounds(680, 120, 40, 30);
+        ageLabelR13.setBounds(680, 120, 47, 30);
 
         ageLabelR14.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         ageLabelR14.setText("All Reports");
         ClinicalResearchers.add(ageLabelR14);
-        ageLabelR14.setBounds(40, 130, 110, 18);
+        ageLabelR14.setBounds(40, 130, 110, 17);
 
         ageLabelR15.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         ageLabelR15.setForeground(new java.awt.Color(102, 102, 102));
         ageLabelR15.setText("As a Clinical Researcher, you will work on trails created by the GLP Officer and add your findings to the report.");
         ClinicalResearchers.add(ageLabelR15);
-        ageLabelR15.setBounds(40, 81, 840, 18);
+        ageLabelR15.setBounds(40, 81, 840, 17);
 
         Title5.setFont(new java.awt.Font("Helvetica Neue", 1, 28)); // NOI18N
         Title5.setText("Clinical Researcher");
         ClinicalResearchers.add(Title5);
-        Title5.setBounds(40, 40, 260, 35);
+        Title5.setBounds(40, 40, 307, 33);
 
         leftComponent.add(ClinicalResearchers, "card8");
 
@@ -2078,12 +2084,12 @@ public class drugLifeCycle extends javax.swing.JFrame {
         ageLabelR16.setForeground(new java.awt.Color(102, 102, 102));
         ageLabelR16.setText("As a GLP Officer, you'll start clinical trails and specify the basic details of trail. ");
         GLPOfficersHome.add(ageLabelR16);
-        ageLabelR16.setBounds(40, 81, 840, 18);
+        ageLabelR16.setBounds(40, 81, 840, 17);
 
         ageLabelR17.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         ageLabelR17.setText("All Reports");
         GLPOfficersHome.add(ageLabelR17);
-        ageLabelR17.setBounds(40, 130, 110, 18);
+        ageLabelR17.setBounds(40, 130, 110, 17);
 
         jTextField16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2100,12 +2106,12 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         ageLabelR18.setText("Search");
         GLPOfficersHome.add(ageLabelR18);
-        ageLabelR18.setBounds(680, 120, 40, 30);
+        ageLabelR18.setBounds(680, 120, 47, 30);
 
         Title6.setFont(new java.awt.Font("Helvetica Neue", 1, 28)); // NOI18N
         Title6.setText("GLP Officer");
         GLPOfficersHome.add(Title6);
-        Title6.setBounds(40, 40, 155, 35);
+        Title6.setBounds(40, 40, 180, 33);
 
         leftComponent.add(GLPOfficersHome, "card8");
 
@@ -2115,7 +2121,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jLabel64.setFont(new java.awt.Font("Helvetica", 1, 28)); // NOI18N
         jLabel64.setText("Create Trail");
         CreateTrail.add(jLabel64);
-        jLabel64.setBounds(50, 30, 340, 29);
+        jLabel64.setBounds(50, 30, 340, 33);
 
         cancel.setBackground(new java.awt.Color(245, 245, 245));
         cancel.setText("Cancel");
@@ -2137,7 +2143,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         CreateTrail.add(usernameTextFieldR1);
-        usernameTextFieldR1.setBounds(300, 180, 110, 23);
+        usernameTextFieldR1.setBounds(300, 180, 110, 24);
 
         usernameLabelR2.setForeground(new java.awt.Color(102, 102, 102));
         usernameLabelR2.setText("To be filled by clinical researchers");
@@ -2167,7 +2173,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         CreateTrail.add(usernameTextFieldR5);
-        usernameTextFieldR5.setBounds(300, 130, 110, 23);
+        usernameTextFieldR5.setBounds(300, 130, 110, 24);
 
         usernameLabelR8.setForeground(new java.awt.Color(102, 102, 102));
         usernameLabelR8.setText("To be filled by clinical researchers");
@@ -2181,11 +2187,11 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         jLabel65.setText("Report ID:");
         CreateTrail.add(jLabel65);
-        jLabel65.setBounds(50, 90, 120, 17);
+        jLabel65.setBounds(50, 90, 120, 18);
 
         jLabel66.setText("jLabel66");
         CreateTrail.add(jLabel66);
-        jLabel66.setBounds(300, 90, 140, 17);
+        jLabel66.setBounds(300, 90, 140, 18);
 
         jLabel67.setText("Assign researcher:");
         CreateTrail.add(jLabel67);
@@ -2196,18 +2202,18 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jScrollPane18.setViewportView(jTextArea6);
 
         CreateTrail.add(jScrollPane18);
-        jScrollPane18.setBounds(300, 360, 390, 91);
+        jScrollPane18.setBounds(300, 360, 390, 96);
 
         jTextArea7.setColumns(20);
         jTextArea7.setRows(5);
         jScrollPane19.setViewportView(jTextArea7);
 
         CreateTrail.add(jScrollPane19);
-        jScrollPane19.setBounds(300, 470, 390, 91);
+        jScrollPane19.setBounds(300, 470, 390, 96);
 
         jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         CreateTrail.add(jComboBox5);
-        jComboBox5.setBounds(600, 130, 190, 23);
+        jComboBox5.setBounds(600, 130, 190, 24);
 
         createTrail2.setBackground(new java.awt.Color(0, 102, 153));
         createTrail2.setForeground(new java.awt.Color(255, 255, 255));
@@ -2262,12 +2268,12 @@ public class drugLifeCycle extends javax.swing.JFrame {
         ageLabelR19.setForeground(new java.awt.Color(102, 102, 102));
         ageLabelR19.setText("As a Health Manager, you'll observe the report and determine the presence of harmful toxins in the report");
         RegulatoryHealthManager.add(ageLabelR19);
-        ageLabelR19.setBounds(40, 81, 840, 18);
+        ageLabelR19.setBounds(40, 81, 840, 17);
 
         ageLabelR20.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         ageLabelR20.setText("All Reports");
         RegulatoryHealthManager.add(ageLabelR20);
-        ageLabelR20.setBounds(40, 130, 110, 18);
+        ageLabelR20.setBounds(40, 130, 110, 17);
 
         jTextField17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2284,12 +2290,12 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         ageLabelR21.setText("Search");
         RegulatoryHealthManager.add(ageLabelR21);
-        ageLabelR21.setBounds(680, 120, 40, 30);
+        ageLabelR21.setBounds(680, 120, 47, 30);
 
         Title7.setFont(new java.awt.Font("Helvetica Neue", 1, 28)); // NOI18N
         Title7.setText("Regulatory Health Manager");
         RegulatoryHealthManager.add(Title7);
-        Title7.setBounds(40, 40, 367, 35);
+        Title7.setBounds(40, 40, 437, 33);
 
         leftComponent.add(RegulatoryHealthManager, "card4");
 
@@ -2351,12 +2357,12 @@ public class drugLifeCycle extends javax.swing.JFrame {
         ageLabelR22.setForeground(new java.awt.Color(102, 102, 102));
         ageLabelR22.setText("As a FDA Medical Officer, you'll analyze the reports and mark them as approved or rejected.");
         MedicalOfficerHome.add(ageLabelR22);
-        ageLabelR22.setBounds(40, 81, 840, 18);
+        ageLabelR22.setBounds(40, 81, 840, 17);
 
         ageLabelR23.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         ageLabelR23.setText("All Reports");
         MedicalOfficerHome.add(ageLabelR23);
-        ageLabelR23.setBounds(40, 130, 110, 18);
+        ageLabelR23.setBounds(40, 130, 110, 17);
 
         jTextField21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2373,12 +2379,12 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         ageLabelR24.setText("Search");
         MedicalOfficerHome.add(ageLabelR24);
-        ageLabelR24.setBounds(680, 120, 40, 30);
+        ageLabelR24.setBounds(680, 120, 47, 30);
 
         Title8.setFont(new java.awt.Font("Helvetica Neue", 1, 28)); // NOI18N
         Title8.setText("Medical Officer");
         MedicalOfficerHome.add(Title8);
-        Title8.setBounds(40, 40, 202, 35);
+        Title8.setBounds(40, 40, 241, 33);
 
         leftComponent.add(MedicalOfficerHome, "card4");
 
@@ -2392,7 +2398,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         AddToxicologyReport.add(jComboBox6);
-        jComboBox6.setBounds(200, 510, 234, 23);
+        jComboBox6.setBounds(200, 510, 234, 24);
 
         AssignToDevDecsion1.setBackground(new java.awt.Color(0, 102, 153));
         AssignToDevDecsion1.setForeground(new java.awt.Color(255, 255, 255));
@@ -2423,7 +2429,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
         jLabel71.setBackground(new java.awt.Color(204, 204, 204));
         jLabel71.setText("Composition");
         AddToxicologyReport.add(jLabel71);
-        jLabel71.setBounds(560, 290, 110, 17);
+        jLabel71.setBounds(560, 290, 110, 18);
 
         jTextArea8.setColumns(20);
         jTextArea8.setRows(5);
@@ -2434,35 +2440,35 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         jLabel73.setText("Assign to Medical Officer");
         AddToxicologyReport.add(jLabel73);
-        jLabel73.setBounds(30, 510, 190, 17);
+        jLabel73.setBounds(30, 510, 190, 18);
 
         jTextArea9.setColumns(20);
         jTextArea9.setRows(5);
         jScrollPane23.setViewportView(jTextArea9);
 
         AddToxicologyReport.add(jScrollPane23);
-        jScrollPane23.setBounds(150, 170, 590, 91);
+        jScrollPane23.setBounds(150, 170, 590, 96);
 
         jLabel74.setText("Report ID:");
         AddToxicologyReport.add(jLabel74);
-        jLabel74.setBounds(40, 120, 59, 17);
+        jLabel74.setBounds(40, 120, 66, 18);
 
         jLabel75.setText("jLabel75");
         AddToxicologyReport.add(jLabel75);
-        jLabel75.setBounds(120, 120, 49, 17);
+        jLabel75.setBounds(120, 120, 54, 18);
 
         Title9.setFont(new java.awt.Font("Helvetica Neue", 1, 28)); // NOI18N
         Title9.setText("Add Toxicology Report");
         AddToxicologyReport.add(Title9);
-        Title9.setBounds(40, 40, 390, 35);
+        Title9.setBounds(40, 40, 390, 33);
 
         jLabel87.setText("Side effects:");
         AddToxicologyReport.add(jLabel87);
-        jLabel87.setBounds(40, 170, 74, 17);
+        jLabel87.setBounds(40, 170, 81, 18);
 
         jLabel104.setText("Toxins Found");
         AddToxicologyReport.add(jLabel104);
-        jLabel104.setBounds(30, 310, 78, 17);
+        jLabel104.setBounds(30, 310, 88, 18);
 
         leftComponent.add(AddToxicologyReport, "card9");
 
@@ -2495,7 +2501,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         ViewReport5.setText("View Report");
         AdvertisingSpecialist.add(ViewReport5);
-        ViewReport5.setBounds(439, 300, 101, 23);
+        ViewReport5.setBounds(439, 300, 109, 24);
 
         ViewReport6.setBackground(new java.awt.Color(245, 245, 245));
         ViewReport6.setText("View Report");
@@ -2505,22 +2511,22 @@ public class drugLifeCycle extends javax.swing.JFrame {
         ageLabelR25.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         ageLabelR25.setText("All Reports");
         AdvertisingSpecialist.add(ageLabelR25);
-        ageLabelR25.setBounds(40, 130, 110, 18);
+        ageLabelR25.setBounds(40, 130, 110, 17);
 
         ageLabelR26.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         ageLabelR26.setForeground(new java.awt.Color(102, 102, 102));
         ageLabelR26.setText("As an advertising Specialist, you'll add advertising information for the drugs.");
         AdvertisingSpecialist.add(ageLabelR26);
-        ageLabelR26.setBounds(40, 81, 480, 18);
+        ageLabelR26.setBounds(40, 81, 515, 17);
 
         Title10.setFont(new java.awt.Font("Helvetica Neue", 1, 28)); // NOI18N
         Title10.setText("Advertising Specialist");
         AdvertisingSpecialist.add(Title10);
-        Title10.setBounds(40, 40, 300, 35);
+        Title10.setBounds(40, 40, 300, 33);
 
         ageLabelR27.setText("Search");
         AdvertisingSpecialist.add(ageLabelR27);
-        ageLabelR27.setBounds(680, 120, 40, 30);
+        ageLabelR27.setBounds(680, 120, 47, 30);
 
         jTextField22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2547,7 +2553,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         AddAdvertising.add(AssignToDevDecsion3);
-        AssignToDevDecsion3.setBounds(812, 420, 100, 23);
+        AssignToDevDecsion3.setBounds(812, 420, 100, 24);
 
         CancelAssigning3.setText("Cancel");
         CancelAssigning3.addActionListener(new java.awt.event.ActionListener() {
@@ -2556,31 +2562,31 @@ public class drugLifeCycle extends javax.swing.JFrame {
             }
         });
         AddAdvertising.add(CancelAssigning3);
-        CancelAssigning3.setBounds(730, 420, 72, 23);
+        CancelAssigning3.setBounds(730, 420, 76, 24);
 
         jLabel83.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
         jLabel83.setText("Add Advertising Info");
         AddAdvertising.add(jLabel83);
-        jLabel83.setBounds(30, 40, 270, 30);
+        jLabel83.setBounds(30, 40, 270, 28);
 
         jLabel86.setText("Product Claim Information:");
         AddAdvertising.add(jLabel86);
-        jLabel86.setBounds(30, 210, 160, 17);
+        jLabel86.setBounds(30, 210, 160, 18);
 
         jLabel77.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel77.setText("found in medical journals, newspapers, and magazines, and on the Internet, television, or radio.");
         AddAdvertising.add(jLabel77);
-        jLabel77.setBounds(30, 120, 910, 18);
+        jLabel77.setBounds(30, 120, 910, 17);
 
         jLabel78.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel78.setText("All advertisements, such as product claims or reminder ads, cannot be false or misleading. They must contain truthful information about a ");
         AddAdvertising.add(jLabel78);
-        jLabel78.setBounds(30, 80, 910, 18);
+        jLabel78.setBounds(30, 80, 910, 17);
 
         jLabel79.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel79.setText("They must contain truthful information about a drug’s effectiveness, side effects, and prescribing information. These advertisements can be ");
         AddAdvertising.add(jLabel79);
-        jLabel79.setBounds(30, 100, 910, 18);
+        jLabel79.setBounds(30, 100, 910, 17);
 
         jTextArea12.setColumns(20);
         jTextArea12.setRows(5);
@@ -2622,7 +2628,7 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
         ViewReport7.setText("View Report");
         SafetyInspectorOfficer.add(ViewReport7);
-        ViewReport7.setBounds(439, 300, 101, 23);
+        ViewReport7.setBounds(439, 300, 109, 24);
 
         ViewReport8.setBackground(new java.awt.Color(245, 245, 245));
         ViewReport8.setText("View Report");
@@ -2632,22 +2638,22 @@ public class drugLifeCycle extends javax.swing.JFrame {
         ageLabelR28.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         ageLabelR28.setText("All Reports");
         SafetyInspectorOfficer.add(ageLabelR28);
-        ageLabelR28.setBounds(40, 130, 110, 18);
+        ageLabelR28.setBounds(40, 130, 110, 17);
 
         ageLabelR29.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         ageLabelR29.setForeground(new java.awt.Color(102, 102, 102));
         ageLabelR29.setText("As a afety Officer, you'll conduct frequent visits to the manufactoring facility to ensure the process meets the standards.");
         SafetyInspectorOfficer.add(ageLabelR29);
-        ageLabelR29.setBounds(40, 81, 770, 18);
+        ageLabelR29.setBounds(40, 81, 770, 17);
 
         Title11.setFont(new java.awt.Font("Helvetica Neue", 1, 28)); // NOI18N
         Title11.setText("Safety Inspection Officer");
         SafetyInspectorOfficer.add(Title11);
-        Title11.setBounds(40, 40, 330, 35);
+        Title11.setBounds(40, 40, 394, 33);
 
         ageLabelR30.setText("Search");
         SafetyInspectorOfficer.add(ageLabelR30);
-        ageLabelR30.setBounds(680, 120, 40, 30);
+        ageLabelR30.setBounds(680, 120, 47, 30);
 
         jTextField27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2788,7 +2794,53 @@ public class drugLifeCycle extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
+    
+    public void populateEnterpriseCombobox(EnterpriseDirectory en){
+        enterpriseComboBoxR.removeAllItems();
+        enterpriseComboBoxR.addItem("New enterprise");
+        //app.populateEnterprise(en);
+        for (Enterprise ent: en.getEntDir()){
+            enterpriseComboBoxR.addItem(ent.getEnterpriseName());
+            System.out.println(ent.getEnterpriseName());
+        }
+    }
 
+    public String entIDGen(){
+        Random ran = new Random();
+        int idInt = ran.nextInt(100);
+        String encID = "ENI-"+idInt;
+        return encID;
+    }
+    
+    public void populateEnterprise(){
+        //EnterpriseDirectory entDir = new EnterpriseDirectory();
+        Enterprise en1 = entDir.addEnterprise();
+        en1.setEnterpriseName("Medical Institute");
+        en1.setEnterpriseType("Discovery and development");
+        System.out.println(en1.getEnterpriseType());
+        en1.setEnterpriseID(entIDGen());
+        enterpriseComboBoxR.addItem(en1.getEnterpriseName());
+        
+        Enterprise en2 = entDir.addEnterprise();
+        en2.setEnterpriseName("Clinical Research Institute");
+        en2.setEnterpriseType("Clinical testing");
+        en2.setEnterpriseID(entIDGen());
+        enterpriseComboBoxR.addItem(en2.getEnterpriseName());
+        
+        Enterprise en3 = entDir.addEnterprise();
+        en3.setEnterpriseName("FDA");
+        en3.setEnterpriseType("Review");
+        en3.setEnterpriseID(entIDGen());
+        enterpriseComboBoxR.addItem(en3.getEnterpriseName());
+        
+        Enterprise en4 = entDir.addEnterprise();
+        en4.setEnterpriseName("Safety Monitoring");
+        en4.setEnterpriseType("Inspection");
+        en4.setEnterpriseID(entIDGen());
+        enterpriseComboBoxR.addItem(en4.getEnterpriseName());
+    }
+    
+    
     //To retrieve data from DB
     public void retrieveEmployee(){
         try{
@@ -2889,6 +2941,27 @@ public class drugLifeCycle extends javax.swing.JFrame {
             roleComboBoxR.setEnabled(false);
         }else{
             roleComboBoxR.setEnabled(true);
+        }
+    }
+    
+    public void showSpecificOrganization(String enterprisename){
+        organizationComboBoxR.removeAllItems();
+        organizationComboBoxR.addItem("New organization");
+        Enterprise ent = new Enterprise();
+        for(Enterprise en: entDir.getEntDir()){
+            if (en.getEnterpriseName().equals(enterprisename)){
+                ent = en;
+            }
+        }if(ent.getEnterpriseType().equals("Discovery and development")){
+            organizationComboBoxR.addItem("Discovery");
+            organizationComboBoxR.addItem("Development");
+        }else if(ent.getEnterpriseType().equals("Clinical testing")){
+            organizationComboBoxR.addItem("GLP Regulators");
+            organizationComboBoxR.addItem("Clinical Researcher");
+        }else if(ent.getEnterpriseType().equals("Review")){
+            organizationComboBoxR.addItem("Review");
+        }else if(ent.getEnterpriseType().equals("Inspection")){
+            organizationComboBoxR.addItem("Manufacturer inspections");
         }
     }
     
@@ -3208,6 +3281,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
 
     private void enterpriseComboBoxRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterpriseComboBoxRActionPerformed
         disableDropdownOrganization();
+        String org = enterpriseComboBoxR.getSelectedItem().toString();
+        showSpecificOrganization(org);
     }//GEN-LAST:event_enterpriseComboBoxRActionPerformed
 
     private void logoutButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutButton1ActionPerformed
@@ -3309,6 +3384,8 @@ public class drugLifeCycle extends javax.swing.JFrame {
     
     private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
         PanelPaint(Registration);
+        //enterpriseComboBoxR.removeAllItems();
+
     }//GEN-LAST:event_registerButtonActionPerformed
 
     private void ViewReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewReportActionPerformed

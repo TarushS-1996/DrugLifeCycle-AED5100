@@ -555,12 +555,8 @@
                 <Component class="javax.swing.JComboBox" name="enterpriseComboBoxR">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="5">
+                      <StringArray count="1">
                         <StringItem index="0" value="New enterprise"/>
-                        <StringItem index="1" value="Medical institute"/>
-                        <StringItem index="2" value="Clinical Research Institute"/>
-                        <StringItem index="3" value="FDA"/>
-                        <StringItem index="4" value="Safety Monitoring"/>
                       </StringArray>
                     </Property>
                   </Properties>
