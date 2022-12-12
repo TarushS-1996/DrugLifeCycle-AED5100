@@ -37,7 +37,7 @@ It’s hard for a big team of researchers working on a pharmaceutical drug to tr
 ![Drug Life Cycle - Class Diagram](https://github.com/TarushS-1996/DrugLifeCycel-AED5100/blob/main/Images/AED_Project_Class_Diagram.drawio.png)
 
 ##### Sequence Diagram
-![Drug Life Cycle - Sequence Diagram]()
+![Drug Life Cycle - Sequence Diagram](https://github.com/TarushS-1996/DrugLifeCycel-AED5100/blob/main/Images/DrugLifeCycle_Sequence_Diagram.drawio.png)
 
 ## Maintainers
 ---
