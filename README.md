@@ -41,7 +41,7 @@ It’s hard for a big team of researchers working on a pharmaceutical drug to tr
 
 ## Presentation PPT
 ![Drug Life Cycle - PPT](https://github.com/TarushS-1996/DrugLifeCycel-AED5100/blob/main/Images/Dominex%20(1).pptx)
-PPT Link: https://docs.google.com/presentation/d/1lsh7xNBAZYi7EGl2EJRXDW_NjoRrTnD6K9fU27Nl2HM/edit?usp=sharing
+!PPT Link: https://docs.google.com/presentation/d/1lsh7xNBAZYi7EGl2EJRXDW_NjoRrTnD6K9fU27Nl2HM/edit?usp=sharing
 
 ## Maintainers
 ---
