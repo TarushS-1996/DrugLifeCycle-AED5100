@@ -40,7 +40,7 @@ It’s hard for a big team of researchers working on a pharmaceutical drug to tr
 ![Drug Life Cycle - Sequence Diagram](https://github.com/TarushS-1996/DrugLifeCycel-AED5100/blob/main/Images/DrugLifeCycle_Sequence_Diagram.drawio.png)
 
 ## Presentation PPT
-![Drug Life Cycle - PPT]()
+![Drug Life Cycle - PPT](https://github.com/TarushS-1996/DrugLifeCycel-AED5100/blob/main/Images/Dominex%20(1).pptx)
 
 ## Maintainers
 ---
